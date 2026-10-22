@@ -1,0 +1,96 @@
+{
+  "id": "confirm_before_write_in_context.taubench_retail",
+  "mechanism": "An agent obtains explicit customer confirmation before an action that changes records",
+  "measures": "Estimated share of database-writing tool calls made after the customer explicitly approved the action the agent had described (the standard in reports/E6/confirmation_handcheck.json), from one annotator's in-context judgements of a stratified sample of 50 writes per model, weighted by stratum size. A different estimand from the keyword share in confirm_before_write.taubench_retail.",
+  "simulator_parameter": "agent's own check before release (analogue for p_selfcheck)",
+  "estimable": "partly",
+  "estimable_note": "Inferred from 50 annotated writes per model, not observed for every write. One annotator, Claude Code (build); annotation error is not in the interval. Checks a procedural rule, not whether the content was right. Not a general rate for these model versions: outdated tasks, simulated customers, one domain.",
+  "value": {
+    "table": {
+      "gpt-4o-retail": {
+        "point": 0.992,
+        "credible_interval_95": [
+          0.898,
+          0.9971
+        ],
+        "if_borderline_judgements_flipped": [
+          0.9125,
+          0.992
+        ],
+        "writes": 666,
+        "annotated": {
+          "Y": {
+            "population": 507,
+            "sampled": 20,
+            "confirmed": 20,
+            "borderline": 0
+          },
+          "N": {
+            "population": 159,
+            "sampled": 30,
+            "confirmed": 29,
+            "borderline": 10
+          }
+        }
+      },
+      "sonnet-35-new-retail": {
+        "point": 0.9805,
+        "credible_interval_95": [
+          0.8729,
+          0.9879
+        ],
+        "if_borderline_judgements_flipped": [
+          0.8772,
+          0.9805
+        ],
+        "writes": 1352,
+        "annotated": {
+          "Y": {
+            "population": 1220,
+            "sampled": 20,
+            "confirmed": 20,
+            "borderline": 2
+          },
+          "N": {
+            "population": 132,
+            "sampled": 30,
+            "confirmed": 24,
+            "borderline": 4
+          }
+        }
+      }
+    },
+    "summary": {
+      "difference": {
+        "between": "sonnet-35-new-retail.json minus gpt-4o-retail.json",
+        "point": -0.0115,
+        "credible_interval_95": [
+          -0.1041,
+          0.0693
+        ]
+      }
+    },
+    "interval_95_meaning": "95% Bayesian credible interval: each stratum's share has a Jeffreys Beta(0.5, 0.5) prior; posterior draws are combined with the stratum weights. It excludes annotation error and has no finite-population correction."
+  },
+  "status": "fitted",
+  "use": "reference_only",
+  "source": {
+    "name": "τ-bench historical trajectories (retail), sierra-research/tau-bench",
+    "url": "https://github.com/sierra-research/tau-bench",
+    "doi": null,
+    "licence": "MIT",
+    "retrieved_utc": "2026-10-02"
+  },
+  "conditions": "simulated customer-service conversations in the τ-bench retail domain; one agent with tools and a written policy; tau-bench commit 59a200c6d575d595120f1cb70fea53cef0632f6b",
+  "transfer": "Analogue for procedural self-checks before release, for reference only. Not a term-error rate.",
+  "versions": {
+    "code_commit": "782f3bc",
+    "code_dirty": false,
+    "analysis": "experiments/e6_taubench/confirmation_handcheck.py (estimate), experiments/e6_taubench/check_taubench.py (record)",
+    "model": "as named in the file names only: gpt-4o, sonnet-35-new"
+  },
+  "disagreements": [],
+  "tests": [],
+  "notes": "Sample: reports/E6/confirmation_sample.json (confirmation_sample.py). Judgements, borderline flags and estimates: reports/E6/confirmation_handcheck.json. Method: stratum shares weighted by stratum size; 95% Bayesian credible interval from 200000 draws of each stratum's posterior under a Jeffreys Beta(0.5, 0.5) prior, combined with the stratum weights, seed 20261002; no finite-population correction (so slightly wide). Limits: an estimate from 50 annotated writes per model, not an observed share of every write; one annotator, and the interval does not include annotation error; a procedural check on outdated tasks with simulated customers, not a general rate for these model versions (review round 5, Codex R5.3).",
+  "created_utc": "2026-10-03 01:28 UTC"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "quotation.lambda_workload",
+  "mechanism": "Proportional fall in a reviewer's detection when five or more quotes wait behind the one in hand (linear below five).",
+  "measures": "Nothing measured. A declared assumption.",
+  "simulator_parameter": "lambda_workload",
+  "estimable": "no",
+  "estimable_note": "No evidence yet. No estimate planned this round.",
+  "value": {
+    "unit": "probability",
+    "range": [
+      0.0,
+      0.5
+    ],
+    "distribution": "uniform over the range (Latin hypercube draws)"
+  },
+  "status": "assumed",
+  "source": {
+    "name": "Declared assumption, evidence/assumptions.yaml",
+    "doi": null,
+    "licence": null,
+    "retrieved_utc": null
+  },
+  "conditions": "E4 quotation research model; every design, context and week",
+  "transfer": "No evidence. The memo says detection depends on workload; zero is included.",
+  "versions": {
+    "code_commit": "1146349",
+    "code_dirty": false,
+    "analysis": "experiments/e4_quotation/write_assumption_records.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "declared_utc": "2026-10-02 22:28 UTC",
+  "created_utc": "2026-10-03 10:36 UTC",
+  "used_by": [
+    "gca_sim/quotation"
+  ]
+}

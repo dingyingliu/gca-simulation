@@ -1,0 +1,38 @@
+{
+  "id": "quotation.p_stale_note",
+  "mechanism": "At the start of the week an out-of-date note exists for a customer with a written agreement, written by the agreement holder's agent.",
+  "measures": "Nothing measured. A declared assumption.",
+  "simulator_parameter": "p_stale_note",
+  "estimable": "no",
+  "estimable_note": "No evidence yet. No estimate planned this round.",
+  "value": {
+    "unit": "probability",
+    "range": [
+      0.0,
+      0.5
+    ],
+    "distribution": "uniform over the range (Latin hypercube draws)"
+  },
+  "status": "assumed",
+  "source": {
+    "name": "Declared assumption, evidence/assumptions.yaml",
+    "doi": null,
+    "licence": null,
+    "retrieved_utc": null
+  },
+  "conditions": "E4 quotation research model; every design, context and week",
+  "transfer": "No evidence. World-level draw per customer.",
+  "versions": {
+    "code_commit": "1146349",
+    "code_dirty": false,
+    "analysis": "experiments/e4_quotation/write_assumption_records.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "declared_utc": "2026-10-02 22:28 UTC",
+  "created_utc": "2026-10-03 10:36 UTC",
+  "used_by": [
+    "gca_sim/quotation"
+  ]
+}

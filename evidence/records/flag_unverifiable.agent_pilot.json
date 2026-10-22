@@ -1,0 +1,53 @@
+{
+  "id": "flag_unverifiable.agent_pilot",
+  "mechanism": "The agent escalates a quote whose agreed terms it cannot verify",
+  "measures": "Escalation rate on agreement-role tasks with isolated notes and the agreement not visible (I.V-)",
+  "simulator_parameter": "p_flag_unverifiable",
+  "estimable": "partly",
+  "estimable_note": "A pilot: few tasks per cell, one model, one prompt, synthetic tasks. The frequency is over valid answers. It constrains the named parameter or product; it does not identify the latent steps behind it.",
+  "value": {
+    "point": 0.9167,
+    "n": 60,
+    "summary": {
+      "mean_over_tasks": 0.9167,
+      "tasks": 20,
+      "valid_task_runs": 60,
+      "count": 55,
+      "missing_task_runs": 0,
+      "interval_95_group_bootstrap": [
+        0.8333,
+        0.9833
+      ],
+      "interval_95_wilson_pooled_ignores_clustering": [
+        0.8193,
+        0.9639
+      ]
+    },
+    "interval_95": [
+      0.8333,
+      0.9833
+    ],
+    "interval_95_meaning": "bootstrap over the 5 development groups (crude); the Wilson interval in summary ignores clustering"
+  },
+  "status": "fitted",
+  "use": "range_only",
+  "source": {
+    "name": "GCA controlled agent pilot (E5), development groups",
+    "url": "experiments/agent_pilot/runs/development.jsonl",
+    "doi": null,
+    "licence": null,
+    "retrieved_utc": "2026-10-03",
+    "file_sha256": "57af7bb8535c2039f673d2f8e4b5f2a6bff14bd426bc054e443ba179cc54c10d"
+  },
+  "conditions": "synthetic quotation tasks, one fixed prompt, model qwen/qwen3.8-27b:free through openrouter (host ['modelrun/fp4']), reasoning effort low, 5 development groups, 3 replicates",
+  "transfer": "Analogue for the quotation episode: synthetic tasks, one model, one prompt.",
+  "versions": {
+    "code_commit": "a1f048f",
+    "code_dirty": false,
+    "analysis": "experiments/agent_pilot/analyse_pilot.py",
+    "model": "qwen/qwen3.8-27b:free"
+  },
+  "disagreements": [],
+  "tests": [],
+  "created_utc": "2026-10-03 14:32 UTC"
+}

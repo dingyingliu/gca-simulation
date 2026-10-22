@@ -1,0 +1,38 @@
+{
+  "id": "quotation.p_detect_informed",
+  "mechanism": "A reviewer who knows the correct value (or the written limits) catches a draft that contradicts it.",
+  "measures": "Nothing measured. A declared assumption.",
+  "simulator_parameter": "p_detect_informed",
+  "estimable": "no",
+  "estimable_note": "No evidence yet. No estimate planned this round.",
+  "value": {
+    "unit": "probability",
+    "range": [
+      0.6,
+      0.95
+    ],
+    "distribution": "uniform over the range (Latin hypercube draws)"
+  },
+  "status": "assumed",
+  "source": {
+    "name": "Declared assumption, evidence/assumptions.yaml",
+    "doi": null,
+    "licence": null,
+    "retrieved_utc": null
+  },
+  "conditions": "E4 quotation research model; every design, context and week",
+  "transfer": "No evidence. E3 shows rejection shares of 2% to 11% per step, which are not detection rates and are not used here.",
+  "versions": {
+    "code_commit": "1146349",
+    "code_dirty": false,
+    "analysis": "experiments/e4_quotation/write_assumption_records.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "declared_utc": "2026-10-02 22:28 UTC",
+  "created_utc": "2026-10-03 10:36 UTC",
+  "used_by": [
+    "gca_sim/quotation"
+  ]
+}

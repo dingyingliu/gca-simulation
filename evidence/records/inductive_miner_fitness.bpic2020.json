@@ -1,0 +1,74 @@
+{
+  "id": "inductive_miner_fitness.bpic2020",
+  "mechanism": "How well a discovered process model describes the observed paths",
+  "measures": "Token-replay fitness and precision of inductive-miner models discovered from this same log (noise 0.0 fits by construction), plus fitness and precision of a model discovered on 2017 cases when replaying 2018 cases",
+  "simulator_parameter": null,
+  "estimable": "yes",
+  "value": {
+    "summary": {
+      "im_noise_0.0": {
+        "noise_threshold": 0.0,
+        "token_replay_log_fitness": 1.0,
+        "token_replay_share_fitting_traces": 1.0,
+        "token_replay_average_trace_fitness": 1.0,
+        "token_replay_precision": 0.3908,
+        "places": 26,
+        "transitions": 43,
+        "process_tree": "->( X( tau, 'Declaration SAVED by EMPLOYEE' ), X( tau, +( X( tau, *( 'Declaration REJECTED by EMPLOYEE', tau ) ), ->( +( X( tau, *( 'Declaration REJECTED by MISSING', tau ) ), ->( X( tau, *( ->( *( 'Declaration SUBMITTED by EMPLOYEE', 'Declaration FOR_APPROVAL by ADMINISTRATION' ), X( tau, 'Declaration REJECTED by ADMINISTRATION', 'Declaration REJECTED by PRE_APPROVER', +( X( tau, 'Declaration APPROVED by ADMINISTRATION' ), X( 'Declaration REJECTED by BUDGET OWNER', ->( X( tau, 'Declaration APPROVED by BUDGET OWNER', 'Declaration APPROVED by PRE_APPROVER' ), X( 'Declaration REJECTED by SUPERVISOR', 'Declaration FINAL_APPROVED by SUPERVISOR' ) ) ) ) ) ), tau ) ), X( tau, 'Declaration FOR_APPROVAL by PRE_APPROVER', 'Request Payment', 'Declaration FOR_APPROVAL by SUPERVISOR' ) ) ), X( tau, 'Payment Handled' ) ) ) ) )"
+      },
+      "im_noise_0.2": {
+        "noise_threshold": 0.2,
+        "token_replay_log_fitness": 0.9674,
+        "token_replay_share_fitting_traces": 0.6753,
+        "token_replay_average_trace_fitness": 0.9562,
+        "token_replay_precision": 0.3758,
+        "places": 21,
+        "transitions": 35,
+        "process_tree": "->( X( tau, 'Declaration SAVED by EMPLOYEE' ), X( 'Declaration APPROVED by PRE_APPROVER', ->( X( tau, ->( X( tau, 'Declaration REJECTED by BUDGET OWNER', ->( X( tau, 'Declaration FOR_APPROVAL by PRE_APPROVER', 'Declaration FOR_APPROVAL by SUPERVISOR' ), 'Declaration REJECTED by MISSING' ) ), X( *( 'Declaration REJECTED by ADMINISTRATION', tau ), 'Declaration REJECTED by SUPERVISOR', 'Declaration REJECTED by PRE_APPROVER' ), *( 'Declaration REJECTED by EMPLOYEE', tau ) ) ), *( 'Declaration SUBMITTED by EMPLOYEE', tau ), *( 'Declaration APPROVED by ADMINISTRATION', tau ), X( tau, *( 'Declaration APPROVED by BUDGET OWNER', tau ) ) ) ), 'Declaration FINAL_APPROVED by SUPERVISOR', 'Request Payment', 'Payment Handled' )",
+        "alignment_log_fitness": 0.9368,
+        "alignment_share_fitting_traces": 0.6753
+      },
+      "transfer_2017_to_2018": {
+        "im_noise_0.0": {
+          "cases_2017": 2240,
+          "cases_2018": 8260,
+          "fitness_on_2017": 1.0,
+          "fitness_on_2018": 0.996,
+          "share_2018_traces_fitting": 0.9579,
+          "precision_on_2017": 0.3209,
+          "precision_on_2018": 0.2157
+        },
+        "im_noise_0.2": {
+          "cases_2017": 2240,
+          "cases_2018": 8260,
+          "fitness_on_2017": 0.9845,
+          "fitness_on_2018": 0.9765,
+          "share_2018_traces_fitting": 0.8574,
+          "precision_on_2017": 0.4831,
+          "precision_on_2018": 0.4304
+        }
+      }
+    }
+  },
+  "status": "fitted",
+  "conditions": "Eindhoven University of Technology travel expense declarations (domestic), 2017 two departments, 2018 whole university; staff anonymised to roles",
+  "transfer": "None. Describes the declarations process only.",
+  "source": {
+    "name": "BPI Challenge 2020: Domestic Declarations",
+    "creator": "Boudewijn van Dongen, Eindhoven University of Technology",
+    "doi": "10.4121/uuid:3f422315-ed9d-4882-891f-e180b5b4feb5",
+    "url": "https://data.4tu.nl/datasets/6a0a26d2-82d0-4018-b1cd-89afb0e8627f/1",
+    "licence": "CC BY-NC 4.0",
+    "retrieved_utc": "2026-10-02",
+    "file_sha256": "0bc3312acf0b9ee5ae6f4ebe9df204005ef11665d62f2d21dd04995161d7532b"
+  },
+  "versions": {
+    "code_commit": "a342e21",
+    "code_dirty": false,
+    "analysis": "experiments/e3_bpic2020/run_e3.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "created_utc": "2026-10-02 22:57 UTC"
+}

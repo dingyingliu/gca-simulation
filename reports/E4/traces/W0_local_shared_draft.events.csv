@@ -1,0 +1,166 @@
+case_id,activity,timestamp_days,resource,rule
+,run_manifest,0.0,simulator,
+,world:stale_note_draw,0.0,world,
+,world:stale_note_draw,0.0,world,
+,world:stale_note_draw,0.0,world,
+,world:stale_note_draw,0.0,world,
+,note_write,0.0,world,
+,world:lead_knows_policy,0.0,world,
+,world:lead_knows_policy,0.0,world,
+,world:lead_knows_policy,0.0,world,
+Q02,world:request_cue,0.0,world,
+Q05,world:request_cue,0.0,world,
+Q07,world:request_cue,0.0,world,
+Q10,world:request_cue,0.0,world,
+Q14,world:request_cue,0.0,world,
+Q17,world:request_cue,0.0,world,
+Q01,request,1.0,customer,
+Q02,request,1.0,customer,
+Q03,request,1.0,customer,
+Q04,request,1.0,customer,
+Q01,draft,1.5,agent:BR,
+Q01,policy_check,1.5,routing rule,policy_breach_to_ho
+Q01,recognise_local,1.5,agent:BR,refer_recognised_local
+Q01,self_check,1.5,agent:BR,agent_flag_to_ho
+Q01,release,1.5,agent:BR,agent_release_under_team_rule
+Q02,draft,1.5,agent:BR,
+Q02,note_write,1.5,agent:BR,
+Q02,policy_check,1.5,routing rule,policy_breach_to_ho
+Q02,recognise_local,1.5,agent:BR,refer_recognised_local
+Q02,self_check,1.5,agent:BR,agent_flag_to_ho
+Q02,release,1.5,agent:BR,agent_release_under_team_rule
+Q03,draft,1.5,agent:TR,
+Q03,policy_check,1.5,routing rule,policy_breach_to_ho
+Q03,recognise_local,1.5,agent:TR,refer_recognised_local
+Q03,self_check,1.5,agent:TR,agent_flag_to_ho
+Q03,enqueue,1.5,ho,
+Q03,review_start:correct,1.5,ho,
+Q04,draft,1.5,agent:TR,
+Q04,note_write,1.5,agent:TR,
+Q04,policy_check,1.5,routing rule,policy_breach_to_ho
+Q04,enqueue,1.5,ho,
+Q05,request,2.0,customer,
+Q06,request,2.0,customer,
+Q07,request,2.0,customer,
+Q08,request,2.0,customer,
+Q03,review_done:correct,2.29505,ho,
+Q03,response_delay,2.29505,ho,
+Q04,review_start:authorise,2.29505,ho,
+Q05,draft,2.5,agent:TR,
+Q05,note_write,2.5,agent:TR,
+Q05,policy_check,2.5,routing rule,policy_breach_to_ho
+Q05,recognise_local,2.5,agent:TR,refer_recognised_local
+Q05,self_check,2.5,agent:TR,agent_flag_to_ho
+Q05,release,2.5,agent:TR,agent_release_under_team_rule
+Q06,draft,2.5,agent:SG,
+Q06,policy_check,2.5,routing rule,policy_breach_to_ho
+Q06,recognise_local,2.5,agent:SG,refer_recognised_local
+Q06,self_check,2.5,agent:SG,agent_flag_to_ho
+Q06,release,2.5,agent:SG,agent_release_under_team_rule
+Q07,draft,2.5,agent:SG,
+Q07,note_write,2.5,agent:SG,
+Q07,policy_check,2.5,routing rule,policy_breach_to_ho
+Q07,route:lead:BR,2.5,routing rule,cross_market_referral
+Q07,enqueue,2.5,lead:BR,
+Q07,review_start:correct,2.5,lead:BR,
+Q08,draft,2.5,agent:BR,
+Q08,policy_check,2.5,routing rule,policy_breach_to_ho
+Q08,recognise_local,2.5,agent:BR,refer_recognised_local
+Q08,self_check,2.5,agent:BR,agent_flag_to_ho
+Q08,release,2.5,agent:BR,agent_release_under_team_rule
+Q03,release,2.920038,ho,head_office_approval
+Q09,request,3.0,customer,
+Q10,request,3.0,customer,
+Q11,request,3.0,customer,
+Q12,request,3.0,customer,
+Q09,draft,3.5,agent:SG,
+Q09,policy_check,3.5,routing rule,policy_breach_to_ho
+Q09,recognise_local,3.5,agent:SG,refer_recognised_local
+Q09,self_check,3.5,agent:SG,agent_flag_to_ho
+Q09,release,3.5,agent:SG,agent_release_under_team_rule
+Q10,draft,3.5,agent:BR,
+Q10,note_write,3.5,agent:BR,
+Q10,policy_check,3.5,routing rule,policy_breach_to_ho
+Q10,recognise_local,3.5,agent:BR,refer_recognised_local
+Q10,self_check,3.5,agent:BR,agent_flag_to_ho
+Q10,release,3.5,agent:BR,agent_release_under_team_rule
+Q11,draft,3.5,agent:TR,
+Q11,policy_check,3.5,routing rule,policy_breach_to_ho
+Q11,recognise_local,3.5,agent:TR,refer_recognised_local
+Q11,self_check,3.5,agent:TR,agent_flag_to_ho
+Q11,release,3.5,agent:TR,agent_release_under_team_rule
+Q12,draft,3.5,agent:SG,
+Q12,note_write,3.5,agent:SG,
+Q12,policy_check,3.5,routing rule,policy_breach_to_ho
+Q12,recognise_local,3.5,agent:SG,refer_recognised_local
+Q12,self_check,3.5,agent:SG,agent_flag_to_ho
+Q12,enqueue,3.5,ho,
+Q04,review_done:authorise,3.586865,ho,
+Q04,response_delay,3.586865,ho,
+Q12,review_start:authorise,3.586865,ho,
+Q07,review_done:correct,3.673494,lead:BR,
+Q07,response_delay,3.673494,lead:BR,
+Q13,request,4.0,customer,
+Q14,request,4.0,customer,
+Q15,request,4.0,customer,
+Q16,request,4.0,customer,
+Q07,release,4.009671,lead:BR,lead_approval
+Q04,release,4.145207,ho,head_office_approval
+Q12,review_done:authorise,4.494528,ho,
+Q12,response_delay,4.494528,ho,
+Q13,draft,4.5,agent:BR,
+Q13,policy_check,4.5,routing rule,policy_breach_to_ho
+Q13,recognise_local,4.5,agent:BR,refer_recognised_local
+Q13,self_check,4.5,agent:BR,agent_flag_to_ho
+Q13,release,4.5,agent:BR,agent_release_under_team_rule
+Q14,draft,4.5,agent:SG,
+Q14,note_write,4.5,agent:SG,
+Q14,policy_check,4.5,routing rule,policy_breach_to_ho
+Q14,recognise_local,4.5,agent:SG,refer_recognised_local
+Q14,self_check,4.5,agent:SG,agent_flag_to_ho
+Q14,release,4.5,agent:SG,agent_release_under_team_rule
+Q15,draft,4.5,agent:TR,
+Q15,policy_check,4.5,routing rule,policy_breach_to_ho
+Q15,recognise_local,4.5,agent:TR,refer_recognised_local
+Q15,self_check,4.5,agent:TR,agent_flag_to_ho
+Q15,release,4.5,agent:TR,agent_release_under_team_rule
+Q16,draft,4.5,agent:SG,
+Q16,policy_check,4.5,routing rule,policy_breach_to_ho
+Q16,recognise_local,4.5,agent:SG,refer_recognised_local
+Q16,enqueue,4.5,lead:SG,
+Q16,review_start:pass,4.5,lead:SG,
+Q17,request,5.0,customer,
+Q18,request,5.0,customer,
+Q19,request,5.0,customer,
+Q20,request,5.0,customer,
+Q16,review_done:pass,5.258831,lead:SG,
+Q16,response_delay,5.258831,lead:SG,
+Q17,draft,5.5,agent:TR,
+Q17,note_write,5.5,agent:TR,
+Q17,policy_check,5.5,routing rule,policy_breach_to_ho
+Q17,recognise_local,5.5,agent:TR,refer_recognised_local
+Q17,self_check,5.5,agent:TR,agent_flag_to_ho
+Q17,release,5.5,agent:TR,agent_release_under_team_rule
+Q18,draft,5.5,agent:BR,
+Q18,note_write,5.5,agent:BR,
+Q18,policy_check,5.5,routing rule,policy_breach_to_ho
+Q18,enqueue,5.5,ho,
+Q18,review_start:authorise,5.5,ho,
+Q19,draft,5.5,agent:BR,
+Q19,policy_check,5.5,routing rule,policy_breach_to_ho
+Q19,recognise_local,5.5,agent:BR,refer_recognised_local
+Q19,self_check,5.5,agent:BR,agent_flag_to_ho
+Q19,release,5.5,agent:BR,agent_release_under_team_rule
+Q20,draft,5.5,agent:TR,
+Q20,policy_check,5.5,routing rule,policy_breach_to_ho
+Q20,recognise_local,5.5,agent:TR,refer_recognised_local
+Q20,enqueue,5.5,lead:TR,
+Q20,review_start:pass,5.5,lead:TR,
+Q20,review_done:pass,5.793325,lead:TR,
+Q20,response_delay,5.793325,lead:TR,
+Q16,release,5.92748,lead:SG,lead_approval
+Q18,review_done:authorise,6.093696,ho,
+Q18,response_delay,6.093696,ho,
+Q12,release,6.138791,ho,head_office_approval
+Q20,release,6.494654,lead:TR,lead_approval
+Q18,release,6.523593,ho,head_office_approval

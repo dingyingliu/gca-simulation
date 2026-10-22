@@ -1,0 +1,122 @@
+{
+  "id": "handover_by_role.bpic2020",
+  "mechanism": "Which role hands work to which",
+  "measures": "Counts of consecutive events in a case whose roles differ",
+  "simulator_parameter": null,
+  "estimable": "yes",
+  "value": {
+    "table": [
+      {
+        "from": "SUPERVISOR",
+        "to": "UNDEFINED",
+        "count": 10046
+      },
+      {
+        "from": "EMPLOYEE",
+        "to": "ADMINISTRATION",
+        "count": 9155
+      },
+      {
+        "from": "ADMINISTRATION",
+        "to": "SUPERVISOR",
+        "count": 5323
+      },
+      {
+        "from": "ADMINISTRATION",
+        "to": "BUDGET OWNER",
+        "count": 2879
+      },
+      {
+        "from": "BUDGET OWNER",
+        "to": "SUPERVISOR",
+        "count": 2820
+      },
+      {
+        "from": "EMPLOYEE",
+        "to": "SUPERVISOR",
+        "count": 1597
+      },
+      {
+        "from": "ADMINISTRATION",
+        "to": "EMPLOYEE",
+        "count": 948
+      },
+      {
+        "from": "EMPLOYEE",
+        "to": "PRE_APPROVER",
+        "count": 772
+      },
+      {
+        "from": "PRE_APPROVER",
+        "to": "SUPERVISOR",
+        "count": 685
+      },
+      {
+        "from": "SUPERVISOR",
+        "to": "EMPLOYEE",
+        "count": 288
+      },
+      {
+        "from": "SUPERVISOR",
+        "to": "MISSING",
+        "count": 87
+      },
+      {
+        "from": "PRE_APPROVER",
+        "to": "EMPLOYEE",
+        "count": 86
+      },
+      {
+        "from": "MISSING",
+        "to": "EMPLOYEE",
+        "count": 61
+      },
+      {
+        "from": "BUDGET OWNER",
+        "to": "EMPLOYEE",
+        "count": 59
+      },
+      {
+        "from": "UNDEFINED",
+        "to": "MISSING",
+        "count": 3
+      },
+      {
+        "from": "EMPLOYEE",
+        "to": "UNDEFINED",
+        "count": 1
+      },
+      {
+        "from": "PRE_APPROVER",
+        "to": "MISSING",
+        "count": 1
+      },
+      {
+        "from": "UNDEFINED",
+        "to": "EMPLOYEE",
+        "count": 1
+      }
+    ]
+  },
+  "status": "observed",
+  "conditions": "Eindhoven University of Technology travel expense declarations (domestic), 2017 two departments, 2018 whole university; staff anonymised to roles",
+  "transfer": "None directly. Shows a sequential approval chain with a return loop to the submitter.",
+  "source": {
+    "name": "BPI Challenge 2020: Domestic Declarations",
+    "creator": "Boudewijn van Dongen, Eindhoven University of Technology",
+    "doi": "10.4121/uuid:3f422315-ed9d-4882-891f-e180b5b4feb5",
+    "url": "https://data.4tu.nl/datasets/6a0a26d2-82d0-4018-b1cd-89afb0e8627f/1",
+    "licence": "CC BY-NC 4.0",
+    "retrieved_utc": "2026-10-02",
+    "file_sha256": "0bc3312acf0b9ee5ae6f4ebe9df204005ef11665d62f2d21dd04995161d7532b"
+  },
+  "versions": {
+    "code_commit": "a342e21",
+    "code_dirty": false,
+    "analysis": "experiments/e3_bpic2020/run_e3.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "created_utc": "2026-10-02 22:57 UTC"
+}

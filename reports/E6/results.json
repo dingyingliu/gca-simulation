@@ -1,0 +1,168 @@
+{
+ "generated_utc": "2026-10-03 01:28 UTC",
+ "versions": {
+  "code_commit": "782f3bc",
+  "code_dirty": false
+ },
+ "tau_bench_commit": "59a200c6d575d595120f1cb70fea53cef0632f6b",
+ "files": {
+  "gpt-4o-retail.json": {
+   "sha256": "df01707894836168ff0ec9616b0bf08f66c7e5afcf313e5fe4f7a2f5c2ec938b",
+   "bytes": 10813408,
+   "recorded": {
+    "top_level_fields": [
+     "task_id",
+     "reward",
+     "info",
+     "traj",
+     "trial"
+    ],
+    "info_fields": [
+     "task",
+     "source",
+     "user_cost",
+     "reward_info"
+    ],
+    "task_fields": [
+     "user_id",
+     "actions",
+     "instruction",
+     "outputs"
+    ],
+    "message_fields": [
+     "content",
+     "name",
+     "role",
+     "tool_call_id",
+     "tool_calls"
+    ],
+    "policy_in_system_message": true,
+    "model_identified_by": "file name only; no model, version, date, temperature or seed field",
+    "timestamps": "none; messages are ordered but not timed"
+   },
+   "runs": 460,
+   "tasks": 115,
+   "trials_per_task": [
+    4
+   ],
+   "trial_ids": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "mean_reward": 0.6043,
+   "share_tasks_all_trials_succeed": 0.3826,
+   "share_tasks_some_but_not_all_succeed": 0.4261,
+   "trials_compared": 4,
+   "verification": {
+    "runs_with_any_action": 430,
+    "runs_reading_user_data_before_authentication": 1,
+    "runs_writing_before_authentication": 0,
+    "database_writes": 666,
+    "writes_after_explicit_yes": 507,
+    "share_writes_after_explicit_yes": 0.7613,
+    "share_writes_after_explicit_yes_95ci_wilson": [
+     0.7274,
+     0.7921
+    ]
+   },
+   "escalation": {
+    "runs_transferring_to_human": 25,
+    "runs_where_gold_actions_include_transfer": 16,
+    "transferred_and_expected": 11,
+    "transferred_not_expected": 14,
+    "expected_not_transferred": 5,
+    "transfer_share": 0.0543,
+    "mean_reward_transferred": 0.64,
+    "mean_reward_not_transferred": 0.6023
+   },
+   "failures": {
+    "failed_runs": 182,
+    "with_an_extra_or_wrong_write": 55,
+    "with_a_missing_write": 102
+   }
+  },
+  "sonnet-35-new-retail.json": {
+   "sha256": "0df526398e9d2720c32d340815cffb04fe8c4f8a61b1f4f84bf3bb558f760131",
+   "bytes": 26544890,
+   "recorded": {
+    "top_level_fields": [
+     "task_id",
+     "reward",
+     "info",
+     "traj",
+     "trial"
+    ],
+    "info_fields": [
+     "task",
+     "source",
+     "user_cost",
+     "reward_info"
+    ],
+    "task_fields": [
+     "user_id",
+     "actions",
+     "instruction",
+     "outputs"
+    ],
+    "message_fields": [
+     "content",
+     "name",
+     "role",
+     "tool_call_id",
+     "tool_calls"
+    ],
+    "policy_in_system_message": true,
+    "model_identified_by": "file name only; no model, version, date, temperature or seed field",
+    "timestamps": "none; messages are ordered but not timed"
+   },
+   "runs": 920,
+   "tasks": 115,
+   "trials_per_task": [
+    8
+   ],
+   "trial_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "mean_reward": 0.6924,
+   "share_tasks_all_trials_succeed": 0.3565,
+   "share_tasks_some_but_not_all_succeed": 0.5826,
+   "trials_compared": 8,
+   "verification": {
+    "runs_with_any_action": 898,
+    "runs_reading_user_data_before_authentication": 33,
+    "runs_writing_before_authentication": 2,
+    "database_writes": 1352,
+    "writes_after_explicit_yes": 1220,
+    "share_writes_after_explicit_yes": 0.9024,
+    "share_writes_after_explicit_yes_95ci_wilson": [
+     0.8854,
+     0.9171
+    ]
+   },
+   "escalation": {
+    "runs_transferring_to_human": 79,
+    "runs_where_gold_actions_include_transfer": 32,
+    "transferred_and_expected": 20,
+    "transferred_not_expected": 59,
+    "expected_not_transferred": 12,
+    "transfer_share": 0.0859,
+    "mean_reward_transferred": 0.5316,
+    "mean_reward_not_transferred": 0.7075
+   },
+   "failures": {
+    "failed_runs": 283,
+    "with_an_extra_or_wrong_write": 51,
+    "with_a_missing_write": 127
+   }
+  }
+ }
+}

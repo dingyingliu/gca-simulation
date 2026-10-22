@@ -1,0 +1,34 @@
+{
+ "generated_utc": "2026-10-03 09:13 UTC",
+ "versions": {
+  "code_commit": "a91aaf8",
+  "code_dirty": false
+ },
+ "run_file": "setup_1.jsonl",
+ "run_sha256": "040698044efdbfcfa38b9099ce2a5c2f7392ac84442f0e45d1fe68755d5da058",
+ "model": "qwen/qwen3.8-27b:free",
+ "P1_parse": {
+  "responses": 24,
+  "parsed": 24,
+  "refusals": 0,
+  "parse_share": 1.0,
+  "pass": true
+ },
+ "P2_equal_context": {
+  "mean_prompt_tokens_S_over_I": {
+   "V+": 1.0495,
+   "V-": 1.0428
+  },
+  "harm_and_help_notes_in_view_in_S": true,
+  "no_other_region_note_in_I": true,
+  "ten_notes_in_view": true,
+  "pass": true
+ },
+ "P3_can_use_visible_agreement": {
+  "agreement_task_runs_in_I_V+": 4,
+  "correct_on_agreed_term": 4,
+  "share": 1.0,
+  "pass": true
+ },
+ "all_pass": true
+}

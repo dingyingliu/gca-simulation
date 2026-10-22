@@ -1,0 +1,70 @@
+{
+  "id": "time_to_decision.budget_owner_after_administration.bpic2020",
+  "mechanism": "Time from 'Administration approved' to the Budget Owner decision that follows it",
+  "measures": "Elapsed calendar time between the two recorded events. Includes queueing, nights, weekends, notification delay and waiting for information. Not review time.",
+  "simulator_parameter": "review latency range for a quotation reviewer (upper envelope)",
+  "estimable": "partly",
+  "estimable_note": "No start-of-work events and no queue position, so work time cannot be separated out; usable only as an upper envelope.",
+  "value": {
+    "unit": "days",
+    "n": 2879,
+    "distribution": "empirical",
+    "summary": {
+      "from": "Declaration APPROVED by ADMINISTRATION",
+      "role": "BUDGET OWNER",
+      "estimable_as_review_latency": "partly",
+      "n": 2879,
+      "mean_days": 1.885,
+      "median_days": 0.864,
+      "median_days_95ci_bootstrap": [
+        0.835,
+        0.891
+      ],
+      "p2_5_days": 0.005,
+      "p10_days": 0.027,
+      "p25_days": 0.126,
+      "p75_days": 2.715,
+      "p90_days": 4.853,
+      "p97_5_days": 10.239,
+      "share_under_1_hour": 0.1358,
+      "share_over_7_days": 0.0431,
+      "share_spanning_a_weekend_day": 0.3011,
+      "by_start_year": {
+        "2018": {
+          "n": 2875,
+          "median_days": 0.864,
+          "p25_days": 0.126,
+          "p75_days": 2.715,
+          "p90_days": 4.852
+        }
+      }
+    },
+    "interval_95": [
+      0.005,
+      10.239
+    ],
+    "interval_95_meaning": "central 95% of observed gaps (2.5th to 97.5th percentile), not a CI"
+  },
+  "use": "range_only",
+  "status": "observed",
+  "conditions": "Eindhoven University of Technology travel expense declarations (domestic), 2017 two departments, 2018 whole university; staff anonymised to roles; Administration approved then Budget Owner",
+  "transfer": "Analogue range for how long a quotation reviewer takes to respond at a comparable load, as an upper envelope (it includes queueing). Use the empirical quantiles; no fitted distribution is endorsed.",
+  "source": {
+    "name": "BPI Challenge 2020: Domestic Declarations",
+    "creator": "Boudewijn van Dongen, Eindhoven University of Technology",
+    "doi": "10.4121/uuid:3f422315-ed9d-4882-891f-e180b5b4feb5",
+    "url": "https://data.4tu.nl/datasets/6a0a26d2-82d0-4018-b1cd-89afb0e8627f/1",
+    "licence": "CC BY-NC 4.0",
+    "retrieved_utc": "2026-10-02",
+    "file_sha256": "0bc3312acf0b9ee5ae6f4ebe9df204005ef11665d62f2d21dd04995161d7532b"
+  },
+  "versions": {
+    "code_commit": "a342e21",
+    "code_dirty": false,
+    "analysis": "experiments/e3_bpic2020/run_e3.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "created_utc": "2026-10-02 22:57 UTC"
+}

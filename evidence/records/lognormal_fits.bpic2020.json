@@ -1,0 +1,111 @@
+{
+  "id": "lognormal_fits.bpic2020",
+  "mechanism": "Candidate parametric forms for the elapsed gaps between steps",
+  "measures": "A lognormal fitted by maximum likelihood to the positive gaps of each step, with its Kolmogorov-Smirnov statistic and the mean and 99th percentile it implies, next to the observed ones",
+  "simulator_parameter": null,
+  "estimable": "no",
+  "estimable_note": "Reference only, not a sampler. The fits are poor (KS well above what n supports) and imply far longer tails than observed, for example a 67-day mean against an observed 2-day mean for the pooled supervisor gaps before this split.",
+  "value": {
+    "table": {
+      "administration_after_submission": {
+        "mu": -7.0889,
+        "sigma": 3.319,
+        "ks_statistic": 0.133,
+        "n_positive": 9154,
+        "share_zero_gaps": 0.0,
+        "implied_mean_days": 0.206,
+        "implied_p99_days": 1.882,
+        "observed_mean_days": 1.624,
+        "observed_p99_days": 43.121
+      },
+      "pre_approver_after_submission": {
+        "mu": -7.1767,
+        "sigma": 3.2612,
+        "ks_statistic": 0.1405,
+        "n_positive": 771,
+        "share_zero_gaps": 0.0,
+        "implied_mean_days": 0.156,
+        "implied_p99_days": 1.507,
+        "observed_mean_days": 1.32,
+        "observed_p99_days": 37.245
+      },
+      "supervisor_after_submission": {
+        "mu": -7.3703,
+        "sigma": 3.0115,
+        "ks_statistic": 0.1326,
+        "n_positive": 1596,
+        "share_zero_gaps": 0.0,
+        "implied_mean_days": 0.059,
+        "implied_p99_days": 0.695,
+        "observed_mean_days": 0.937,
+        "observed_p99_days": 31.178
+      },
+      "budget_owner_after_administration": {
+        "mu": -0.6418,
+        "sigma": 2.0475,
+        "ks_statistic": 0.1578,
+        "n_positive": 2879,
+        "share_zero_gaps": 0.0,
+        "implied_mean_days": 4.282,
+        "implied_p99_days": 61.651,
+        "observed_mean_days": 1.885,
+        "observed_p99_days": 13.723
+      },
+      "supervisor_after_administration": {
+        "mu": -0.5984,
+        "sigma": 2.0436,
+        "ks_statistic": 0.1626,
+        "n_positive": 5323,
+        "share_zero_gaps": 0.0,
+        "implied_mean_days": 4.436,
+        "implied_p99_days": 63.792,
+        "observed_mean_days": 1.912,
+        "observed_p99_days": 13.635
+      },
+      "supervisor_after_budget_owner": {
+        "mu": 0.4099,
+        "sigma": 1.4977,
+        "ks_statistic": 0.1469,
+        "n_positive": 2820,
+        "share_zero_gaps": 0.0,
+        "implied_mean_days": 4.625,
+        "implied_p99_days": 49.112,
+        "observed_mean_days": 2.879,
+        "observed_p99_days": 6.905
+      },
+      "supervisor_after_pre_approver": {
+        "mu": -0.6297,
+        "sigma": 2.157,
+        "ks_statistic": 0.1687,
+        "n_positive": 685,
+        "share_zero_gaps": 0.0,
+        "implied_mean_days": 5.456,
+        "implied_p99_days": 80.504,
+        "observed_mean_days": 1.907,
+        "observed_p99_days": 6.83
+      }
+    }
+  },
+  "use": "reference_only",
+  "status": "fitted",
+  "conditions": "Eindhoven University of Technology travel expense declarations (domestic), 2017 two departments, 2018 whole university; staff anonymised to roles",
+  "transfer": "None. Not selected for simulation.",
+  "source": {
+    "name": "BPI Challenge 2020: Domestic Declarations",
+    "creator": "Boudewijn van Dongen, Eindhoven University of Technology",
+    "doi": "10.4121/uuid:3f422315-ed9d-4882-891f-e180b5b4feb5",
+    "url": "https://data.4tu.nl/datasets/6a0a26d2-82d0-4018-b1cd-89afb0e8627f/1",
+    "licence": "CC BY-NC 4.0",
+    "retrieved_utc": "2026-10-02",
+    "file_sha256": "0bc3312acf0b9ee5ae6f4ebe9df204005ef11665d62f2d21dd04995161d7532b"
+  },
+  "versions": {
+    "code_commit": "a342e21",
+    "code_dirty": false,
+    "analysis": "experiments/e3_bpic2020/run_e3.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "created_utc": "2026-10-02 22:57 UTC"
+}

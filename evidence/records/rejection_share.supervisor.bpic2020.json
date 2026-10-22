@@ -1,0 +1,53 @@
+{
+  "id": "rejection_share.supervisor.bpic2020",
+  "mechanism": "How often the Supervisor step returns a declaration rather than approving it",
+  "measures": "Share of this role's decision events that are rejections. Reasons are not recorded, nor whether the declaration was wrong. Mixes caught errors, missing paperwork and policy refusals, and misses errors nobody caught.",
+  "simulator_parameter": "share of items returned at a review step (not detection probability)",
+  "estimable": "yes",
+  "estimable_note": "Estimable as an observed return rate. Not estimable as the chance of catching an error.",
+  "value": {
+    "unit": "share of decisions",
+    "n": 10424,
+    "point": 0.0281,
+    "interval_95": [
+      0.0251,
+      0.0315
+    ],
+    "interval_95_meaning": "Wilson interval treating decisions as independent. Decisions cluster within cases and within reviewers the log cannot identify, so it understates uncertainty; the 2017 and 2018 shares in the summary show the spread across organisational scope.",
+    "summary": {
+      "by_start_year": {
+        "2017": {
+          "decisions": 2299,
+          "rejected": 71,
+          "rejection_share": 0.0309
+        },
+        "2018": {
+          "decisions": 8125,
+          "rejected": 222,
+          "rejection_share": 0.0273
+        }
+      }
+    }
+  },
+  "status": "observed",
+  "conditions": "Eindhoven University of Technology travel expense declarations (domestic), 2017 two departments, 2018 whole university; staff anonymised to roles; Supervisor step",
+  "transfer": "Analogue plausibility range for how often a quotation review returns a quote. Must not be used as a detection rate.",
+  "source": {
+    "name": "BPI Challenge 2020: Domestic Declarations",
+    "creator": "Boudewijn van Dongen, Eindhoven University of Technology",
+    "doi": "10.4121/uuid:3f422315-ed9d-4882-891f-e180b5b4feb5",
+    "url": "https://data.4tu.nl/datasets/6a0a26d2-82d0-4018-b1cd-89afb0e8627f/1",
+    "licence": "CC BY-NC 4.0",
+    "retrieved_utc": "2026-10-02",
+    "file_sha256": "0bc3312acf0b9ee5ae6f4ebe9df204005ef11665d62f2d21dd04995161d7532b"
+  },
+  "versions": {
+    "code_commit": "a342e21",
+    "code_dirty": false,
+    "analysis": "experiments/e3_bpic2020/run_e3.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "created_utc": "2026-10-02 22:57 UTC"
+}

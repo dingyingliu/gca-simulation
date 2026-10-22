@@ -1,0 +1,39 @@
+{
+  "id": "quotation.p_notice_visible",
+  "mechanism": "Having read a note that contradicts a register entry it can see, the agent notices and uses the register.",
+  "measures": "Not drawn on its own any more, and still not measured on its own. The agent pilot (E5) measures the product p_read_note x (1 - p_notice_visible), which is drawn from the pilot's interval; this parameter follows from it and the assumed p_read_note. The range shown is the envelope of the values that can result.",
+  "simulator_parameter": "p_notice_visible",
+  "estimable": "no",
+  "estimable_note": "Not identified on its own. The pilot fits a combination of parameters (the records named in the notes); this parameter follows from that combination and from an assumed parameter, so it stays an assumption.",
+  "value": {
+    "unit": "probability",
+    "range": [
+      0.3203,
+      1.0
+    ],
+    "distribution": "not drawn on its own: it follows from a combination drawn from the pilot's interval and from an assumed parameter (gca_sim/quotation/params.py)"
+  },
+  "status": "assumed",
+  "source": {
+    "name": "Declared assumption, constrained by the GCA controlled agent pilot (E5)",
+    "doi": null,
+    "licence": null,
+    "retrieved_utc": null
+  },
+  "conditions": "E4 quotation research model; every design, context and week",
+  "transfer": "Not drawn on its own any more, and still not measured on its own. The agent pilot (E5) measures the product p_read_note x (1 - p_notice_visible), which is drawn from the pilot's interval; this parameter follows from it and the assumed p_read_note. The range shown is the envelope of the values that can result.",
+  "versions": {
+    "code_commit": "70e17db",
+    "code_dirty": false,
+    "analysis": "experiments/e4_quotation/write_assumption_records.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "declared_utc": "2026-10-02 22:28 UTC",
+  "created_utc": "2026-10-03 14:03 UTC",
+  "used_by": [
+    "gca_sim/quotation"
+  ],
+  "notes": "Constrained through the fitted pilot records: note_adoption_visible.agent_pilot. Range set on 2026-10-03 14:01 UTC by experiments/e4_quotation/apply_pilot.py."
+}

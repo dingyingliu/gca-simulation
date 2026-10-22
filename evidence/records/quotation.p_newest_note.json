@@ -1,0 +1,38 @@
+{
+  "id": "quotation.p_newest_note",
+  "mechanism": "When several notes about the customer's term are readable, the agent takes the newest one; otherwise one of the older ones, each equally likely.",
+  "measures": "Nothing measured. A declared assumption.",
+  "simulator_parameter": "p_newest_note",
+  "estimable": "no",
+  "estimable_note": "No evidence yet. Planned estimate: E5: how often the second Harm task matches the planted value although the first Harm task's stored note states another value (S.V-).",
+  "value": {
+    "unit": "probability",
+    "range": [
+      1.0,
+      1.0
+    ],
+    "distribution": "uniform over the range (Latin hypercube draws)"
+  },
+  "status": "assumed",
+  "source": {
+    "name": "Declared assumption, evidence/assumptions.yaml",
+    "doi": null,
+    "licence": null,
+    "retrieved_utc": null
+  },
+  "conditions": "E4 quotation research model; every design, context and week",
+  "transfer": "No evidence. Fixed at 1, the first model's rule (always the newest note).",
+  "versions": {
+    "code_commit": "f79bfb2",
+    "code_dirty": false,
+    "analysis": "experiments/e4_quotation/write_assumption_records.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "declared_utc": "2026-10-03 10:25 UTC",
+  "created_utc": "2026-10-03 13:59 UTC",
+  "used_by": [
+    "gca_sim/quotation"
+  ]
+}

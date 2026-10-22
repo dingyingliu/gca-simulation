@@ -1,0 +1,53 @@
+{
+  "id": "note_adoption_help.agent_pilot",
+  "mechanism": "The agent uses a correct shared note when it cannot see the agreement",
+  "measures": "Share of Help tasks whose agreed term equals the correct note's value exactly, shared notes, agreement not visible (S.V-)",
+  "simulator_parameter": "the product p_read_note x p_adopt_blind (should agree with note_adoption_blind)",
+  "estimable": "partly",
+  "estimable_note": "A pilot: few tasks per cell, one model, one prompt, synthetic tasks. The frequency is over valid answers. It constrains the named parameter or product; it does not identify the latent steps behind it.",
+  "value": {
+    "point": 0.9333,
+    "n": 15,
+    "summary": {
+      "mean_over_tasks": 0.9333,
+      "tasks": 5,
+      "valid_task_runs": 15,
+      "count": 14,
+      "missing_task_runs": 0,
+      "interval_95_group_bootstrap": [
+        0.8,
+        1.0
+      ],
+      "interval_95_wilson_pooled_ignores_clustering": [
+        0.7018,
+        0.9881
+      ]
+    },
+    "interval_95": [
+      0.8,
+      1.0
+    ],
+    "interval_95_meaning": "bootstrap over the 5 development groups (crude); the Wilson interval in summary ignores clustering"
+  },
+  "status": "fitted",
+  "use": "range_only",
+  "source": {
+    "name": "GCA controlled agent pilot (E5), development groups",
+    "url": "experiments/agent_pilot/runs/development.jsonl",
+    "doi": null,
+    "licence": null,
+    "retrieved_utc": "2026-10-03",
+    "file_sha256": "57af7bb8535c2039f673d2f8e4b5f2a6bff14bd426bc054e443ba179cc54c10d"
+  },
+  "conditions": "synthetic quotation tasks, one fixed prompt, model qwen/qwen3.8-27b:free through openrouter (host ['modelrun/fp4']), reasoning effort low, 5 development groups, 3 replicates",
+  "transfer": "Analogue for the quotation episode: synthetic tasks, one model, one prompt.",
+  "versions": {
+    "code_commit": "a1f048f",
+    "code_dirty": false,
+    "analysis": "experiments/agent_pilot/analyse_pilot.py",
+    "model": "qwen/qwen3.8-27b:free"
+  },
+  "disagreements": [],
+  "tests": [],
+  "created_utc": "2026-10-03 14:32 UTC"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "quotation.notes_record",
+  "mechanism": "What an agent's note records: the drafted terms or the terms as released after review",
+  "measures": "Nothing measured. A structural assumption.",
+  "simulator_parameter": "notes_record",
+  "estimable": "no",
+  "estimable_note": "Structural assumption; no evidence.",
+  "value": {
+    "summary": {
+      "values": [
+        "draft",
+        "released"
+      ]
+    }
+  },
+  "status": "assumed",
+  "source": {
+    "name": "Declared assumption, evidence/assumptions.yaml",
+    "doi": null,
+    "licence": null,
+    "retrieved_utc": null
+  },
+  "conditions": "E4 quotation research model",
+  "transfer": "structural assumption; both values are run and reported separately",
+  "versions": {
+    "code_commit": "1146349",
+    "code_dirty": false,
+    "analysis": "experiments/e4_quotation/write_assumption_records.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "declared_utc": "2026-10-02 22:28 UTC",
+  "created_utc": "2026-10-03 10:36 UTC",
+  "used_by": [
+    "gca_sim/quotation"
+  ]
+}

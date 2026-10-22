@@ -1,0 +1,34 @@
+{
+  "id": "quotation.t_draft",
+  "mechanism": "Time for the agent to draft and send a quote",
+  "measures": "Nothing measured. A structural assumption.",
+  "simulator_parameter": "t_draft",
+  "estimable": "no",
+  "estimable_note": "Structural assumption; no evidence.",
+  "value": {
+    "unit": "working days",
+    "point": 0.5
+  },
+  "status": "illustrative",
+  "source": {
+    "name": "Declared assumption, evidence/assumptions.yaml",
+    "doi": null,
+    "licence": null,
+    "retrieved_utc": null
+  },
+  "conditions": "E4 quotation research model",
+  "transfer": "walkthrough: half a day to draft and send",
+  "versions": {
+    "code_commit": "1146349",
+    "code_dirty": false,
+    "analysis": "experiments/e4_quotation/write_assumption_records.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "declared_utc": "2026-10-02 22:28 UTC",
+  "created_utc": "2026-10-03 10:36 UTC",
+  "used_by": [
+    "gca_sim/quotation"
+  ]
+}

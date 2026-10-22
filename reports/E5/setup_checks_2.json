@@ -1,0 +1,57 @@
+{
+ "generated_utc": "2026-10-03 10:09 UTC",
+ "versions": {
+  "code_commit": "da00a9e",
+  "code_dirty": false
+ },
+ "model": "qwen/qwen3.8-27b:free",
+ "request_inputs_sha256": "e04d17462688b7594d2cff1f84fa07accb47a44d64d5cae5c379ea41123690c7",
+ "scoring_inputs_sha256": "254d2f1b71a0ac78036fd264b9b8cc831d62757ca3632cb69f21019c677faf35",
+ "run_file": "setup_2.jsonl",
+ "run_sha256": "1a8486e5f53431614944da5aaee5dbfc859102f95201693444409c750bd7e35f",
+ "P1_parse": {
+  "responses": 24,
+  "parsed": 24,
+  "refusals": 0,
+  "parse_share": 1.0,
+  "pass": true
+ },
+ "P2_equal_context": {
+  "measure": "the notes block in characters, counted by code on the prompts sent (no tokeniser for this model is available offline); limits: the mean in S within 10% of the mean in I, and within 15% at every task position at each visibility level",
+  "notes_block": {
+   "mean_chars_S": 1535.2,
+   "mean_chars_I": 1546.7,
+   "mean_ratio_S_over_I": 0.9926,
+   "ratio_by_visibility_and_task": {
+    "V+|T1": 1.0148,
+    "V+|T2": 0.9974,
+    "V+|T3": 0.9948,
+    "V+|T4": 0.9624,
+    "V+|T5": 0.9621,
+    "V+|T6": 0.9226,
+    "V-|T1": 1.0148,
+    "V-|T2": 0.9916,
+    "V-|T3": 1.0291,
+    "V-|T4": 1.0154,
+    "V-|T5": 1.0189,
+    "V-|T6": 0.9865
+   }
+  },
+  "every_position_within_limit": true,
+  "whole_prompt_provider_tokens_S_over_I_reported_only": {
+   "V+": 0.9952,
+   "V-": 1.0006
+  },
+  "harm_and_help_notes_in_view_in_S": true,
+  "no_other_region_note_in_I": true,
+  "ten_notes_in_view": true,
+  "pass": true
+ },
+ "P3_can_use_visible_agreement": {
+  "agreement_task_runs_in_I_V+": 4,
+  "complied_with_agreed_term": 4,
+  "share": 1.0,
+  "pass": true
+ },
+ "all_pass": true
+}

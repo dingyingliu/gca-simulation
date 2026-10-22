@@ -1,0 +1,46 @@
+{
+  "id": "trial_consistency.taubench_retail",
+  "mechanism": "The same agent on the same task succeeds on some trials and fails on others",
+  "measures": "Share of tasks where every trial succeeds, and where some but not all succeed",
+  "simulator_parameter": "run-to-run variation of agent behaviour (supports replicate runs per task)",
+  "estimable": "yes",
+  "value": {
+    "table": {
+      "gpt-4o-retail": {
+        "mean_reward": 0.6043,
+        "share_tasks_all_trials_succeed": 0.3826,
+        "share_tasks_some_but_not_all_succeed": 0.4261,
+        "trials_per_task": [
+          4
+        ]
+      },
+      "sonnet-35-new-retail": {
+        "mean_reward": 0.6924,
+        "share_tasks_all_trials_succeed": 0.3565,
+        "share_tasks_some_but_not_all_succeed": 0.5826,
+        "trials_per_task": [
+          8
+        ]
+      }
+    }
+  },
+  "status": "observed",
+  "conditions": "simulated customer-service conversations in the τ-bench retail domain; one agent with tools and a written policy; tau-bench commit 59a200c6d575d595120f1cb70fea53cef0632f6b",
+  "transfer": "Supports treating agent behaviour as stochastic and using several replicates per task (E2 plan).",
+  "source": {
+    "name": "τ-bench historical trajectories (retail), sierra-research/tau-bench",
+    "url": "https://github.com/sierra-research/tau-bench",
+    "doi": null,
+    "licence": "MIT",
+    "retrieved_utc": "2026-10-02"
+  },
+  "versions": {
+    "code_commit": "782f3bc",
+    "code_dirty": false,
+    "analysis": "experiments/e6_taubench/check_taubench.py",
+    "model": "as named in the file names only: gpt-4o, sonnet-35-new"
+  },
+  "disagreements": [],
+  "tests": [],
+  "created_utc": "2026-10-03 01:28 UTC"
+}

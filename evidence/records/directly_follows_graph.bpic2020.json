@@ -1,0 +1,227 @@
+{
+  "id": "directly_follows_graph.bpic2020",
+  "mechanism": "Which step follows which in practice",
+  "measures": "Counts of directly-follows pairs of activities within cases",
+  "simulator_parameter": null,
+  "estimable": "yes",
+  "value": {
+    "table": [
+      {
+        "from": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "to": "Request Payment",
+        "count": 10038
+      },
+      {
+        "from": "Request Payment",
+        "to": "Payment Handled",
+        "count": 10037
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration APPROVED by ADMINISTRATION",
+        "count": 8202
+      },
+      {
+        "from": "Declaration APPROVED by ADMINISTRATION",
+        "to": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "count": 5133
+      },
+      {
+        "from": "Declaration APPROVED by ADMINISTRATION",
+        "to": "Declaration APPROVED by BUDGET OWNER",
+        "count": 2820
+      },
+      {
+        "from": "Declaration APPROVED by BUDGET OWNER",
+        "to": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "count": 2788
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "count": 1536
+      },
+      {
+        "from": "Declaration REJECTED by EMPLOYEE",
+        "to": "Declaration SUBMITTED by EMPLOYEE",
+        "count": 1081
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration REJECTED by ADMINISTRATION",
+        "count": 952
+      },
+      {
+        "from": "Declaration REJECTED by ADMINISTRATION",
+        "to": "Declaration REJECTED by EMPLOYEE",
+        "count": 928
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration APPROVED by PRE_APPROVER",
+        "count": 685
+      },
+      {
+        "from": "Declaration APPROVED by PRE_APPROVER",
+        "to": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "count": 674
+      },
+      {
+        "from": "Declaration REJECTED by SUPERVISOR",
+        "to": "Declaration REJECTED by EMPLOYEE",
+        "count": 286
+      },
+      {
+        "from": "Declaration APPROVED by ADMINISTRATION",
+        "to": "Declaration REJECTED by SUPERVISOR",
+        "count": 190
+      },
+      {
+        "from": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "to": "Declaration REJECTED by MISSING",
+        "count": 86
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration REJECTED by PRE_APPROVER",
+        "count": 86
+      },
+      {
+        "from": "Declaration REJECTED by PRE_APPROVER",
+        "to": "Declaration REJECTED by EMPLOYEE",
+        "count": 85
+      },
+      {
+        "from": "Declaration REJECTED by MISSING",
+        "to": "Declaration SUBMITTED by EMPLOYEE",
+        "count": 61
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration REJECTED by SUPERVISOR",
+        "count": 60
+      },
+      {
+        "from": "Declaration APPROVED by ADMINISTRATION",
+        "to": "Declaration REJECTED by BUDGET OWNER",
+        "count": 59
+      },
+      {
+        "from": "Declaration REJECTED by BUDGET OWNER",
+        "to": "Declaration REJECTED by EMPLOYEE",
+        "count": 58
+      },
+      {
+        "from": "Declaration APPROVED by BUDGET OWNER",
+        "to": "Declaration REJECTED by SUPERVISOR",
+        "count": 32
+      },
+      {
+        "from": "Declaration REJECTED by ADMINISTRATION",
+        "to": "Declaration SUBMITTED by EMPLOYEE",
+        "count": 19
+      },
+      {
+        "from": "Declaration APPROVED by PRE_APPROVER",
+        "to": "Declaration REJECTED by SUPERVISOR",
+        "count": 11
+      },
+      {
+        "from": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "to": "Payment Handled",
+        "count": 7
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration REJECTED by EMPLOYEE",
+        "count": 7
+      },
+      {
+        "from": "Request Payment",
+        "to": "Declaration REJECTED by MISSING",
+        "count": 3
+      },
+      {
+        "from": "Declaration REJECTED by SUPERVISOR",
+        "to": "Declaration SUBMITTED by EMPLOYEE",
+        "count": 2
+      },
+      {
+        "from": "Declaration FOR_APPROVAL by ADMINISTRATION",
+        "to": "Declaration SUBMITTED by EMPLOYEE",
+        "count": 1
+      },
+      {
+        "from": "Declaration FOR_APPROVAL by PRE_APPROVER",
+        "to": "Declaration REJECTED by MISSING",
+        "count": 1
+      },
+      {
+        "from": "Declaration FOR_APPROVAL by SUPERVISOR",
+        "to": "Declaration REJECTED by MISSING",
+        "count": 1
+      },
+      {
+        "from": "Declaration REJECTED by BUDGET OWNER",
+        "to": "Declaration SUBMITTED by EMPLOYEE",
+        "count": 1
+      },
+      {
+        "from": "Declaration REJECTED by PRE_APPROVER",
+        "to": "Declaration SUBMITTED by EMPLOYEE",
+        "count": 1
+      },
+      {
+        "from": "Declaration REJECTED by SUPERVISOR",
+        "to": "Request Payment",
+        "count": 1
+      },
+      {
+        "from": "Declaration SAVED by EMPLOYEE",
+        "to": "Request Payment",
+        "count": 1
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration FOR_APPROVAL by ADMINISTRATION",
+        "count": 1
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration FOR_APPROVAL by PRE_APPROVER",
+        "count": 1
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration FOR_APPROVAL by SUPERVISOR",
+        "count": 1
+      },
+      {
+        "from": "Payment Handled",
+        "to": "Declaration REJECTED by EMPLOYEE",
+        "count": 1
+      }
+    ]
+  },
+  "status": "observed",
+  "conditions": "Eindhoven University of Technology travel expense declarations (domestic), 2017 two departments, 2018 whole university; staff anonymised to roles",
+  "transfer": "None directly. The observed paths are not the formal rules.",
+  "source": {
+    "name": "BPI Challenge 2020: Domestic Declarations",
+    "creator": "Boudewijn van Dongen, Eindhoven University of Technology",
+    "doi": "10.4121/uuid:3f422315-ed9d-4882-891f-e180b5b4feb5",
+    "url": "https://data.4tu.nl/datasets/6a0a26d2-82d0-4018-b1cd-89afb0e8627f/1",
+    "licence": "CC BY-NC 4.0",
+    "retrieved_utc": "2026-10-02",
+    "file_sha256": "0bc3312acf0b9ee5ae6f4ebe9df204005ef11665d62f2d21dd04995161d7532b"
+  },
+  "versions": {
+    "code_commit": "a342e21",
+    "code_dirty": false,
+    "analysis": "experiments/e3_bpic2020/run_e3.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "created_utc": "2026-10-02 22:57 UTC"
+}

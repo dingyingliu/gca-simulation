@@ -1,0 +1,440 @@
+{
+ "frozen_utc": "2026-10-03 14:34 UTC",
+ "development_results_sha256": "00199bcb6d2d08ce26c4d6e74a1dde1cfa7e42a1c66ad0be01c07234bce84eeb",
+ "assumptions_sha256": "82140be9e16a1c850a170bc85e3dc3ea1124496a7d695f0761a2c89d49851f7c",
+ "heldout_manifest_sha256": "5a462d2582abba8a1cfb0ee1e1f5a4cc9bf511cb79447e260c424aaaf5ee3025",
+ "development_versions": {
+  "code_commit": "3029b32",
+  "code_dirty": false
+ },
+ "rule": {
+  "development_share": 0.95,
+  "heldout_share": 0.9,
+  "target_pass_fraction": 0.8,
+  "target_measures": [
+   "wrong_terms",
+   "days_mean"
+  ],
+  "excluded_measures": [
+   "total_reviews",
+   "lead_reviews",
+   "ho_reviews"
+  ],
+  "families": [
+   "design",
+   "context",
+   "baseline",
+   "notes_assumption"
+  ]
+ },
+ "conclusions": [
+  {
+   "id": "full|review|isolated|draft||full|limits|isolated|draft||wrong_terms",
+   "a": "full|review|isolated|draft",
+   "b": "full|limits|isolated|draft",
+   "measure": "wrong_terms",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|isolated|draft||full|limits|isolated|draft||days_mean",
+   "a": "full|review|isolated|draft",
+   "b": "full|limits|isolated|draft",
+   "measure": "days_mean",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|isolated|draft||full|limits|isolated|draft||inconsistent_customers",
+   "a": "full|review|isolated|draft",
+   "b": "full|limits|isolated|draft",
+   "measure": "inconsistent_customers",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|isolated|draft||full|limits|isolated|draft||repeat_all_wrong",
+   "a": "full|review|isolated|draft",
+   "b": "full|limits|isolated|draft",
+   "measure": "repeat_all_wrong",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|isolated|draft||full|local|isolated|draft||days_mean",
+   "a": "full|review|isolated|draft",
+   "b": "full|local|isolated|draft",
+   "measure": "days_mean",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|isolated|draft||full|local|isolated|draft||repeat_all_wrong",
+   "a": "full|review|isolated|draft",
+   "b": "full|local|isolated|draft",
+   "measure": "repeat_all_wrong",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|limits|isolated|draft||full|local|isolated|draft||wrong_terms",
+   "a": "full|limits|isolated|draft",
+   "b": "full|local|isolated|draft",
+   "measure": "wrong_terms",
+   "direction": -1,
+   "family": "design"
+  },
+  {
+   "id": "full|limits|isolated|draft||full|local|isolated|draft||days_mean",
+   "a": "full|limits|isolated|draft",
+   "b": "full|local|isolated|draft",
+   "measure": "days_mean",
+   "direction": -1,
+   "family": "design"
+  },
+  {
+   "id": "full|limits|isolated|draft||full|local|isolated|draft||inconsistent_customers",
+   "a": "full|limits|isolated|draft",
+   "b": "full|local|isolated|draft",
+   "measure": "inconsistent_customers",
+   "direction": -1,
+   "family": "design"
+  },
+  {
+   "id": "full|limits|isolated|draft||full|local|isolated|draft||repeat_all_wrong",
+   "a": "full|limits|isolated|draft",
+   "b": "full|local|isolated|draft",
+   "measure": "repeat_all_wrong",
+   "direction": -1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|isolated|released||full|limits|isolated|released||wrong_terms",
+   "a": "full|review|isolated|released",
+   "b": "full|limits|isolated|released",
+   "measure": "wrong_terms",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|isolated|released||full|limits|isolated|released||days_mean",
+   "a": "full|review|isolated|released",
+   "b": "full|limits|isolated|released",
+   "measure": "days_mean",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|isolated|released||full|limits|isolated|released||inconsistent_customers",
+   "a": "full|review|isolated|released",
+   "b": "full|limits|isolated|released",
+   "measure": "inconsistent_customers",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|isolated|released||full|limits|isolated|released||repeat_all_wrong",
+   "a": "full|review|isolated|released",
+   "b": "full|limits|isolated|released",
+   "measure": "repeat_all_wrong",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|isolated|released||full|local|isolated|released||days_mean",
+   "a": "full|review|isolated|released",
+   "b": "full|local|isolated|released",
+   "measure": "days_mean",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|isolated|released||full|local|isolated|released||repeat_all_wrong",
+   "a": "full|review|isolated|released",
+   "b": "full|local|isolated|released",
+   "measure": "repeat_all_wrong",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|limits|isolated|released||full|local|isolated|released||wrong_terms",
+   "a": "full|limits|isolated|released",
+   "b": "full|local|isolated|released",
+   "measure": "wrong_terms",
+   "direction": -1,
+   "family": "design"
+  },
+  {
+   "id": "full|limits|isolated|released||full|local|isolated|released||days_mean",
+   "a": "full|limits|isolated|released",
+   "b": "full|local|isolated|released",
+   "measure": "days_mean",
+   "direction": -1,
+   "family": "design"
+  },
+  {
+   "id": "full|limits|isolated|released||full|local|isolated|released||inconsistent_customers",
+   "a": "full|limits|isolated|released",
+   "b": "full|local|isolated|released",
+   "measure": "inconsistent_customers",
+   "direction": -1,
+   "family": "design"
+  },
+  {
+   "id": "full|limits|isolated|released||full|local|isolated|released||repeat_all_wrong",
+   "a": "full|limits|isolated|released",
+   "b": "full|local|isolated|released",
+   "measure": "repeat_all_wrong",
+   "direction": -1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|shared|draft||full|limits|shared|draft||wrong_terms",
+   "a": "full|review|shared|draft",
+   "b": "full|limits|shared|draft",
+   "measure": "wrong_terms",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|shared|draft||full|limits|shared|draft||days_mean",
+   "a": "full|review|shared|draft",
+   "b": "full|limits|shared|draft",
+   "measure": "days_mean",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|shared|draft||full|limits|shared|draft||inconsistent_customers",
+   "a": "full|review|shared|draft",
+   "b": "full|limits|shared|draft",
+   "measure": "inconsistent_customers",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|shared|draft||full|limits|shared|draft||repeat_all_wrong",
+   "a": "full|review|shared|draft",
+   "b": "full|limits|shared|draft",
+   "measure": "repeat_all_wrong",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|shared|draft||full|local|shared|draft||days_mean",
+   "a": "full|review|shared|draft",
+   "b": "full|local|shared|draft",
+   "measure": "days_mean",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|shared|draft||full|local|shared|draft||repeat_all_wrong",
+   "a": "full|review|shared|draft",
+   "b": "full|local|shared|draft",
+   "measure": "repeat_all_wrong",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|limits|shared|draft||full|local|shared|draft||wrong_terms",
+   "a": "full|limits|shared|draft",
+   "b": "full|local|shared|draft",
+   "measure": "wrong_terms",
+   "direction": -1,
+   "family": "design"
+  },
+  {
+   "id": "full|limits|shared|draft||full|local|shared|draft||days_mean",
+   "a": "full|limits|shared|draft",
+   "b": "full|local|shared|draft",
+   "measure": "days_mean",
+   "direction": -1,
+   "family": "design"
+  },
+  {
+   "id": "full|limits|shared|draft||full|local|shared|draft||inconsistent_customers",
+   "a": "full|limits|shared|draft",
+   "b": "full|local|shared|draft",
+   "measure": "inconsistent_customers",
+   "direction": -1,
+   "family": "design"
+  },
+  {
+   "id": "full|limits|shared|draft||full|local|shared|draft||repeat_all_wrong",
+   "a": "full|limits|shared|draft",
+   "b": "full|local|shared|draft",
+   "measure": "repeat_all_wrong",
+   "direction": -1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|shared|released||full|limits|shared|released||wrong_terms",
+   "a": "full|review|shared|released",
+   "b": "full|limits|shared|released",
+   "measure": "wrong_terms",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|shared|released||full|limits|shared|released||days_mean",
+   "a": "full|review|shared|released",
+   "b": "full|limits|shared|released",
+   "measure": "days_mean",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|shared|released||full|limits|shared|released||inconsistent_customers",
+   "a": "full|review|shared|released",
+   "b": "full|limits|shared|released",
+   "measure": "inconsistent_customers",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|shared|released||full|limits|shared|released||repeat_all_wrong",
+   "a": "full|review|shared|released",
+   "b": "full|limits|shared|released",
+   "measure": "repeat_all_wrong",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|shared|released||full|local|shared|released||days_mean",
+   "a": "full|review|shared|released",
+   "b": "full|local|shared|released",
+   "measure": "days_mean",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|shared|released||full|local|shared|released||inconsistent_customers",
+   "a": "full|review|shared|released",
+   "b": "full|local|shared|released",
+   "measure": "inconsistent_customers",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|shared|released||full|local|shared|released||repeat_all_wrong",
+   "a": "full|review|shared|released",
+   "b": "full|local|shared|released",
+   "measure": "repeat_all_wrong",
+   "direction": 1,
+   "family": "design"
+  },
+  {
+   "id": "full|limits|shared|released||full|local|shared|released||wrong_terms",
+   "a": "full|limits|shared|released",
+   "b": "full|local|shared|released",
+   "measure": "wrong_terms",
+   "direction": -1,
+   "family": "design"
+  },
+  {
+   "id": "full|limits|shared|released||full|local|shared|released||days_mean",
+   "a": "full|limits|shared|released",
+   "b": "full|local|shared|released",
+   "measure": "days_mean",
+   "direction": -1,
+   "family": "design"
+  },
+  {
+   "id": "full|limits|shared|released||full|local|shared|released||inconsistent_customers",
+   "a": "full|limits|shared|released",
+   "b": "full|local|shared|released",
+   "measure": "inconsistent_customers",
+   "direction": -1,
+   "family": "design"
+  },
+  {
+   "id": "full|limits|shared|released||full|local|shared|released||repeat_all_wrong",
+   "a": "full|limits|shared|released",
+   "b": "full|local|shared|released",
+   "measure": "repeat_all_wrong",
+   "direction": -1,
+   "family": "design"
+  },
+  {
+   "id": "full|review|shared|draft||baseline|review|shared|draft||inconsistent_customers",
+   "a": "full|review|shared|draft",
+   "b": "baseline|review|shared|draft",
+   "measure": "inconsistent_customers",
+   "direction": -1,
+   "family": "baseline"
+  },
+  {
+   "id": "full|review|shared|released||full|review|isolated|released||inconsistent_customers",
+   "a": "full|review|shared|released",
+   "b": "full|review|isolated|released",
+   "measure": "inconsistent_customers",
+   "direction": -1,
+   "family": "context"
+  },
+  {
+   "id": "full|review|shared|released||baseline|review|shared|released||inconsistent_customers",
+   "a": "full|review|shared|released",
+   "b": "baseline|review|shared|released",
+   "measure": "inconsistent_customers",
+   "direction": -1,
+   "family": "baseline"
+  },
+  {
+   "id": "full|local|shared|draft||baseline|local|shared|draft||inconsistent_customers",
+   "a": "full|local|shared|draft",
+   "b": "baseline|local|shared|draft",
+   "measure": "inconsistent_customers",
+   "direction": -1,
+   "family": "baseline"
+  },
+  {
+   "id": "full|local|shared|released||full|local|isolated|released||wrong_terms",
+   "a": "full|local|shared|released",
+   "b": "full|local|isolated|released",
+   "measure": "wrong_terms",
+   "direction": -1,
+   "family": "context"
+  },
+  {
+   "id": "full|local|shared|released||full|local|isolated|released||inconsistent_customers",
+   "a": "full|local|shared|released",
+   "b": "full|local|isolated|released",
+   "measure": "inconsistent_customers",
+   "direction": -1,
+   "family": "context"
+  },
+  {
+   "id": "full|local|shared|released||baseline|local|shared|released||inconsistent_customers",
+   "a": "full|local|shared|released",
+   "b": "baseline|local|shared|released",
+   "measure": "inconsistent_customers",
+   "direction": -1,
+   "family": "baseline"
+  },
+  {
+   "id": "full|local|shared|released||baseline|local|shared|released||repeat_all_wrong",
+   "a": "full|local|shared|released",
+   "b": "baseline|local|shared|released",
+   "measure": "repeat_all_wrong",
+   "direction": 1,
+   "family": "baseline"
+  },
+  {
+   "id": "full|local|shared|released||full|local|shared|draft||wrong_terms",
+   "a": "full|local|shared|released",
+   "b": "full|local|shared|draft",
+   "measure": "wrong_terms",
+   "direction": -1,
+   "family": "notes_assumption"
+  },
+  {
+   "id": "full|local|shared|released||full|local|shared|draft||inconsistent_customers",
+   "a": "full|local|shared|released",
+   "b": "full|local|shared|draft",
+   "measure": "inconsistent_customers",
+   "direction": -1,
+   "family": "notes_assumption"
+  }
+ ]
+}

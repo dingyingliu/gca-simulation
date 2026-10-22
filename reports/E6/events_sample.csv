@@ -1,0 +1,219 @@
+case_id,activity,order,resource
+gpt-4o-retail:task0:trial0,policy_loaded,0,system
+gpt-4o-retail:task0:trial0,customer_message,1,user simulator
+gpt-4o-retail:task0:trial0,agent_message,2,agent
+gpt-4o-retail:task0:trial0,customer_message,3,user simulator
+gpt-4o-retail:task0:trial0,tool:find_user_id_by_name_zip,4,agent
+gpt-4o-retail:task0:trial0,result:find_user_id_by_name_zip,5,environment
+gpt-4o-retail:task0:trial0,agent_message,6,agent
+gpt-4o-retail:task0:trial0,customer_message,7,user simulator
+gpt-4o-retail:task0:trial0,tool:get_user_details,8,agent
+gpt-4o-retail:task0:trial0,result:get_user_details,9,environment
+gpt-4o-retail:task0:trial0,tool:get_order_details,10,agent
+gpt-4o-retail:task0:trial0,result:get_order_details,11,environment
+gpt-4o-retail:task0:trial0,tool:get_order_details,12,agent
+gpt-4o-retail:task0:trial0,result:get_order_details,13,environment
+gpt-4o-retail:task0:trial0,tool:get_order_details,14,agent
+gpt-4o-retail:task0:trial0,result:get_order_details,15,environment
+gpt-4o-retail:task0:trial0,tool:get_order_details,16,agent
+gpt-4o-retail:task0:trial0,result:get_order_details,17,environment
+gpt-4o-retail:task0:trial0,tool:get_order_details,18,agent
+gpt-4o-retail:task0:trial0,result:get_order_details,19,environment
+gpt-4o-retail:task0:trial0,agent_message,20,agent
+gpt-4o-retail:task0:trial0,customer_message,21,user simulator
+gpt-4o-retail:task0:trial0,agent_message,22,agent
+gpt-4o-retail:task0:trial0,customer_message,23,user simulator
+gpt-4o-retail:task0:trial0,tool:get_product_details,24,agent
+gpt-4o-retail:task0:trial0,result:get_product_details,25,environment
+gpt-4o-retail:task0:trial0,tool:get_product_details,26,agent
+gpt-4o-retail:task0:trial0,result:get_product_details,27,environment
+gpt-4o-retail:task0:trial0,agent_message,28,agent
+gpt-4o-retail:task0:trial0,customer_message,29,user simulator
+gpt-4o-retail:task0:trial0,tool:exchange_delivered_order_items,30,agent
+gpt-4o-retail:task0:trial0,result:exchange_delivered_order_items,31,environment
+gpt-4o-retail:task0:trial0,agent_message,32,agent
+gpt-4o-retail:task0:trial0,customer_message,33,user simulator
+gpt-4o-retail:task1:trial0,policy_loaded,0,system
+gpt-4o-retail:task1:trial0,customer_message,1,user simulator
+gpt-4o-retail:task1:trial0,agent_message,2,agent
+gpt-4o-retail:task1:trial0,customer_message,3,user simulator
+gpt-4o-retail:task1:trial0,tool:find_user_id_by_email,4,agent
+gpt-4o-retail:task1:trial0,result:find_user_id_by_email,5,environment
+gpt-4o-retail:task1:trial0,agent_message,6,agent
+gpt-4o-retail:task1:trial0,customer_message,7,user simulator
+gpt-4o-retail:task1:trial0,tool:find_user_id_by_name_zip,8,agent
+gpt-4o-retail:task1:trial0,result:find_user_id_by_name_zip,9,environment
+gpt-4o-retail:task1:trial0,agent_message,10,agent
+gpt-4o-retail:task1:trial0,customer_message,11,user simulator
+gpt-4o-retail:task1:trial0,tool:get_user_details,12,agent
+gpt-4o-retail:task1:trial0,result:get_user_details,13,environment
+gpt-4o-retail:task1:trial0,tool:get_order_details,14,agent
+gpt-4o-retail:task1:trial0,result:get_order_details,15,environment
+gpt-4o-retail:task1:trial0,tool:get_order_details,16,agent
+gpt-4o-retail:task1:trial0,result:get_order_details,17,environment
+gpt-4o-retail:task1:trial0,tool:get_order_details,18,agent
+gpt-4o-retail:task1:trial0,result:get_order_details,19,environment
+gpt-4o-retail:task1:trial0,tool:get_order_details,20,agent
+gpt-4o-retail:task1:trial0,result:get_order_details,21,environment
+gpt-4o-retail:task1:trial0,tool:get_order_details,22,agent
+gpt-4o-retail:task1:trial0,result:get_order_details,23,environment
+gpt-4o-retail:task1:trial0,agent_message,24,agent
+gpt-4o-retail:task1:trial0,customer_message,25,user simulator
+gpt-4o-retail:task1:trial0,tool:get_product_details,26,agent
+gpt-4o-retail:task1:trial0,result:get_product_details,27,environment
+gpt-4o-retail:task1:trial0,tool:get_product_details,28,agent
+gpt-4o-retail:task1:trial0,result:get_product_details,29,environment
+gpt-4o-retail:task1:trial0,agent_message,30,agent
+gpt-4o-retail:task1:trial0,customer_message,31,user simulator
+gpt-4o-retail:task1:trial0,agent_message,32,agent
+gpt-4o-retail:task1:trial0,customer_message,33,user simulator
+gpt-4o-retail:task1:trial0,tool:exchange_delivered_order_items,34,agent
+gpt-4o-retail:task1:trial0,result:exchange_delivered_order_items,35,environment
+gpt-4o-retail:task1:trial0,agent_message,36,agent
+gpt-4o-retail:task1:trial0,customer_message,37,user simulator
+gpt-4o-retail:task2:trial0,policy_loaded,0,system
+gpt-4o-retail:task2:trial0,customer_message,1,user simulator
+gpt-4o-retail:task2:trial0,agent_message,2,agent
+gpt-4o-retail:task2:trial0,customer_message,3,user simulator
+gpt-4o-retail:task2:trial0,tool:find_user_id_by_name_zip,4,agent
+gpt-4o-retail:task2:trial0,result:find_user_id_by_name_zip,5,environment
+gpt-4o-retail:task2:trial0,tool:list_all_product_types,6,agent
+gpt-4o-retail:task2:trial0,result:list_all_product_types,7,environment
+gpt-4o-retail:task2:trial0,tool:get_product_details,8,agent
+gpt-4o-retail:task2:trial0,result:get_product_details,9,environment
+gpt-4o-retail:task2:trial0,agent_message,10,agent
+gpt-4o-retail:task2:trial0,customer_message,11,user simulator
+gpt-4o-retail:task2:trial0,agent_message,12,agent
+gpt-4o-retail:task2:trial0,customer_message,13,user simulator
+gpt-4o-retail:task2:trial0,tool:get_user_details,14,agent
+gpt-4o-retail:task2:trial0,result:get_user_details,15,environment
+gpt-4o-retail:task2:trial0,tool:get_order_details,16,agent
+gpt-4o-retail:task2:trial0,result:get_order_details,17,environment
+gpt-4o-retail:task2:trial0,tool:get_order_details,18,agent
+gpt-4o-retail:task2:trial0,result:get_order_details,19,environment
+gpt-4o-retail:task2:trial0,tool:get_order_details,20,agent
+gpt-4o-retail:task2:trial0,result:get_order_details,21,environment
+gpt-4o-retail:task2:trial0,tool:get_order_details,22,agent
+gpt-4o-retail:task2:trial0,result:get_order_details,23,environment
+gpt-4o-retail:task2:trial0,tool:get_order_details,24,agent
+gpt-4o-retail:task2:trial0,result:get_order_details,25,environment
+gpt-4o-retail:task2:trial0,agent_message,26,agent
+gpt-4o-retail:task2:trial0,customer_message,27,user simulator
+gpt-4o-retail:task2:trial0,agent_message,28,agent
+gpt-4o-retail:task2:trial0,customer_message,29,user simulator
+gpt-4o-retail:task2:trial0,tool:return_delivered_order_items,30,agent
+gpt-4o-retail:task2:trial0,result:return_delivered_order_items,31,environment
+gpt-4o-retail:task2:trial0,agent_message,32,agent
+gpt-4o-retail:task2:trial0,customer_message,33,user simulator
+gpt-4o-retail:task5:trial0,policy_loaded,0,system
+gpt-4o-retail:task5:trial0,customer_message,1,user simulator
+gpt-4o-retail:task5:trial0,agent_message,2,agent
+gpt-4o-retail:task5:trial0,customer_message,3,user simulator
+gpt-4o-retail:task5:trial0,tool:find_user_id_by_name_zip,4,agent
+gpt-4o-retail:task5:trial0,result:find_user_id_by_name_zip,5,environment
+gpt-4o-retail:task5:trial0,agent_message,6,agent
+gpt-4o-retail:task5:trial0,customer_message,7,user simulator
+gpt-4o-retail:task5:trial0,tool:find_user_id_by_email,8,agent
+gpt-4o-retail:task5:trial0,result:find_user_id_by_email,9,environment
+gpt-4o-retail:task5:trial0,agent_message,10,agent
+gpt-4o-retail:task5:trial0,customer_message,11,user simulator
+gpt-4o-retail:task5:trial0,tool:transfer_to_human_agents,12,agent
+gpt-4o-retail:task5:trial0,result:transfer_to_human_agents,13,environment
+sonnet-35-new-retail:task0:trial0,policy_loaded,0,system
+sonnet-35-new-retail:task0:trial0,customer_message,1,user simulator
+sonnet-35-new-retail:task0:trial0,agent_message,2,agent
+sonnet-35-new-retail:task0:trial0,customer_message,3,user simulator
+sonnet-35-new-retail:task0:trial0,tool:find_user_id_by_email,4,agent
+sonnet-35-new-retail:task0:trial0,result:find_user_id_by_email,5,environment
+sonnet-35-new-retail:task0:trial0,agent_message,6,agent
+sonnet-35-new-retail:task0:trial0,customer_message,7,user simulator
+sonnet-35-new-retail:task0:trial0,tool:find_user_id_by_name_zip,8,agent
+sonnet-35-new-retail:task0:trial0,result:find_user_id_by_name_zip,9,environment
+sonnet-35-new-retail:task0:trial0,tool:get_order_details,10,agent
+sonnet-35-new-retail:task0:trial0,result:get_order_details,11,environment
+sonnet-35-new-retail:task0:trial0,agent_message,12,agent
+sonnet-35-new-retail:task0:trial0,customer_message,13,user simulator
+sonnet-35-new-retail:task0:trial0,tool:get_product_details,14,agent
+sonnet-35-new-retail:task0:trial0,result:get_product_details,15,environment
+sonnet-35-new-retail:task0:trial0,tool:get_product_details,16,agent
+sonnet-35-new-retail:task0:trial0,result:get_product_details,17,environment
+sonnet-35-new-retail:task0:trial0,agent_message,18,agent
+sonnet-35-new-retail:task0:trial0,customer_message,19,user simulator
+sonnet-35-new-retail:task0:trial0,tool:exchange_delivered_order_items,20,agent
+sonnet-35-new-retail:task0:trial0,result:exchange_delivered_order_items,21,environment
+sonnet-35-new-retail:task0:trial0,agent_message,22,agent
+sonnet-35-new-retail:task0:trial0,customer_message,23,user simulator
+sonnet-35-new-retail:task1:trial0,policy_loaded,0,system
+sonnet-35-new-retail:task1:trial0,customer_message,1,user simulator
+sonnet-35-new-retail:task1:trial0,agent_message,2,agent
+sonnet-35-new-retail:task1:trial0,customer_message,3,user simulator
+sonnet-35-new-retail:task1:trial0,agent_message,4,agent
+sonnet-35-new-retail:task1:trial0,customer_message,5,user simulator
+sonnet-35-new-retail:task1:trial0,tool:find_user_id_by_name_zip,6,agent
+sonnet-35-new-retail:task1:trial0,result:find_user_id_by_name_zip,7,environment
+sonnet-35-new-retail:task1:trial0,tool:get_order_details,8,agent
+sonnet-35-new-retail:task1:trial0,result:get_order_details,9,environment
+sonnet-35-new-retail:task1:trial0,agent_message,10,agent
+sonnet-35-new-retail:task1:trial0,customer_message,11,user simulator
+sonnet-35-new-retail:task1:trial0,tool:get_product_details,12,agent
+sonnet-35-new-retail:task1:trial0,result:get_product_details,13,environment
+sonnet-35-new-retail:task1:trial0,tool:get_product_details,14,agent
+sonnet-35-new-retail:task1:trial0,result:get_product_details,15,environment
+sonnet-35-new-retail:task1:trial0,agent_message,16,agent
+sonnet-35-new-retail:task1:trial0,customer_message,17,user simulator
+sonnet-35-new-retail:task1:trial0,agent_message,18,agent
+sonnet-35-new-retail:task1:trial0,customer_message,19,user simulator
+sonnet-35-new-retail:task1:trial0,tool:exchange_delivered_order_items,20,agent
+sonnet-35-new-retail:task1:trial0,result:exchange_delivered_order_items,21,environment
+sonnet-35-new-retail:task1:trial0,agent_message,22,agent
+sonnet-35-new-retail:task1:trial0,customer_message,23,user simulator
+sonnet-35-new-retail:task1:trial0,agent_message,24,agent
+sonnet-35-new-retail:task1:trial0,customer_message,25,user simulator
+sonnet-35-new-retail:task2:trial0,policy_loaded,0,system
+sonnet-35-new-retail:task2:trial0,customer_message,1,user simulator
+sonnet-35-new-retail:task2:trial0,tool:list_all_product_types,2,agent
+sonnet-35-new-retail:task2:trial0,result:list_all_product_types,3,environment
+sonnet-35-new-retail:task2:trial0,tool:get_product_details,4,agent
+sonnet-35-new-retail:task2:trial0,result:get_product_details,5,environment
+sonnet-35-new-retail:task2:trial0,agent_message,6,agent
+sonnet-35-new-retail:task2:trial0,customer_message,7,user simulator
+sonnet-35-new-retail:task2:trial0,agent_message,8,agent
+sonnet-35-new-retail:task2:trial0,customer_message,9,user simulator
+sonnet-35-new-retail:task2:trial0,tool:find_user_id_by_name_zip,10,agent
+sonnet-35-new-retail:task2:trial0,result:find_user_id_by_name_zip,11,environment
+sonnet-35-new-retail:task2:trial0,tool:get_user_details,12,agent
+sonnet-35-new-retail:task2:trial0,result:get_user_details,13,environment
+sonnet-35-new-retail:task2:trial0,agent_message,14,agent
+sonnet-35-new-retail:task2:trial0,customer_message,15,user simulator
+sonnet-35-new-retail:task2:trial0,tool:get_order_details,16,agent
+sonnet-35-new-retail:task2:trial0,result:get_order_details,17,environment
+sonnet-35-new-retail:task2:trial0,tool:get_order_details,18,agent
+sonnet-35-new-retail:task2:trial0,result:get_order_details,19,environment
+sonnet-35-new-retail:task2:trial0,tool:get_order_details,20,agent
+sonnet-35-new-retail:task2:trial0,result:get_order_details,21,environment
+sonnet-35-new-retail:task2:trial0,tool:get_order_details,22,agent
+sonnet-35-new-retail:task2:trial0,result:get_order_details,23,environment
+sonnet-35-new-retail:task2:trial0,tool:get_order_details,24,agent
+sonnet-35-new-retail:task2:trial0,result:get_order_details,25,environment
+sonnet-35-new-retail:task2:trial0,agent_message,26,agent
+sonnet-35-new-retail:task2:trial0,customer_message,27,user simulator
+sonnet-35-new-retail:task2:trial0,agent_message,28,agent
+sonnet-35-new-retail:task2:trial0,customer_message,29,user simulator
+sonnet-35-new-retail:task2:trial0,tool:return_delivered_order_items,30,agent
+sonnet-35-new-retail:task2:trial0,result:return_delivered_order_items,31,environment
+sonnet-35-new-retail:task2:trial0,agent_message,32,agent
+sonnet-35-new-retail:task2:trial0,customer_message,33,user simulator
+sonnet-35-new-retail:task5:trial0,policy_loaded,0,system
+sonnet-35-new-retail:task5:trial0,customer_message,1,user simulator
+sonnet-35-new-retail:task5:trial0,agent_message,2,agent
+sonnet-35-new-retail:task5:trial0,customer_message,3,user simulator
+sonnet-35-new-retail:task5:trial0,agent_message,4,agent
+sonnet-35-new-retail:task5:trial0,customer_message,5,user simulator
+sonnet-35-new-retail:task5:trial0,agent_message,6,agent
+sonnet-35-new-retail:task5:trial0,customer_message,7,user simulator
+sonnet-35-new-retail:task5:trial0,tool:find_user_id_by_name_zip,8,agent
+sonnet-35-new-retail:task5:trial0,result:find_user_id_by_name_zip,9,environment
+sonnet-35-new-retail:task5:trial0,agent_message,10,agent
+sonnet-35-new-retail:task5:trial0,customer_message,11,user simulator
+sonnet-35-new-retail:task5:trial0,tool:transfer_to_human_agents,12,agent
+sonnet-35-new-retail:task5:trial0,result:transfer_to_human_agents,13,environment

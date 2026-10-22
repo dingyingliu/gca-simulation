@@ -1,0 +1,101 @@
+{
+  "id": "approval_chain_vs_amount.bpic2020",
+  "mechanism": "Whether larger declarations pass more approvers",
+  "measures": "Approval roles in the paid submission round against the declared amount (inexact), for paid cases with a positive amount",
+  "simulator_parameter": "value-based escalation (example of association, not a threshold)",
+  "estimable": "partly",
+  "estimable_note": "Association only. Amounts are perturbed, and whether the budget owner is also the supervisor changes the path but is not recorded.",
+  "value": {
+    "n": 10044,
+    "table": {
+      "0-25": {
+        "cases": 2606,
+        "with_BO": 703,
+        "share": 0.2698,
+        "share_95ci_wilson": [
+          0.2531,
+          0.2871
+        ]
+      },
+      "25-50": {
+        "cases": 3049,
+        "with_BO": 802,
+        "share": 0.263,
+        "share_95ci_wilson": [
+          0.2477,
+          0.279
+        ]
+      },
+      "50-100": {
+        "cases": 2085,
+        "with_BO": 571,
+        "share": 0.2739,
+        "share_95ci_wilson": [
+          0.2551,
+          0.2934
+        ]
+      },
+      "100-250": {
+        "cases": 1510,
+        "with_BO": 486,
+        "share": 0.3219,
+        "share_95ci_wilson": [
+          0.2988,
+          0.3458
+        ]
+      },
+      "250-500": {
+        "cases": 574,
+        "with_BO": 160,
+        "share": 0.2787,
+        "share_95ci_wilson": [
+          0.2436,
+          0.3168
+        ]
+      },
+      "500+": {
+        "cases": 220,
+        "with_BO": 66,
+        "share": 0.3,
+        "share_95ci_wilson": [
+          0.2433,
+          0.3636
+        ]
+      }
+    },
+    "summary": {
+      "spearman_amount_vs_length": {
+        "rho": 0.0406,
+        "p_value": 4.6260803097718346e-05
+      },
+      "chain_counts": {
+        "ADM>SUP": 5133,
+        "ADM>BO>SUP": 2788,
+        "SUP": 1462,
+        "PRE>SUP": 659,
+        "": 2
+      }
+    }
+  },
+  "status": "observed",
+  "conditions": "Eindhoven University of Technology travel expense declarations (domestic), 2017 two departments, 2018 whole university; staff anonymised to roles",
+  "transfer": "Example only. No threshold transfers to quotations.",
+  "source": {
+    "name": "BPI Challenge 2020: Domestic Declarations",
+    "creator": "Boudewijn van Dongen, Eindhoven University of Technology",
+    "doi": "10.4121/uuid:3f422315-ed9d-4882-891f-e180b5b4feb5",
+    "url": "https://data.4tu.nl/datasets/6a0a26d2-82d0-4018-b1cd-89afb0e8627f/1",
+    "licence": "CC BY-NC 4.0",
+    "retrieved_utc": "2026-10-02",
+    "file_sha256": "0bc3312acf0b9ee5ae6f4ebe9df204005ef11665d62f2d21dd04995161d7532b"
+  },
+  "versions": {
+    "code_commit": "a342e21",
+    "code_dirty": false,
+    "analysis": "experiments/e3_bpic2020/run_e3.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "created_utc": "2026-10-02 22:57 UTC"
+}

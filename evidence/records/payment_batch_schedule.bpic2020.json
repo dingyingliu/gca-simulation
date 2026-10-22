@@ -1,0 +1,40 @@
+{
+  "id": "payment_batch_schedule.bpic2020",
+  "mechanism": "Payment of approved declarations",
+  "measures": "Time of day and weekday of 'Payment Handled' events",
+  "simulator_parameter": null,
+  "estimable": "yes",
+  "value": {
+    "summary": {
+      "events": 10044,
+      "share_17_30_to_17_32": 0.988,
+      "by_weekday": {
+        "0": 4294,
+        "1": 26,
+        "2": 1,
+        "3": 5723
+      }
+    }
+  },
+  "status": "observed",
+  "conditions": "Eindhoven University of Technology travel expense declarations (domestic), 2017 two departments, 2018 whole university; staff anonymised to roles",
+  "transfer": "None. A payment batch schedule, not processing.",
+  "source": {
+    "name": "BPI Challenge 2020: Domestic Declarations",
+    "creator": "Boudewijn van Dongen, Eindhoven University of Technology",
+    "doi": "10.4121/uuid:3f422315-ed9d-4882-891f-e180b5b4feb5",
+    "url": "https://data.4tu.nl/datasets/6a0a26d2-82d0-4018-b1cd-89afb0e8627f/1",
+    "licence": "CC BY-NC 4.0",
+    "retrieved_utc": "2026-10-02",
+    "file_sha256": "0bc3312acf0b9ee5ae6f4ebe9df204005ef11665d62f2d21dd04995161d7532b"
+  },
+  "versions": {
+    "code_commit": "a342e21",
+    "code_dirty": false,
+    "analysis": "experiments/e3_bpic2020/run_e3.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "created_utc": "2026-10-02 22:57 UTC"
+}

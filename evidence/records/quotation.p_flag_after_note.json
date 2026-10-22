@@ -1,0 +1,40 @@
+{
+  "id": "quotation.p_flag_after_note",
+  "mechanism": "Agent escalates a release-eligible draft although it used a note, when the request mentions agreed terms and no register entry is visible.",
+  "measures": "Agent pilot (E5), development groups: escalation rate among runs whose agreed term equals the note's value exactly, shared notes, agreement not visible. Range by experiments/agent_pilot_plan.md, section 9.1.",
+  "simulator_parameter": "p_flag_after_note",
+  "estimable": "partly",
+  "estimable_note": "A pilot: few tasks per cell, one model, one prompt, synthetic tasks. The range is the pilot's interval, not a stable estimate.",
+  "value": {
+    "unit": "probability",
+    "range": [
+      0.35,
+      0.85
+    ],
+    "distribution": "uniform over the range (Latin hypercube draws)"
+  },
+  "status": "fitted",
+  "source": {
+    "name": "GCA controlled agent pilot (E5), development groups, applied by experiments/e4_quotation/apply_pilot.py",
+    "doi": null,
+    "licence": null,
+    "retrieved_utc": null
+  },
+  "conditions": "E4 quotation research model; every design, context and week",
+  "transfer": "Agent pilot (E5), development groups: escalation rate among runs whose agreed term equals the note's value exactly, shared notes, agreement not visible. Range by experiments/agent_pilot_plan.md, section 9.1.",
+  "versions": {
+    "code_commit": "70e17db",
+    "code_dirty": false,
+    "analysis": "experiments/e4_quotation/write_assumption_records.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "declared_utc": "2026-10-03 10:25 UTC",
+  "created_utc": "2026-10-03 14:03 UTC",
+  "used_by": [
+    "gca_sim/quotation"
+  ],
+  "use": "range_only",
+  "notes": "Pilot records behind this range: flag_after_note.agent_pilot. Range set on 2026-10-03 14:01 UTC by experiments/e4_quotation/apply_pilot.py."
+}

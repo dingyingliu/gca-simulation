@@ -1,0 +1,36 @@
+{
+  "id": "quotation.bypass_after_days",
+  "mechanism": "Staff send a quote unreviewed after it waits this long in a review queue",
+  "measures": "Nothing measured. A structural assumption.",
+  "simulator_parameter": "bypass_after_days",
+  "estimable": "no",
+  "estimable_note": "Structural assumption; no evidence.",
+  "value": {
+    "summary": {
+      "main": null,
+      "sensitivity": 3
+    }
+  },
+  "status": "assumed",
+  "source": {
+    "name": "Declared assumption, evidence/assumptions.yaml",
+    "doi": null,
+    "licence": null,
+    "retrieved_utc": null
+  },
+  "conditions": "E4 quotation research model",
+  "transfer": "Case memo: do not assume that staff evade controls when review becomes slower. Off in the main comparison; the walkthrough's three-day value is run once as a labelled sensitivity.",
+  "versions": {
+    "code_commit": "1146349",
+    "code_dirty": false,
+    "analysis": "experiments/e4_quotation/write_assumption_records.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "declared_utc": "2026-10-02 22:28 UTC",
+  "created_utc": "2026-10-03 10:36 UTC",
+  "used_by": [
+    "gca_sim/quotation"
+  ]
+}

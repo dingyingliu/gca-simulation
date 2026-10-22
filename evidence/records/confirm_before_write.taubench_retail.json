@@ -1,0 +1,100 @@
+{
+  "id": "confirm_before_write.taubench_retail",
+  "mechanism": "An agent obtains explicit customer confirmation before an action that changes records",
+  "measures": "Share of database-writing tool calls whose latest preceding customer message contains the word 'yes'",
+  "simulator_parameter": "agent's own check before release (analogue for p_selfcheck)",
+  "estimable": "partly",
+  "estimable_note": "A keyword heuristic for confirmation; checks a procedural rule, not whether the content was right. One annotator's in-context reading of a stratified sample of 50 writes per model (tests: counts) found every sampled write after 'yes' confirmed and most writes without it confirmed too, so the keyword shares understate confirmation. The share inferred from that sample is a separate, fitted record: confirm_before_write_in_context.taubench_retail.",
+  "value": {
+    "table": {
+      "gpt-4o-retail": {
+        "runs_with_any_action": 430,
+        "runs_reading_user_data_before_authentication": 1,
+        "runs_writing_before_authentication": 0,
+        "database_writes": 666,
+        "writes_after_explicit_yes": 507,
+        "share_writes_after_explicit_yes": 0.7613,
+        "share_writes_after_explicit_yes_95ci_wilson": [
+          0.7274,
+          0.7921
+        ]
+      },
+      "sonnet-35-new-retail": {
+        "runs_with_any_action": 898,
+        "runs_reading_user_data_before_authentication": 33,
+        "runs_writing_before_authentication": 2,
+        "database_writes": 1352,
+        "writes_after_explicit_yes": 1220,
+        "share_writes_after_explicit_yes": 0.9024,
+        "share_writes_after_explicit_yes_95ci_wilson": [
+          0.8854,
+          0.9171
+        ]
+      }
+    }
+  },
+  "status": "observed",
+  "conditions": "simulated customer-service conversations in the τ-bench retail domain; one agent with tools and a written policy; tau-bench commit 59a200c6d575d595120f1cb70fea53cef0632f6b",
+  "transfer": "Analogue for procedural self-checks before release. Not a term-error rate.",
+  "source": {
+    "name": "τ-bench historical trajectories (retail), sierra-research/tau-bench",
+    "url": "https://github.com/sierra-research/tau-bench",
+    "doi": null,
+    "licence": "MIT",
+    "retrieved_utc": "2026-10-02"
+  },
+  "versions": {
+    "code_commit": "782f3bc",
+    "code_dirty": false,
+    "analysis": "experiments/e6_taubench/check_taubench.py",
+    "model": "as named in the file names only: gpt-4o, sonnet-35-new"
+  },
+  "disagreements": [],
+  "tests": [
+    {
+      "test": "in-context check of the 'yes' keyword heuristic, stratified sample (annotation counts)",
+      "file": "reports/E6/confirmation_handcheck.json",
+      "judged_by": "Claude Code (build), reading each write in context in the pinned files, 2026-10-03 UTC",
+      "standard": "Confirmed: before the write, the agent described the action (at least the order and the change) and the customer explicitly approved it, in the latest message or earlier with nothing withdrawn since: 'yes' or an equivalent go-ahead, including choosing one of the options the agent offered when the agent said it would proceed on that choice. The write must make no change the customer did not approve (another order or action, or items, address or payment method other than those approved); an execution error that changes nothing unapproved does not count against it. Not confirmed: the agent acted on the customer's own request without describing the action first, the reply only asks a question, or the write departs from what was approved. Borderline marks a judgement another reader could reasonably make the other way.",
+      "sample": "stratified by whether the latest customer message before the write contains 'yes': 20 writes with and 30 without, per model, random.Random(20261002) within each stratum (confirmation_sample.py)",
+      "counts": {
+        "gpt-4o-retail.json": {
+          "strata": {
+            "Y": {
+              "population": 507,
+              "sampled": 20,
+              "confirmed": 20,
+              "borderline": 0
+            },
+            "N": {
+              "population": 159,
+              "sampled": 30,
+              "confirmed": 29,
+              "borderline": 10
+            }
+          },
+          "keyword_false_matches_in_sample": 0
+        },
+        "sonnet-35-new-retail.json": {
+          "strata": {
+            "Y": {
+              "population": 1220,
+              "sampled": 20,
+              "confirmed": 20,
+              "borderline": 2
+            },
+            "N": {
+              "population": 132,
+              "sampled": 30,
+              "confirmed": 24,
+              "borderline": 4
+            }
+          },
+          "keyword_false_matches_in_sample": 0
+        }
+      },
+      "estimate": "confirm_before_write_in_context.taubench_retail (fitted)"
+    }
+  ],
+  "created_utc": "2026-10-03 01:28 UTC"
+}

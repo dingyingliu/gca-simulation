@@ -1,0 +1,51 @@
+{
+  "id": "transfer_to_human.taubench_retail",
+  "mechanism": "An agent hands a request to a person when the policy says it is outside its scope",
+  "measures": "Share of runs calling transfer_to_human_agents, against whether the task's gold actions include a transfer",
+  "simulator_parameter": "agent escalation when a request is outside its authority (analogue for p_flag_unverifiable)",
+  "estimable": "partly",
+  "estimable_note": "Measures escalation of out-of-scope requests in customer service, not escalation of quotes whose terms the agent cannot verify. No timestamps, one agent, no shared context.",
+  "value": {
+    "table": {
+      "gpt-4o-retail": {
+        "runs_transferring_to_human": 25,
+        "runs_where_gold_actions_include_transfer": 16,
+        "transferred_and_expected": 11,
+        "transferred_not_expected": 14,
+        "expected_not_transferred": 5,
+        "transfer_share": 0.0543,
+        "mean_reward_transferred": 0.64,
+        "mean_reward_not_transferred": 0.6023
+      },
+      "sonnet-35-new-retail": {
+        "runs_transferring_to_human": 79,
+        "runs_where_gold_actions_include_transfer": 32,
+        "transferred_and_expected": 20,
+        "transferred_not_expected": 59,
+        "expected_not_transferred": 12,
+        "transfer_share": 0.0859,
+        "mean_reward_transferred": 0.5316,
+        "mean_reward_not_transferred": 0.7075
+      }
+    }
+  },
+  "status": "observed",
+  "conditions": "simulated customer-service conversations in the τ-bench retail domain; one agent with tools and a written policy; tau-bench commit 59a200c6d575d595120f1cb70fea53cef0632f6b",
+  "transfer": "Weak analogue only: shows that escalation decisions can be measured against a written rule.",
+  "source": {
+    "name": "τ-bench historical trajectories (retail), sierra-research/tau-bench",
+    "url": "https://github.com/sierra-research/tau-bench",
+    "doi": null,
+    "licence": "MIT",
+    "retrieved_utc": "2026-10-02"
+  },
+  "versions": {
+    "code_commit": "782f3bc",
+    "code_dirty": false,
+    "analysis": "experiments/e6_taubench/check_taubench.py",
+    "model": "as named in the file names only: gpt-4o, sonnet-35-new"
+  },
+  "disagreements": [],
+  "tests": [],
+  "created_utc": "2026-10-03 01:28 UTC"
+}

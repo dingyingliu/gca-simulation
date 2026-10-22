@@ -1,0 +1,43 @@
+{
+  "id": "note_reading_rule.agent_pilot",
+  "mechanism": "The agent follows an older note although a newer note about the same customer states another value",
+  "measures": "Share of second Harm tasks (order 5) whose agreed term equals the planted note's value, among group runs in which the first Harm task's stored note states another value and does not name the planted one, shared notes, agreement not visible (S.V-)",
+  "simulator_parameter": "(1 - p_newest_note) x p_read_note x p_adopt_blind",
+  "estimable": "no",
+  "estimable_note": "No qualifying observations in the development groups, so no fitted constraint.",
+  "value": {
+    "point": null,
+    "n": 0,
+    "summary": {
+      "mean_over_tasks": null,
+      "tasks": 0,
+      "valid_task_runs": 0,
+      "count": 0,
+      "missing_task_runs": 0,
+      "interval_95_group_bootstrap": null,
+      "interval_95_wilson_pooled_ignores_clustering": null
+    }
+  },
+  "status": "observed",
+  "use": "reference_only",
+  "source": {
+    "name": "GCA controlled agent pilot (E5), development groups",
+    "url": "experiments/agent_pilot/runs/development.jsonl",
+    "doi": null,
+    "licence": null,
+    "retrieved_utc": "2026-10-03",
+    "file_sha256": "57af7bb8535c2039f673d2f8e4b5f2a6bff14bd426bc054e443ba179cc54c10d"
+  },
+  "conditions": "synthetic quotation tasks, one fixed prompt, model qwen/qwen3.8-27b:free through openrouter (host ['modelrun/fp4']), reasoning effort low, 5 development groups, 3 replicates",
+  "transfer": "None: the pilot had no run of this kind.",
+  "versions": {
+    "code_commit": "a1f048f",
+    "code_dirty": false,
+    "analysis": "experiments/agent_pilot/analyse_pilot.py",
+    "model": "qwen/qwen3.8-27b:free"
+  },
+  "disagreements": [],
+  "tests": [],
+  "created_utc": "2026-10-03 14:32 UTC",
+  "notes": "The frequency could not be estimated. It says nothing about the parameter named."
+}

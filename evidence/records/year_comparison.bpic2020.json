@@ -1,0 +1,143 @@
+{
+  "id": "year_comparison.bpic2020",
+  "mechanism": "Whether routes, return shares and step times differ between 2017 and 2018",
+  "measures": "Route shares in the paid round, rejection shares per role, median time to decision per step, and the 2017-discovered model's fitness and precision on 2018, by the case's start year",
+  "simulator_parameter": null,
+  "estimable": "yes",
+  "value": {
+    "summary": {
+      "note": "2017 covers two departments and 2018 the whole university, so differences mix organisational scope with time.",
+      "paid_cases": {
+        "2017": 2141,
+        "2018": 7903
+      },
+      "route_shares_paid_round": {
+        "2017": {
+          "SUP": 0.6829,
+          "PRE>SUP": 0.3078,
+          "ADM>SUP": 0.0065,
+          "ADM>BO>SUP": 0.0019
+        },
+        "2018": {
+          "ADM>SUP": 0.6477,
+          "ADM>BO>SUP": 0.3523
+        }
+      },
+      "rejection_share_by_role": {
+        "ADMINISTRATION": {
+          "2017": {
+            "decisions": 22,
+            "rejected": 4,
+            "rejection_share": 0.1818
+          },
+          "2018": {
+            "decisions": 9132,
+            "rejected": 948,
+            "rejection_share": 0.1038
+          }
+        },
+        "PRE_APPROVER": {
+          "2017": {
+            "decisions": 771,
+            "rejected": 86,
+            "rejection_share": 0.1115
+          },
+          "2018": {
+            "decisions": 0,
+            "rejected": 0,
+            "rejection_share": null
+          }
+        },
+        "BUDGET OWNER": {
+          "2017": {
+            "decisions": 4,
+            "rejected": 0,
+            "rejection_share": 0.0
+          },
+          "2018": {
+            "decisions": 2875,
+            "rejected": 59,
+            "rejection_share": 0.0205
+          }
+        },
+        "SUPERVISOR": {
+          "2017": {
+            "decisions": 2299,
+            "rejected": 71,
+            "rejection_share": 0.0309
+          },
+          "2018": {
+            "decisions": 8125,
+            "rejected": 222,
+            "rejection_share": 0.0273
+          }
+        }
+      },
+      "time_to_decision_median_by_step": {
+        "administration_after_submission": {
+          "2018": 0.0
+        },
+        "pre_approver_after_submission": {
+          "2017": 0.0
+        },
+        "supervisor_after_submission": {
+          "2017": 0.0
+        },
+        "budget_owner_after_administration": {
+          "2018": 0.864
+        },
+        "supervisor_after_administration": {
+          "2018": 0.871
+        },
+        "supervisor_after_budget_owner": {
+          "2018": 1.925
+        },
+        "supervisor_after_pre_approver": {
+          "2017": 0.9
+        }
+      },
+      "transfer_2017_model_on_2018": {
+        "im_noise_0.0": {
+          "cases_2017": 2240,
+          "cases_2018": 8260,
+          "fitness_on_2017": 1.0,
+          "fitness_on_2018": 0.996,
+          "share_2018_traces_fitting": 0.9579,
+          "precision_on_2017": 0.3209,
+          "precision_on_2018": 0.2157
+        },
+        "im_noise_0.2": {
+          "cases_2017": 2240,
+          "cases_2018": 8260,
+          "fitness_on_2017": 0.9845,
+          "fitness_on_2018": 0.9765,
+          "share_2018_traces_fitting": 0.8574,
+          "precision_on_2017": 0.4831,
+          "precision_on_2018": 0.4304
+        }
+      }
+    }
+  },
+  "use": "descriptive",
+  "status": "observed",
+  "conditions": "Eindhoven University of Technology travel expense declarations (domestic), 2017 two departments, 2018 whole university; staff anonymised to roles",
+  "transfer": "The spread between the two years is a better guide to how much these quantities vary than the Wilson intervals, which assume independent decisions.",
+  "source": {
+    "name": "BPI Challenge 2020: Domestic Declarations",
+    "creator": "Boudewijn van Dongen, Eindhoven University of Technology",
+    "doi": "10.4121/uuid:3f422315-ed9d-4882-891f-e180b5b4feb5",
+    "url": "https://data.4tu.nl/datasets/6a0a26d2-82d0-4018-b1cd-89afb0e8627f/1",
+    "licence": "CC BY-NC 4.0",
+    "retrieved_utc": "2026-10-02",
+    "file_sha256": "0bc3312acf0b9ee5ae6f4ebe9df204005ef11665d62f2d21dd04995161d7532b"
+  },
+  "versions": {
+    "code_commit": "a342e21",
+    "code_dirty": false,
+    "analysis": "experiments/e3_bpic2020/run_e3.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "created_utc": "2026-10-02 22:57 UTC"
+}

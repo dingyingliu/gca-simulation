@@ -1,0 +1,190 @@
+case_id,activity,timestamp_days,resource,rule
+,run_manifest,0.0,simulator,
+,world:stale_note_draw,0.0,world,
+,world:stale_note_draw,0.0,world,
+,world:stale_note_draw,0.0,world,
+,world:stale_note_draw,0.0,world,
+,note_write,0.0,world,
+,world:lead_knows_policy,0.0,world,
+,world:lead_knows_policy,0.0,world,
+,world:lead_knows_policy,0.0,world,
+Q02,world:request_cue,0.0,world,
+Q05,world:request_cue,0.0,world,
+Q07,world:request_cue,0.0,world,
+Q10,world:request_cue,0.0,world,
+Q14,world:request_cue,0.0,world,
+Q17,world:request_cue,0.0,world,
+Q01,request,1.0,customer,
+Q02,request,1.0,customer,
+Q03,request,1.0,customer,
+Q04,request,1.0,customer,
+Q01,draft,1.5,agent:BR,
+Q01,route:lead:BR,1.5,routing rule,review_every_quote
+Q01,enqueue,1.5,lead:BR,
+Q01,review_start:pass,1.5,lead:BR,
+Q02,draft,1.5,agent:BR,
+Q02,route:lead:BR,1.5,routing rule,review_every_quote
+Q02,enqueue,1.5,lead:BR,
+Q03,draft,1.5,agent:TR,
+Q03,route:lead:TR,1.5,routing rule,review_every_quote
+Q03,enqueue,1.5,lead:TR,
+Q03,review_start:pass,1.5,lead:TR,
+Q04,draft,1.5,agent:TR,
+Q04,route:lead:TR,1.5,routing rule,review_every_quote
+Q04,enqueue,1.5,lead:TR,
+Q01,review_done:pass,1.867127,lead:BR,
+Q01,response_delay,1.867127,lead:BR,
+Q02,review_start:correct,1.867127,lead:BR,
+Q01,release,1.986948,lead:BR,lead_approval
+Q05,request,2.0,customer,
+Q06,request,2.0,customer,
+Q07,request,2.0,customer,
+Q08,request,2.0,customer,
+Q03,review_done:pass,2.121618,lead:TR,
+Q03,response_delay,2.121618,lead:TR,
+Q04,review_start:counter,2.121618,lead:TR,
+Q03,release,2.39939,lead:TR,lead_approval
+Q05,draft,2.5,agent:TR,
+Q05,route:lead:TR,2.5,routing rule,review_every_quote
+Q05,enqueue,2.5,lead:TR,
+Q06,draft,2.5,agent:SG,
+Q06,route:lead:SG,2.5,routing rule,review_every_quote
+Q06,enqueue,2.5,lead:SG,
+Q06,review_start:pass,2.5,lead:SG,
+Q07,draft,2.5,agent:SG,
+Q07,route:lead:SG,2.5,routing rule,review_every_quote
+Q07,enqueue,2.5,lead:SG,
+Q08,draft,2.5,agent:BR,
+Q08,route:lead:BR,2.5,routing rule,review_every_quote
+Q08,enqueue,2.5,lead:BR,
+Q04,review_done:counter,2.766574,lead:TR,
+Q04,response_delay,2.766574,lead:TR,
+Q05,review_start:correct,2.766574,lead:TR,
+Q02,review_done:correct,2.774059,lead:BR,
+Q02,response_delay,2.774059,lead:BR,
+Q08,review_start:pass,2.774059,lead:BR,
+Q02,release,2.926882,lead:BR,lead_approval
+Q02,note_write,2.926882,agent:BR,
+Q09,request,3.0,customer,
+Q10,request,3.0,customer,
+Q11,request,3.0,customer,
+Q12,request,3.0,customer,
+Q06,review_done:pass,3.011455,lead:SG,
+Q06,response_delay,3.011455,lead:SG,
+Q07,review_start:pass,3.011455,lead:SG,
+Q04,release,3.014726,lead:TR,lead_approval
+Q04,note_write,3.014726,agent:TR,
+Q08,review_done:pass,3.236451,lead:BR,
+Q08,response_delay,3.236451,lead:BR,
+Q09,draft,3.5,agent:SG,
+Q09,route:lead:SG,3.5,routing rule,review_every_quote
+Q09,enqueue,3.5,lead:SG,
+Q10,draft,3.5,agent:BR,
+Q10,route:lead:BR,3.5,routing rule,review_every_quote
+Q10,enqueue,3.5,lead:BR,
+Q10,review_start:correct,3.5,lead:BR,
+Q11,draft,3.5,agent:TR,
+Q11,route:lead:TR,3.5,routing rule,review_every_quote
+Q11,enqueue,3.5,lead:TR,
+Q12,draft,3.5,agent:SG,
+Q12,route:lead:SG,3.5,routing rule,review_every_quote
+Q12,enqueue,3.5,lead:SG,
+Q06,release,3.502497,lead:SG,lead_approval
+Q08,release,3.702073,lead:BR,lead_approval
+Q10,review_done:correct,3.893706,lead:BR,
+Q10,response_delay,3.893706,lead:BR,
+Q05,review_done:correct,3.997094,lead:TR,
+Q05,response_delay,3.997094,lead:TR,
+Q11,review_start:pass,3.997094,lead:TR,
+Q13,request,4.0,customer,
+Q14,request,4.0,customer,
+Q15,request,4.0,customer,
+Q16,request,4.0,customer,
+Q07,review_done:pass,4.18495,lead:SG,
+Q07,response_delay,4.18495,lead:SG,
+Q09,review_start:pass,4.18495,lead:SG,
+Q10,release,4.325367,lead:BR,lead_approval
+Q10,note_write,4.325367,agent:BR,
+Q13,draft,4.5,agent:BR,
+Q13,route:lead:BR,4.5,routing rule,review_every_quote
+Q13,enqueue,4.5,lead:BR,
+Q13,review_start:pass,4.5,lead:BR,
+Q14,draft,4.5,agent:SG,
+Q14,route:lead:SG,4.5,routing rule,review_every_quote
+Q14,enqueue,4.5,lead:SG,
+Q15,draft,4.5,agent:TR,
+Q15,route:lead:TR,4.5,routing rule,review_every_quote
+Q15,enqueue,4.5,lead:TR,
+Q16,draft,4.5,agent:SG,
+Q16,route:lead:SG,4.5,routing rule,review_every_quote
+Q16,enqueue,4.5,lead:SG,
+Q07,release,4.521126,lead:SG,lead_approval
+Q07,note_write,4.521126,agent:SG,
+Q05,release,4.632996,lead:TR,lead_approval
+Q05,note_write,4.632996,agent:TR,
+Q17,request,5.0,customer,
+Q18,request,5.0,customer,
+Q19,request,5.0,customer,
+Q20,request,5.0,customer,
+Q11,review_done:pass,5.263826,lead:TR,
+Q11,response_delay,5.263826,lead:TR,
+Q15,review_start:pass,5.263826,lead:TR,
+Q09,review_done:pass,5.311482,lead:SG,
+Q09,response_delay,5.311482,lead:SG,
+Q12,review_start:counter,5.311482,lead:SG,
+Q17,draft,5.5,agent:TR,
+Q17,route:lead:TR,5.5,routing rule,review_every_quote
+Q17,enqueue,5.5,lead:TR,
+Q18,draft,5.5,agent:BR,
+Q18,route:lead:BR,5.5,routing rule,review_every_quote
+Q18,enqueue,5.5,lead:BR,
+Q19,draft,5.5,agent:BR,
+Q19,route:lead:BR,5.5,routing rule,review_every_quote
+Q19,enqueue,5.5,lead:BR,
+Q20,draft,5.5,agent:TR,
+Q20,route:lead:TR,5.5,routing rule,review_every_quote
+Q20,enqueue,5.5,lead:TR,
+Q09,release,5.716579,lead:SG,lead_approval
+Q11,release,5.783023,lead:TR,lead_approval
+Q13,review_done:pass,6.000157,lead:BR,
+Q13,response_delay,6.000157,lead:BR,
+Q18,review_start:pass,6.000157,lead:BR,
+Q12,review_done:counter,6.119387,lead:SG,
+Q12,response_delay,6.119387,lead:SG,
+Q14,review_start:correct,6.119387,lead:SG,
+Q15,review_done:pass,6.324937,lead:TR,
+Q15,response_delay,6.324937,lead:TR,
+Q17,review_start:correct,6.324937,lead:TR,
+Q18,review_done:pass,6.488435,lead:BR,
+Q18,response_delay,6.488435,lead:BR,
+Q19,review_start:pass,6.488435,lead:BR,
+Q18,gate_refused,6.6795,release gate,policy_gate_to_ho
+Q18,enqueue,6.6795,ho,
+Q18,review_start:authorise,6.6795,ho,
+Q17,review_done:correct,6.68225,lead:TR,
+Q17,response_delay,6.68225,lead:TR,
+Q20,review_start:pass,6.68225,lead:TR,
+Q13,release,6.76639,lead:BR,lead_approval
+Q12,release,6.850171,lead:SG,lead_approval
+Q12,note_write,6.850171,agent:SG,
+Q19,review_done:pass,6.920668,lead:BR,
+Q19,response_delay,6.920668,lead:BR,
+Q20,review_done:pass,6.975575,lead:TR,
+Q20,response_delay,6.975575,lead:TR,
+Q15,release,6.986449,lead:TR,lead_approval
+Q17,release,7.019333,lead:TR,lead_approval
+Q17,note_write,7.019333,agent:TR,
+Q14,review_done:correct,7.12637,lead:SG,
+Q14,response_delay,7.12637,lead:SG,
+Q16,review_start:pass,7.12637,lead:SG,
+Q18,review_done:authorise,7.273196,ho,
+Q18,response_delay,7.273196,ho,
+Q14,release,7.455142,lead:SG,lead_approval
+Q14,note_write,7.455142,agent:SG,
+Q20,release,7.676904,lead:TR,lead_approval
+Q18,release,7.703093,ho,head_office_approval
+Q18,note_write,7.703093,agent:BR,
+Q16,review_done:pass,7.885201,lead:SG,
+Q16,response_delay,7.885201,lead:SG,
+Q19,release,8.088555,lead:BR,lead_approval
+Q16,release,8.55385,lead:SG,lead_approval

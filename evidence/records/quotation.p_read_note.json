@@ -1,0 +1,39 @@
+{
+  "id": "quotation.p_read_note",
+  "mechanism": "Agent reads the most recent readable note about this customer's term when drafting.",
+  "measures": "Nothing measured. A declared assumption.",
+  "simulator_parameter": "p_read_note",
+  "estimable": "no",
+  "estimable_note": "No evidence yet. Planned estimate: E5 constrains products, not this alone: p_read_note x p_adopt_blind (S.V-, Harm and Help roles) and p_read_note x (1 - p_notice_visible) (S.V+, Harm role).",
+  "value": {
+    "unit": "probability",
+    "range": [
+      0.3,
+      1.0
+    ],
+    "distribution": "uniform over the declared range cut from below, draw by draw, at the larger of the two products drawn from the pilot's intervals (p_read_note x p_adopt_blind and p_read_note x (1 - p_notice_visible))"
+  },
+  "status": "assumed",
+  "source": {
+    "name": "Declared assumption, evidence/assumptions.yaml",
+    "doi": null,
+    "licence": null,
+    "retrieved_utc": null
+  },
+  "conditions": "E4 quotation research model; every design, context and week",
+  "transfer": "No evidence.",
+  "versions": {
+    "code_commit": "70e17db",
+    "code_dirty": false,
+    "analysis": "experiments/e4_quotation/write_assumption_records.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "declared_utc": "2026-10-02 22:28 UTC",
+  "created_utc": "2026-10-03 14:03 UTC",
+  "used_by": [
+    "gca_sim/quotation"
+  ],
+  "notes": "The pilot does not measure reading a note on its own. This parameter is constrained through the fitted records note_adoption_blind.agent_pilot, note_adoption_help.agent_pilot and note_adoption_visible.agent_pilot."
+}

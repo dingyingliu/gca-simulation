@@ -1,0 +1,61 @@
+{
+ "version": 2,
+ "settings": {
+  "replicates": 3,
+  "development_groups": 5,
+  "bootstrap": 10000,
+  "simulated_pilots": 1000,
+  "task_concentration": 6.0,
+  "seed": 20261002
+ },
+ "flag_rates": {
+  "harm role, S.V- released error (2 tasks per group); no group effect; 2 held-out groups": {
+   "dev 0.5 -> held-out 0.5": 0.19,
+   "dev 0.5 -> held-out 0.3": 0.314,
+   "dev 0.5 -> held-out 0.2": 0.516,
+   "dev 0.3 -> held-out 0.6": 0.557
+  },
+  "harm role, S.V- released error (2 tasks per group); no group effect; 6 held-out groups": {
+   "dev 0.5 -> held-out 0.5": 0.227,
+   "dev 0.5 -> held-out 0.3": 0.53,
+   "dev 0.5 -> held-out 0.2": 0.771,
+   "dev 0.3 -> held-out 0.6": 0.78
+  },
+  "harm role, S.V- released error (2 tasks per group); group effect, concentration 4; 2 held-out groups": {
+   "dev 0.5 -> held-out 0.5": 0.157,
+   "dev 0.5 -> held-out 0.3": 0.234,
+   "dev 0.5 -> held-out 0.2": 0.331,
+   "dev 0.3 -> held-out 0.6": 0.388
+  },
+  "harm role, S.V- released error (2 tasks per group); group effect, concentration 4; 6 held-out groups": {
+   "dev 0.5 -> held-out 0.5": 0.207,
+   "dev 0.5 -> held-out 0.3": 0.378,
+   "dev 0.5 -> held-out 0.2": 0.577,
+   "dev 0.3 -> held-out 0.6": 0.588
+  },
+  "help role, S.V- correct term (1 task per group); no group effect; 2 held-out groups": {
+   "dev 0.5 -> held-out 0.5": 0.148,
+   "dev 0.5 -> held-out 0.3": 0.198,
+   "dev 0.5 -> held-out 0.2": 0.273,
+   "dev 0.3 -> held-out 0.6": 0.323
+  },
+  "help role, S.V- correct term (1 task per group); no group effect; 6 held-out groups": {
+   "dev 0.5 -> held-out 0.5": 0.2,
+   "dev 0.5 -> held-out 0.3": 0.34,
+   "dev 0.5 -> held-out 0.2": 0.488,
+   "dev 0.3 -> held-out 0.6": 0.556
+  },
+  "help role, S.V- correct term (1 task per group); group effect, concentration 4; 2 held-out groups": {
+   "dev 0.5 -> held-out 0.5": 0.126,
+   "dev 0.5 -> held-out 0.3": 0.181,
+   "dev 0.5 -> held-out 0.2": 0.186,
+   "dev 0.3 -> held-out 0.6": 0.284
+  },
+  "help role, S.V- correct term (1 task per group); group effect, concentration 4; 6 held-out groups": {
+   "dev 0.5 -> held-out 0.5": 0.164,
+   "dev 0.5 -> held-out 0.3": 0.289,
+   "dev 0.5 -> held-out 0.2": 0.452,
+   "dev 0.3 -> held-out 0.6": 0.494
+  }
+ }
+}

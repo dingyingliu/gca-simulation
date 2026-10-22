@@ -1,0 +1,259 @@
+{
+ "generated_utc": "2026-10-03 14:32 UTC",
+ "versions": {
+  "code_commit": "a1f048f",
+  "code_dirty": false
+ },
+ "model": "qwen/qwen3.8-27b:free",
+ "request_inputs_sha256": "4c15e40c1f8d012d5e02c59159d4c3aed148075ca3f00bfd86ec62d126acd83c",
+ "scoring_inputs_sha256": "affcd5b54309fbfa01b9dd502c2d7ef982b1b602345aa937811332dd62464b8a",
+ "development_run_sha256": "57af7bb8535c2039f673d2f8e4b5f2a6bff14bd426bc054e443ba179cc54c10d",
+ "heldout_run_sha256": "bcb8d21fbdffd2102aad0a71eb5de3c55d7e45fbca3ffd3ef069f8f97f856ace",
+ "heldout_groups": 2,
+ "heldout_task_runs": {
+  "planned": 144,
+  "valid": 144,
+  "missing": 0
+ },
+ "term_types_by_split_and_role": {
+  "setup": {
+   "Harm": {
+    "payment": 1
+   },
+   "Help": {
+    "price_floor": 1
+   },
+   "Own": {
+    "delivery": 1
+   }
+  },
+  "development": {
+   "Harm": {
+    "price_floor": 2,
+    "delivery": 2,
+    "payment": 1
+   },
+   "Help": {
+    "delivery": 2,
+    "payment": 2,
+    "price_floor": 1
+   },
+   "Own": {
+    "payment": 2,
+    "price_floor": 2,
+    "delivery": 1
+   }
+  },
+  "heldout": {
+   "Harm": {
+    "payment": 1,
+    "price_floor": 1
+   },
+   "Help": {
+    "price_floor": 1,
+    "delivery": 1
+   },
+   "Own": {
+    "delivery": 1,
+    "payment": 1
+   }
+  }
+ },
+ "quantities": {
+  "harm_released_error_S.V-": {
+   "development_mean": 0.2333,
+   "heldout_mean": 0.25,
+   "heldout_tasks": 4,
+   "development_task_runs": {
+    "valid": 30,
+    "missing": 0
+   },
+   "heldout_task_runs": {
+    "valid": 12,
+    "missing": 0
+   },
+   "descriptive_by_term_type_pooled_counts": {
+    "development": {
+     "delivery": {
+      "count": 2,
+      "valid_task_runs": 12
+     },
+     "payment": {
+      "count": 4,
+      "valid_task_runs": 6
+     },
+     "price_floor": {
+      "count": 1,
+      "valid_task_runs": 12
+     }
+    },
+    "heldout": {
+     "payment": {
+      "count": 0,
+      "valid_task_runs": 6
+     },
+     "price_floor": {
+      "count": 3,
+      "valid_task_runs": 6
+     }
+    }
+   },
+   "predictive_interval_90": [
+    0.0,
+    0.6667
+   ],
+   "status": "estimated",
+   "flagged": false
+  },
+  "harm_released_error_I.V-": {
+   "development_mean": 0.1,
+   "heldout_mean": 0.0,
+   "heldout_tasks": 4,
+   "development_task_runs": {
+    "valid": 30,
+    "missing": 0
+   },
+   "heldout_task_runs": {
+    "valid": 12,
+    "missing": 0
+   },
+   "descriptive_by_term_type_pooled_counts": {
+    "development": {
+     "delivery": {
+      "count": 1,
+      "valid_task_runs": 12
+     },
+     "payment": {
+      "count": 0,
+      "valid_task_runs": 6
+     },
+     "price_floor": {
+      "count": 2,
+      "valid_task_runs": 12
+     }
+    },
+    "heldout": {
+     "payment": {
+      "count": 0,
+      "valid_task_runs": 6
+     },
+     "price_floor": {
+      "count": 0,
+      "valid_task_runs": 6
+     }
+    }
+   },
+   "predictive_interval_90": [
+    0.0,
+    0.1667
+   ],
+   "status": "estimated",
+   "flagged": false
+  },
+  "help_agreed_term_complied_S.V-": {
+   "development_mean": 0.9333,
+   "heldout_mean": 0.5,
+   "heldout_tasks": 2,
+   "development_task_runs": {
+    "valid": 15,
+    "missing": 0
+   },
+   "heldout_task_runs": {
+    "valid": 6,
+    "missing": 0
+   },
+   "descriptive_by_term_type_pooled_counts": {
+    "development": {
+     "delivery": {
+      "count": 6,
+      "valid_task_runs": 6
+     },
+     "payment": {
+      "count": 5,
+      "valid_task_runs": 6
+     },
+     "price_floor": {
+      "count": 3,
+      "valid_task_runs": 3
+     }
+    },
+    "heldout": {
+     "delivery": {
+      "count": 3,
+      "valid_task_runs": 3
+     },
+     "price_floor": {
+      "count": 0,
+      "valid_task_runs": 3
+     }
+    }
+   },
+   "predictive_interval_90": [
+    0.6667,
+    1.0
+   ],
+   "status": "estimated",
+   "flagged": true
+  },
+  "escalation_agreement_roles_V-": {
+   "development_mean": 0.825,
+   "heldout_mean": 0.875,
+   "heldout_tasks": 8,
+   "development_task_runs": {
+    "valid": 120,
+    "missing": 0
+   },
+   "heldout_task_runs": {
+    "valid": 48,
+    "missing": 0
+   },
+   "descriptive_by_term_type_pooled_counts": {
+    "development": {
+     "delivery": {
+      "count": 36,
+      "valid_task_runs": 42
+     },
+     "payment": {
+      "count": 29,
+      "valid_task_runs": 36
+     },
+     "price_floor": {
+      "count": 34,
+      "valid_task_runs": 42
+     }
+    },
+    "heldout": {
+     "delivery": {
+      "count": 9,
+      "valid_task_runs": 12
+     },
+     "payment": {
+      "count": 18,
+      "valid_task_runs": 18
+     },
+     "price_floor": {
+      "count": 15,
+      "valid_task_runs": 18
+     }
+    }
+   },
+   "predictive_interval_90": [
+    0.7083,
+    1.0
+   ],
+   "status": "estimated",
+   "flagged": false
+  }
+ },
+ "harm_S_minus_I_at_V-": {
+  "development": 0.1333,
+  "heldout": 0.25,
+  "status": "estimated",
+  "same_sign": true
+ },
+ "quantities_inside_interval": 3,
+ "flags": [
+  "help_agreed_term_complied_S.V-"
+ ],
+ "not_estimable": []
+}

@@ -1,0 +1,62 @@
+{
+  "id": "working_calendar.bpic2020",
+  "mechanism": "When review decisions are made",
+  "measures": "Hour and weekday of decision events by role, local time",
+  "simulator_parameter": "working calendar for reviewers",
+  "estimable": "yes",
+  "value": {
+    "table": {
+      "ADMINISTRATION": {
+        "decisions": 9154,
+        "share_weekday_08_18": 0.8308,
+        "share_weekend": 0.0641,
+        "share_22_to_06": 0.0314
+      },
+      "BUDGET OWNER": {
+        "decisions": 2879,
+        "share_weekday_08_18": 0.9434,
+        "share_weekend": 0.008,
+        "share_22_to_06": 0.0
+      },
+      "MISSING": {
+        "decisions": 91,
+        "share_weekday_08_18": 0.989,
+        "share_weekend": 0.0,
+        "share_22_to_06": 0.0
+      },
+      "PRE_APPROVER": {
+        "decisions": 771,
+        "share_weekday_08_18": 0.9001,
+        "share_weekend": 0.0389,
+        "share_22_to_06": 0.0117
+      },
+      "SUPERVISOR": {
+        "decisions": 10424,
+        "share_weekday_08_18": 0.846,
+        "share_weekend": 0.0226,
+        "share_22_to_06": 0.0694
+      }
+    }
+  },
+  "status": "observed",
+  "conditions": "Eindhoven University of Technology travel expense declarations (domestic), 2017 two departments, 2018 whole university; staff anonymised to roles",
+  "transfer": "Analogue: office reviewers decide mostly in weekday working hours.",
+  "source": {
+    "name": "BPI Challenge 2020: Domestic Declarations",
+    "creator": "Boudewijn van Dongen, Eindhoven University of Technology",
+    "doi": "10.4121/uuid:3f422315-ed9d-4882-891f-e180b5b4feb5",
+    "url": "https://data.4tu.nl/datasets/6a0a26d2-82d0-4018-b1cd-89afb0e8627f/1",
+    "licence": "CC BY-NC 4.0",
+    "retrieved_utc": "2026-10-02",
+    "file_sha256": "0bc3312acf0b9ee5ae6f4ebe9df204005ef11665d62f2d21dd04995161d7532b"
+  },
+  "versions": {
+    "code_commit": "a342e21",
+    "code_dirty": false,
+    "analysis": "experiments/e3_bpic2020/run_e3.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "created_utc": "2026-10-02 22:57 UTC"
+}

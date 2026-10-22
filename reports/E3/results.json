@@ -1,0 +1,1766 @@
+{
+  "generated_utc": "2026-10-02 22:57 UTC",
+  "versions": {
+    "code_commit": "a342e21",
+    "code_dirty": false,
+    "pm4py": "2.7.23.8",
+    "pandas": "3.0.6",
+    "numpy": "2.5.3"
+  },
+  "counts": {
+    "cases": 10500,
+    "events": 56437,
+    "activities": 17,
+    "first_event_utc": "2017-01-09 08:49:50+00:00",
+    "last_event_utc": "2019-06-17 15:30:58+00:00",
+    "cases_by_start_year": {
+      "2017": 2240,
+      "2018": 8260
+    },
+    "events_per_case": {
+      "min": 1,
+      "median": 5.0,
+      "max": 24,
+      "mean": 5.375
+    },
+    "activity_counts": {
+      "Declaration SUBMITTED by EMPLOYEE": 11531,
+      "Declaration FINAL_APPROVED by SUPERVISOR": 10131,
+      "Payment Handled": 10044,
+      "Request Payment": 10040,
+      "Declaration APPROVED by ADMINISTRATION": 8202,
+      "Declaration APPROVED by BUDGET OWNER": 2820,
+      "Declaration REJECTED by EMPLOYEE": 1365,
+      "Declaration REJECTED by ADMINISTRATION": 952,
+      "Declaration APPROVED by PRE_APPROVER": 685,
+      "Declaration REJECTED by SUPERVISOR": 293,
+      "Declaration SAVED by EMPLOYEE": 135,
+      "Declaration REJECTED by MISSING": 91,
+      "Declaration REJECTED by PRE_APPROVER": 86,
+      "Declaration REJECTED by BUDGET OWNER": 59,
+      "Declaration FOR_APPROVAL by ADMINISTRATION": 1,
+      "Declaration FOR_APPROVAL by SUPERVISOR": 1,
+      "Declaration FOR_APPROVAL by PRE_APPROVER": 1
+    },
+    "role_counts": {
+      "UNDEFINED": 20084,
+      "EMPLOYEE": 13031,
+      "SUPERVISOR": 10425,
+      "ADMINISTRATION": 9155,
+      "BUDGET OWNER": 2879,
+      "PRE_APPROVER": 772,
+      "MISSING": 91
+    }
+  },
+  "variants": {
+    "n_variants": 99,
+    "variants_to_cover": {
+      "50%": 2,
+      "80%": 3,
+      "90%": 6,
+      "95%": 9,
+      "99%": 32
+    },
+    "top10": [
+      {
+        "rank": 1,
+        "cases": 4618,
+        "share": 0.4398,
+        "cumulative_share": 0.4398,
+        "sequence": [
+          "Employee submitted",
+          "Administration approved",
+          "Supervisor final approved",
+          "Request Payment",
+          "Payment Handled"
+        ]
+      },
+      {
+        "rank": 2,
+        "cases": 2473,
+        "share": 0.2355,
+        "cumulative_share": 0.6753,
+        "sequence": [
+          "Employee submitted",
+          "Administration approved",
+          "Budget Owner approved",
+          "Supervisor final approved",
+          "Request Payment",
+          "Payment Handled"
+        ]
+      },
+      {
+        "rank": 3,
+        "cases": 1392,
+        "share": 0.1326,
+        "cumulative_share": 0.8079,
+        "sequence": [
+          "Employee submitted",
+          "Supervisor final approved",
+          "Request Payment",
+          "Payment Handled"
+        ]
+      },
+      {
+        "rank": 4,
+        "cases": 575,
+        "share": 0.0548,
+        "cumulative_share": 0.8627,
+        "sequence": [
+          "Employee submitted",
+          "Pre_Approver approved",
+          "Supervisor final approved",
+          "Request Payment",
+          "Payment Handled"
+        ]
+      },
+      {
+        "rank": 5,
+        "cases": 345,
+        "share": 0.0329,
+        "cumulative_share": 0.8955,
+        "sequence": [
+          "Employee submitted",
+          "Administration rejected",
+          "Employee rejected",
+          "Employee submitted",
+          "Administration approved",
+          "Supervisor final approved",
+          "Request Payment",
+          "Payment Handled"
+        ]
+      },
+      {
+        "rank": 6,
+        "cases": 188,
+        "share": 0.0179,
+        "cumulative_share": 0.9134,
+        "sequence": [
+          "Employee submitted",
+          "Administration rejected",
+          "Employee rejected",
+          "Employee submitted",
+          "Administration approved",
+          "Budget Owner approved",
+          "Supervisor final approved",
+          "Request Payment",
+          "Payment Handled"
+        ]
+      },
+      {
+        "rank": 7,
+        "cases": 174,
+        "share": 0.0166,
+        "cumulative_share": 0.93,
+        "sequence": [
+          "Employee submitted",
+          "Administration rejected",
+          "Employee rejected"
+        ]
+      },
+      {
+        "rank": 8,
+        "cases": 134,
+        "share": 0.0128,
+        "cumulative_share": 0.9428,
+        "sequence": [
+          "Employee saved"
+        ]
+      },
+      {
+        "rank": 9,
+        "cases": 77,
+        "share": 0.0073,
+        "cumulative_share": 0.9501,
+        "sequence": [
+          "Employee submitted",
+          "Administration approved",
+          "Supervisor rejected",
+          "Employee rejected",
+          "Employee submitted",
+          "Administration approved",
+          "Supervisor final approved",
+          "Request Payment",
+          "Payment Handled"
+        ]
+      },
+      {
+        "rank": 10,
+        "cases": 57,
+        "share": 0.0054,
+        "cumulative_share": 0.9555,
+        "sequence": [
+          "Employee submitted",
+          "Pre_Approver rejected",
+          "Employee rejected",
+          "Employee submitted",
+          "Pre_Approver approved",
+          "Supervisor final approved",
+          "Request Payment",
+          "Payment Handled"
+        ]
+      }
+    ]
+  },
+  "dfg": {
+    "edges": [
+      {
+        "from": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "to": "Request Payment",
+        "count": 10038
+      },
+      {
+        "from": "Request Payment",
+        "to": "Payment Handled",
+        "count": 10037
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration APPROVED by ADMINISTRATION",
+        "count": 8202
+      },
+      {
+        "from": "Declaration APPROVED by ADMINISTRATION",
+        "to": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "count": 5133
+      },
+      {
+        "from": "Declaration APPROVED by ADMINISTRATION",
+        "to": "Declaration APPROVED by BUDGET OWNER",
+        "count": 2820
+      },
+      {
+        "from": "Declaration APPROVED by BUDGET OWNER",
+        "to": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "count": 2788
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "count": 1536
+      },
+      {
+        "from": "Declaration REJECTED by EMPLOYEE",
+        "to": "Declaration SUBMITTED by EMPLOYEE",
+        "count": 1081
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration REJECTED by ADMINISTRATION",
+        "count": 952
+      },
+      {
+        "from": "Declaration REJECTED by ADMINISTRATION",
+        "to": "Declaration REJECTED by EMPLOYEE",
+        "count": 928
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration APPROVED by PRE_APPROVER",
+        "count": 685
+      },
+      {
+        "from": "Declaration APPROVED by PRE_APPROVER",
+        "to": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "count": 674
+      },
+      {
+        "from": "Declaration REJECTED by SUPERVISOR",
+        "to": "Declaration REJECTED by EMPLOYEE",
+        "count": 286
+      },
+      {
+        "from": "Declaration APPROVED by ADMINISTRATION",
+        "to": "Declaration REJECTED by SUPERVISOR",
+        "count": 190
+      },
+      {
+        "from": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "to": "Declaration REJECTED by MISSING",
+        "count": 86
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration REJECTED by PRE_APPROVER",
+        "count": 86
+      },
+      {
+        "from": "Declaration REJECTED by PRE_APPROVER",
+        "to": "Declaration REJECTED by EMPLOYEE",
+        "count": 85
+      },
+      {
+        "from": "Declaration REJECTED by MISSING",
+        "to": "Declaration SUBMITTED by EMPLOYEE",
+        "count": 61
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration REJECTED by SUPERVISOR",
+        "count": 60
+      },
+      {
+        "from": "Declaration APPROVED by ADMINISTRATION",
+        "to": "Declaration REJECTED by BUDGET OWNER",
+        "count": 59
+      },
+      {
+        "from": "Declaration REJECTED by BUDGET OWNER",
+        "to": "Declaration REJECTED by EMPLOYEE",
+        "count": 58
+      },
+      {
+        "from": "Declaration APPROVED by BUDGET OWNER",
+        "to": "Declaration REJECTED by SUPERVISOR",
+        "count": 32
+      },
+      {
+        "from": "Declaration REJECTED by ADMINISTRATION",
+        "to": "Declaration SUBMITTED by EMPLOYEE",
+        "count": 19
+      },
+      {
+        "from": "Declaration APPROVED by PRE_APPROVER",
+        "to": "Declaration REJECTED by SUPERVISOR",
+        "count": 11
+      },
+      {
+        "from": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "to": "Payment Handled",
+        "count": 7
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration REJECTED by EMPLOYEE",
+        "count": 7
+      },
+      {
+        "from": "Request Payment",
+        "to": "Declaration REJECTED by MISSING",
+        "count": 3
+      },
+      {
+        "from": "Declaration REJECTED by SUPERVISOR",
+        "to": "Declaration SUBMITTED by EMPLOYEE",
+        "count": 2
+      },
+      {
+        "from": "Declaration FOR_APPROVAL by ADMINISTRATION",
+        "to": "Declaration SUBMITTED by EMPLOYEE",
+        "count": 1
+      },
+      {
+        "from": "Declaration FOR_APPROVAL by PRE_APPROVER",
+        "to": "Declaration REJECTED by MISSING",
+        "count": 1
+      },
+      {
+        "from": "Declaration FOR_APPROVAL by SUPERVISOR",
+        "to": "Declaration REJECTED by MISSING",
+        "count": 1
+      },
+      {
+        "from": "Declaration REJECTED by BUDGET OWNER",
+        "to": "Declaration SUBMITTED by EMPLOYEE",
+        "count": 1
+      },
+      {
+        "from": "Declaration REJECTED by PRE_APPROVER",
+        "to": "Declaration SUBMITTED by EMPLOYEE",
+        "count": 1
+      },
+      {
+        "from": "Declaration REJECTED by SUPERVISOR",
+        "to": "Request Payment",
+        "count": 1
+      },
+      {
+        "from": "Declaration SAVED by EMPLOYEE",
+        "to": "Request Payment",
+        "count": 1
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration FOR_APPROVAL by ADMINISTRATION",
+        "count": 1
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration FOR_APPROVAL by PRE_APPROVER",
+        "count": 1
+      },
+      {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration FOR_APPROVAL by SUPERVISOR",
+        "count": 1
+      },
+      {
+        "from": "Payment Handled",
+        "to": "Declaration REJECTED by EMPLOYEE",
+        "count": 1
+      }
+    ],
+    "start_activities": {
+      "Declaration SUBMITTED by EMPLOYEE": 10365,
+      "Declaration SAVED by EMPLOYEE": 135
+    },
+    "end_activities": {
+      "Payment Handled": 10043,
+      "Declaration REJECTED by EMPLOYEE": 284,
+      "Declaration REJECTED by ADMINISTRATION": 5,
+      "Declaration SAVED by EMPLOYEE": 134,
+      "Declaration REJECTED by SUPERVISOR": 4,
+      "Declaration REJECTED by MISSING": 30
+    }
+  },
+  "inductive_miner": {
+    "im_noise_0.0": {
+      "noise_threshold": 0.0,
+      "token_replay_log_fitness": 1.0,
+      "token_replay_share_fitting_traces": 1.0,
+      "token_replay_average_trace_fitness": 1.0,
+      "token_replay_precision": 0.3908,
+      "places": 26,
+      "transitions": 43,
+      "process_tree": "->( X( tau, 'Declaration SAVED by EMPLOYEE' ), X( tau, +( X( tau, *( 'Declaration REJECTED by EMPLOYEE', tau ) ), ->( +( X( tau, *( 'Declaration REJECTED by MISSING', tau ) ), ->( X( tau, *( ->( *( 'Declaration SUBMITTED by EMPLOYEE', 'Declaration FOR_APPROVAL by ADMINISTRATION' ), X( tau, 'Declaration REJECTED by ADMINISTRATION', 'Declaration REJECTED by PRE_APPROVER', +( X( tau, 'Declaration APPROVED by ADMINISTRATION' ), X( 'Declaration REJECTED by BUDGET OWNER', ->( X( tau, 'Declaration APPROVED by BUDGET OWNER', 'Declaration APPROVED by PRE_APPROVER' ), X( 'Declaration REJECTED by SUPERVISOR', 'Declaration FINAL_APPROVED by SUPERVISOR' ) ) ) ) ) ), tau ) ), X( tau, 'Declaration FOR_APPROVAL by PRE_APPROVER', 'Request Payment', 'Declaration FOR_APPROVAL by SUPERVISOR' ) ) ), X( tau, 'Payment Handled' ) ) ) ) )"
+    },
+    "im_noise_0.2": {
+      "noise_threshold": 0.2,
+      "token_replay_log_fitness": 0.9674,
+      "token_replay_share_fitting_traces": 0.6753,
+      "token_replay_average_trace_fitness": 0.9562,
+      "token_replay_precision": 0.3758,
+      "places": 21,
+      "transitions": 35,
+      "process_tree": "->( X( tau, 'Declaration SAVED by EMPLOYEE' ), X( 'Declaration APPROVED by PRE_APPROVER', ->( X( tau, ->( X( tau, 'Declaration REJECTED by BUDGET OWNER', ->( X( tau, 'Declaration FOR_APPROVAL by PRE_APPROVER', 'Declaration FOR_APPROVAL by SUPERVISOR' ), 'Declaration REJECTED by MISSING' ) ), X( *( 'Declaration REJECTED by ADMINISTRATION', tau ), 'Declaration REJECTED by SUPERVISOR', 'Declaration REJECTED by PRE_APPROVER' ), *( 'Declaration REJECTED by EMPLOYEE', tau ) ) ), *( 'Declaration SUBMITTED by EMPLOYEE', tau ), *( 'Declaration APPROVED by ADMINISTRATION', tau ), X( tau, *( 'Declaration APPROVED by BUDGET OWNER', tau ) ) ) ), 'Declaration FINAL_APPROVED by SUPERVISOR', 'Request Payment', 'Payment Handled' )",
+      "alignment_log_fitness": 0.9368,
+      "alignment_share_fitting_traces": 0.6753
+    },
+    "transfer_2017_to_2018": {
+      "im_noise_0.0": {
+        "cases_2017": 2240,
+        "cases_2018": 8260,
+        "fitness_on_2017": 1.0,
+        "fitness_on_2018": 0.996,
+        "share_2018_traces_fitting": 0.9579,
+        "precision_on_2017": 0.3209,
+        "precision_on_2018": 0.2157
+      },
+      "im_noise_0.2": {
+        "cases_2017": 2240,
+        "cases_2018": 8260,
+        "fitness_on_2017": 0.9845,
+        "fitness_on_2018": 0.9765,
+        "share_2018_traces_fitting": 0.8574,
+        "precision_on_2017": 0.4831,
+        "precision_on_2018": 0.4304
+      }
+    }
+  },
+  "handover_by_role": {
+    "note": "Consecutive events in a case whose roles differ. SYSTEM events have role UNDEFINED.",
+    "edges": [
+      {
+        "from": "SUPERVISOR",
+        "to": "UNDEFINED",
+        "count": 10046
+      },
+      {
+        "from": "EMPLOYEE",
+        "to": "ADMINISTRATION",
+        "count": 9155
+      },
+      {
+        "from": "ADMINISTRATION",
+        "to": "SUPERVISOR",
+        "count": 5323
+      },
+      {
+        "from": "ADMINISTRATION",
+        "to": "BUDGET OWNER",
+        "count": 2879
+      },
+      {
+        "from": "BUDGET OWNER",
+        "to": "SUPERVISOR",
+        "count": 2820
+      },
+      {
+        "from": "EMPLOYEE",
+        "to": "SUPERVISOR",
+        "count": 1597
+      },
+      {
+        "from": "ADMINISTRATION",
+        "to": "EMPLOYEE",
+        "count": 948
+      },
+      {
+        "from": "EMPLOYEE",
+        "to": "PRE_APPROVER",
+        "count": 772
+      },
+      {
+        "from": "PRE_APPROVER",
+        "to": "SUPERVISOR",
+        "count": 685
+      },
+      {
+        "from": "SUPERVISOR",
+        "to": "EMPLOYEE",
+        "count": 288
+      },
+      {
+        "from": "SUPERVISOR",
+        "to": "MISSING",
+        "count": 87
+      },
+      {
+        "from": "PRE_APPROVER",
+        "to": "EMPLOYEE",
+        "count": 86
+      },
+      {
+        "from": "MISSING",
+        "to": "EMPLOYEE",
+        "count": 61
+      },
+      {
+        "from": "BUDGET OWNER",
+        "to": "EMPLOYEE",
+        "count": 59
+      },
+      {
+        "from": "UNDEFINED",
+        "to": "MISSING",
+        "count": 3
+      },
+      {
+        "from": "EMPLOYEE",
+        "to": "UNDEFINED",
+        "count": 1
+      },
+      {
+        "from": "PRE_APPROVER",
+        "to": "MISSING",
+        "count": 1
+      },
+      {
+        "from": "UNDEFINED",
+        "to": "EMPLOYEE",
+        "count": 1
+      }
+    ],
+    "same_role_consecutive": {
+      "EMPLOYEE": 1088,
+      "UNDEFINED": 10037
+    },
+    "pm4py_crosscheck_edges": 20
+  },
+  "outcomes": {
+    "per_step": {
+      "ADMINISTRATION": {
+        "decisions": 9154,
+        "approved": 8202,
+        "rejected": 952,
+        "rejection_share": 0.104,
+        "rejection_share_95ci_wilson": [
+          0.0979,
+          0.1104
+        ],
+        "by_start_year": {
+          "2017": {
+            "decisions": 22,
+            "rejected": 4,
+            "rejection_share": 0.1818
+          },
+          "2018": {
+            "decisions": 9132,
+            "rejected": 948,
+            "rejection_share": 0.1038
+          }
+        }
+      },
+      "PRE_APPROVER": {
+        "decisions": 771,
+        "approved": 685,
+        "rejected": 86,
+        "rejection_share": 0.1115,
+        "rejection_share_95ci_wilson": [
+          0.0912,
+          0.1357
+        ],
+        "by_start_year": {
+          "2017": {
+            "decisions": 771,
+            "rejected": 86,
+            "rejection_share": 0.1115
+          },
+          "2018": {
+            "decisions": 0,
+            "rejected": 0,
+            "rejection_share": null
+          }
+        }
+      },
+      "BUDGET OWNER": {
+        "decisions": 2879,
+        "approved": 2820,
+        "rejected": 59,
+        "rejection_share": 0.0205,
+        "rejection_share_95ci_wilson": [
+          0.0159,
+          0.0263
+        ],
+        "by_start_year": {
+          "2017": {
+            "decisions": 4,
+            "rejected": 0,
+            "rejection_share": 0.0
+          },
+          "2018": {
+            "decisions": 2875,
+            "rejected": 59,
+            "rejection_share": 0.0205
+          }
+        }
+      },
+      "SUPERVISOR": {
+        "decisions": 10424,
+        "approved": 10131,
+        "rejected": 293,
+        "rejection_share": 0.0281,
+        "rejection_share_95ci_wilson": [
+          0.0251,
+          0.0315
+        ],
+        "by_start_year": {
+          "2017": {
+            "decisions": 2299,
+            "rejected": 71,
+            "rejection_share": 0.0309
+          },
+          "2018": {
+            "decisions": 8125,
+            "rejected": 222,
+            "rejection_share": 0.0273
+          }
+        }
+      },
+      "MISSING": {
+        "decisions": 91,
+        "approved": 0,
+        "rejected": 91,
+        "rejection_share": 1.0,
+        "rejection_share_95ci_wilson": [
+          0.9595,
+          1.0
+        ]
+      }
+    },
+    "note": "Counted per decision event. A resubmitted declaration can be decided more than once by the same role.",
+    "later_reviewer_rejects_after_earlier_approval": {
+      "BUDGET OWNER after ADMINISTRATION approval": {
+        "decisions": 2879,
+        "rejected": 59,
+        "share": 0.0205,
+        "share_95ci_wilson": [
+          0.0159,
+          0.0263
+        ]
+      },
+      "SUPERVISOR after ADMINISTRATION approval": {
+        "decisions": 5323,
+        "rejected": 190,
+        "share": 0.0357,
+        "share_95ci_wilson": [
+          0.031,
+          0.041
+        ]
+      },
+      "SUPERVISOR after BUDGET OWNER approval": {
+        "decisions": 2820,
+        "rejected": 32,
+        "share": 0.0113,
+        "share_95ci_wilson": [
+          0.008,
+          0.016
+        ]
+      }
+    },
+    "case_outcomes": {
+      "paid": 10044,
+      "ended_unpaid": 456,
+      "unpaid_last_activity": {
+        "Employee rejected": 283,
+        "Employee saved": 134,
+        "Missing rejected": 30,
+        "Administration rejected": 5,
+        "Supervisor rejected": 4
+      }
+    },
+    "rework": {
+      "returned_to_employee": 1365,
+      "resubmitted_next": 1081,
+      "resubmission_share": 0.7919,
+      "resubmission_share_95ci_wilson": [
+        0.7696,
+        0.8126
+      ],
+      "time_to_resubmit": {
+        "n": 1081,
+        "mean_days": 5.179,
+        "median_days": 0.202,
+        "median_days_95ci_bootstrap": [
+          0.134,
+          0.287
+        ],
+        "p2_5_days": 0.002,
+        "p10_days": 0.006,
+        "p25_days": 0.027,
+        "p75_days": 2.208,
+        "p90_days": 11.067,
+        "p97_5_days": 44.308,
+        "share_under_1_hour": 0.3191,
+        "share_over_7_days": 0.136
+      },
+      "submissions_per_case": {
+        "0": 135,
+        "1": 9346,
+        "2": 893,
+        "3": 112,
+        "4": 10,
+        "5": 2,
+        "6": 1,
+        "7": 1
+      },
+      "cases_with_more_than_one_submission": 1019
+    }
+  },
+  "timing": {
+    "note": "Elapsed calendar time between two recorded events. Includes queueing, nights, weekends and waiting for information. Not review time.",
+    "between_activities": {
+      "Employee submitted -> Administration approved": {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration APPROVED by ADMINISTRATION",
+        "n": 8202,
+        "mean_days": 1.156,
+        "median_days": 0.0,
+        "median_days_95ci_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "p2_5_days": 0.0,
+        "p10_days": 0.0,
+        "p25_days": 0.0,
+        "p75_days": 0.003,
+        "p90_days": 0.016,
+        "p97_5_days": 12.053,
+        "share_under_1_hour": 0.9166,
+        "share_over_7_days": 0.0321,
+        "share_spanning_a_weekend_day": 0.1092
+      },
+      "Employee submitted -> Administration rejected": {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration REJECTED by ADMINISTRATION",
+        "n": 952,
+        "mean_days": 5.662,
+        "median_days": 0.001,
+        "median_days_95ci_bootstrap": [
+          0.001,
+          0.002
+        ],
+        "p2_5_days": 0.0,
+        "p10_days": 0.0,
+        "p25_days": 0.0,
+        "p75_days": 0.009,
+        "p90_days": 1.695,
+        "p97_5_days": 75.359,
+        "share_under_1_hour": 0.8487,
+        "share_over_7_days": 0.0809,
+        "share_spanning_a_weekend_day": 0.1639
+      },
+      "Employee submitted -> Pre_Approver approved": {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration APPROVED by PRE_APPROVER",
+        "n": 685,
+        "mean_days": 1.242,
+        "median_days": 0.0,
+        "median_days_95ci_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "p2_5_days": 0.0,
+        "p10_days": 0.0,
+        "p25_days": 0.0,
+        "p75_days": 0.003,
+        "p90_days": 0.013,
+        "p97_5_days": 14.01,
+        "share_under_1_hour": 0.9299,
+        "share_over_7_days": 0.038,
+        "share_spanning_a_weekend_day": 0.0905
+      },
+      "Employee submitted -> Supervisor final approved": {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "to": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "n": 1536,
+        "mean_days": 0.948,
+        "median_days": 0.0,
+        "median_days_95ci_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "p2_5_days": 0.0,
+        "p10_days": 0.0,
+        "p25_days": 0.0,
+        "p75_days": 0.002,
+        "p90_days": 0.015,
+        "p97_5_days": 6.652,
+        "share_under_1_hour": 0.9271,
+        "share_over_7_days": 0.0247,
+        "share_spanning_a_weekend_day": 0.1068
+      },
+      "Administration approved -> Budget Owner approved": {
+        "from": "Declaration APPROVED by ADMINISTRATION",
+        "to": "Declaration APPROVED by BUDGET OWNER",
+        "n": 2820,
+        "mean_days": 1.898,
+        "median_days": 0.865,
+        "median_days_95ci_bootstrap": [
+          0.837,
+          0.894
+        ],
+        "p2_5_days": 0.005,
+        "p10_days": 0.027,
+        "p25_days": 0.129,
+        "p75_days": 2.732,
+        "p90_days": 4.86,
+        "p97_5_days": 10.408,
+        "share_under_1_hour": 0.133,
+        "share_over_7_days": 0.0429,
+        "share_spanning_a_weekend_day": 0.3032
+      },
+      "Administration approved -> Supervisor final approved": {
+        "from": "Declaration APPROVED by ADMINISTRATION",
+        "to": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "n": 5133,
+        "mean_days": 1.902,
+        "median_days": 0.87,
+        "median_days_95ci_bootstrap": [
+          0.849,
+          0.893
+        ],
+        "p2_5_days": 0.005,
+        "p10_days": 0.027,
+        "p25_days": 0.122,
+        "p75_days": 2.825,
+        "p90_days": 4.768,
+        "p97_5_days": 8.941,
+        "share_under_1_hour": 0.1399,
+        "share_over_7_days": 0.0376,
+        "share_spanning_a_weekend_day": 0.3242
+      },
+      "Administration approved -> Supervisor rejected": {
+        "from": "Declaration APPROVED by ADMINISTRATION",
+        "to": "Declaration REJECTED by SUPERVISOR",
+        "n": 190,
+        "mean_days": 2.192,
+        "median_days": 0.919,
+        "median_days_95ci_bootstrap": [
+          0.832,
+          1.764
+        ],
+        "p2_5_days": 0.012,
+        "p10_days": 0.039,
+        "p25_days": 0.257,
+        "p75_days": 3.054,
+        "p90_days": 4.936,
+        "p97_5_days": 10.405,
+        "share_under_1_hour": 0.1158,
+        "share_over_7_days": 0.0579,
+        "share_spanning_a_weekend_day": 0.4316
+      },
+      "Budget Owner approved -> Supervisor final approved": {
+        "from": "Declaration APPROVED by BUDGET OWNER",
+        "to": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "n": 2788,
+        "mean_days": 2.864,
+        "median_days": 1.91,
+        "median_days_95ci_bootstrap": [
+          1.861,
+          1.978
+        ],
+        "p2_5_days": 0.026,
+        "p10_days": 0.173,
+        "p25_days": 0.877,
+        "p75_days": 4.986,
+        "p90_days": 6.72,
+        "p97_5_days": 6.874,
+        "share_under_1_hour": 0.0352,
+        "share_over_7_days": 0.0075,
+        "share_spanning_a_weekend_day": 0.4006
+      },
+      "Pre_Approver approved -> Supervisor final approved": {
+        "from": "Declaration APPROVED by PRE_APPROVER",
+        "to": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "n": 674,
+        "mean_days": 1.889,
+        "median_days": 0.899,
+        "median_days_95ci_bootstrap": [
+          0.837,
+          0.956
+        ],
+        "p2_5_days": 0.003,
+        "p10_days": 0.025,
+        "p25_days": 0.12,
+        "p75_days": 2.983,
+        "p90_days": 6.154,
+        "p97_5_days": 6.797,
+        "share_under_1_hour": 0.1439,
+        "share_over_7_days": 0.0015,
+        "share_spanning_a_weekend_day": 0.3131
+      },
+      "Supervisor final approved -> Request Payment": {
+        "from": "Declaration FINAL_APPROVED by SUPERVISOR",
+        "to": "Request Payment",
+        "n": 10038,
+        "mean_days": 3.163,
+        "median_days": 1.143,
+        "median_days_95ci_bootstrap": [
+          1.117,
+          1.176
+        ],
+        "p2_5_days": 0.001,
+        "p10_days": 0.068,
+        "p25_days": 0.427,
+        "p75_days": 3.904,
+        "p90_days": 6.974,
+        "p97_5_days": 15.974,
+        "share_under_1_hour": 0.0757,
+        "share_over_7_days": 0.0986,
+        "share_spanning_a_weekend_day": 0.316
+      },
+      "Request Payment -> Payment Handled": {
+        "from": "Request Payment",
+        "to": "Payment Handled",
+        "n": 10037,
+        "mean_days": 3.575,
+        "median_days": 3.24,
+        "median_days_95ci_bootstrap": [
+          3.226,
+          3.252
+        ],
+        "p2_5_days": 1.148,
+        "p10_days": 2.045,
+        "p25_days": 2.318,
+        "p75_days": 4.281,
+        "p90_days": 4.913,
+        "p97_5_days": 7.38,
+        "share_under_1_hour": 0.0,
+        "share_over_7_days": 0.0393,
+        "share_spanning_a_weekend_day": 0.4909
+      },
+      "Employee rejected -> Employee submitted": {
+        "from": "Declaration REJECTED by EMPLOYEE",
+        "to": "Declaration SUBMITTED by EMPLOYEE",
+        "n": 1081,
+        "mean_days": 5.179,
+        "median_days": 0.202,
+        "median_days_95ci_bootstrap": [
+          0.135,
+          0.29
+        ],
+        "p2_5_days": 0.002,
+        "p10_days": 0.006,
+        "p25_days": 0.027,
+        "p75_days": 2.208,
+        "p90_days": 11.067,
+        "p97_5_days": 44.308,
+        "share_under_1_hour": 0.3191,
+        "share_over_7_days": 0.136,
+        "share_spanning_a_weekend_day": 0.2294
+      }
+    },
+    "to_role_decision_pooled_descriptive": {
+      "ADMINISTRATION": {
+        "n": 9154,
+        "mean_days": 1.624,
+        "median_days": 0.0,
+        "median_days_95ci_bootstrap": [
+          0.0,
+          0.001
+        ],
+        "p2_5_days": 0.0,
+        "p10_days": 0.0,
+        "p25_days": 0.0,
+        "p75_days": 0.003,
+        "p90_days": 0.023,
+        "p97_5_days": 15.642,
+        "share_under_1_hour": 0.9095,
+        "share_over_7_days": 0.0371,
+        "share_spanning_a_weekend_day": 0.1149
+      },
+      "PRE_APPROVER": {
+        "n": 771,
+        "mean_days": 1.32,
+        "median_days": 0.0,
+        "median_days_95ci_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "p2_5_days": 0.0,
+        "p10_days": 0.0,
+        "p25_days": 0.0,
+        "p75_days": 0.003,
+        "p90_days": 0.016,
+        "p97_5_days": 14.015,
+        "share_under_1_hour": 0.917,
+        "share_over_7_days": 0.0402,
+        "share_spanning_a_weekend_day": 0.0947
+      },
+      "BUDGET OWNER": {
+        "n": 2879,
+        "mean_days": 1.885,
+        "median_days": 0.864,
+        "median_days_95ci_bootstrap": [
+          0.836,
+          0.89
+        ],
+        "p2_5_days": 0.005,
+        "p10_days": 0.027,
+        "p25_days": 0.126,
+        "p75_days": 2.715,
+        "p90_days": 4.853,
+        "p97_5_days": 10.239,
+        "share_under_1_hour": 0.1358,
+        "share_over_7_days": 0.0431,
+        "share_spanning_a_weekend_day": 0.3011
+      },
+      "SUPERVISOR": {
+        "n": 10424,
+        "mean_days": 2.024,
+        "median_days": 0.873,
+        "median_days_95ci_bootstrap": [
+          0.853,
+          0.892
+        ],
+        "p2_5_days": 0.0,
+        "p10_days": 0.001,
+        "p25_days": 0.056,
+        "p75_days": 2.947,
+        "p90_days": 5.933,
+        "p97_5_days": 7.025,
+        "share_under_1_hour": 0.232,
+        "share_over_7_days": 0.0255,
+        "share_spanning_a_weekend_day": 0.314
+      }
+    },
+    "to_role_decision_by_preceding_step": {
+      "administration_after_submission": {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "role": "ADMINISTRATION",
+        "estimable_as_review_latency": "no",
+        "n": 9154,
+        "mean_days": 1.624,
+        "median_days": 0.0,
+        "median_days_95ci_bootstrap": [
+          0.0,
+          0.001
+        ],
+        "p2_5_days": 0.0,
+        "p10_days": 0.0,
+        "p25_days": 0.0,
+        "p75_days": 0.003,
+        "p90_days": 0.023,
+        "p97_5_days": 15.642,
+        "share_under_1_hour": 0.9095,
+        "share_over_7_days": 0.0371,
+        "share_spanning_a_weekend_day": 0.1149,
+        "by_start_year": {
+          "2018": {
+            "n": 9132,
+            "median_days": 0.0,
+            "p25_days": 0.0,
+            "p75_days": 0.003,
+            "p90_days": 0.022
+          }
+        }
+      },
+      "pre_approver_after_submission": {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "role": "PRE_APPROVER",
+        "estimable_as_review_latency": "no",
+        "n": 771,
+        "mean_days": 1.32,
+        "median_days": 0.0,
+        "median_days_95ci_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "p2_5_days": 0.0,
+        "p10_days": 0.0,
+        "p25_days": 0.0,
+        "p75_days": 0.003,
+        "p90_days": 0.016,
+        "p97_5_days": 14.015,
+        "share_under_1_hour": 0.917,
+        "share_over_7_days": 0.0402,
+        "share_spanning_a_weekend_day": 0.0947,
+        "by_start_year": {
+          "2017": {
+            "n": 771,
+            "median_days": 0.0,
+            "p25_days": 0.0,
+            "p75_days": 0.003,
+            "p90_days": 0.016
+          }
+        }
+      },
+      "supervisor_after_submission": {
+        "from": "Declaration SUBMITTED by EMPLOYEE",
+        "role": "SUPERVISOR",
+        "estimable_as_review_latency": "no",
+        "n": 1596,
+        "mean_days": 0.937,
+        "median_days": 0.0,
+        "median_days_95ci_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "p2_5_days": 0.0,
+        "p10_days": 0.0,
+        "p25_days": 0.0,
+        "p75_days": 0.002,
+        "p90_days": 0.015,
+        "p97_5_days": 6.977,
+        "share_under_1_hour": 0.9279,
+        "share_over_7_days": 0.0251,
+        "share_spanning_a_weekend_day": 0.1065,
+        "by_start_year": {
+          "2017": {
+            "n": 1596,
+            "median_days": 0.0,
+            "p25_days": 0.0,
+            "p75_days": 0.002,
+            "p90_days": 0.015
+          }
+        }
+      },
+      "budget_owner_after_administration": {
+        "from": "Declaration APPROVED by ADMINISTRATION",
+        "role": "BUDGET OWNER",
+        "estimable_as_review_latency": "partly",
+        "n": 2879,
+        "mean_days": 1.885,
+        "median_days": 0.864,
+        "median_days_95ci_bootstrap": [
+          0.835,
+          0.891
+        ],
+        "p2_5_days": 0.005,
+        "p10_days": 0.027,
+        "p25_days": 0.126,
+        "p75_days": 2.715,
+        "p90_days": 4.853,
+        "p97_5_days": 10.239,
+        "share_under_1_hour": 0.1358,
+        "share_over_7_days": 0.0431,
+        "share_spanning_a_weekend_day": 0.3011,
+        "by_start_year": {
+          "2018": {
+            "n": 2875,
+            "median_days": 0.864,
+            "p25_days": 0.126,
+            "p75_days": 2.715,
+            "p90_days": 4.852
+          }
+        }
+      },
+      "supervisor_after_administration": {
+        "from": "Declaration APPROVED by ADMINISTRATION",
+        "role": "SUPERVISOR",
+        "estimable_as_review_latency": "partly",
+        "n": 5323,
+        "mean_days": 1.912,
+        "median_days": 0.871,
+        "median_days_95ci_bootstrap": [
+          0.85,
+          0.894
+        ],
+        "p2_5_days": 0.005,
+        "p10_days": 0.027,
+        "p25_days": 0.124,
+        "p75_days": 2.836,
+        "p90_days": 4.778,
+        "p97_5_days": 8.981,
+        "share_under_1_hour": 0.139,
+        "share_over_7_days": 0.0383,
+        "share_spanning_a_weekend_day": 0.328,
+        "by_start_year": {
+          "2018": {
+            "n": 5309,
+            "median_days": 0.871,
+            "p25_days": 0.124,
+            "p75_days": 2.841,
+            "p90_days": 4.781
+          }
+        }
+      },
+      "supervisor_after_budget_owner": {
+        "from": "Declaration APPROVED by BUDGET OWNER",
+        "role": "SUPERVISOR",
+        "estimable_as_review_latency": "partly",
+        "n": 2820,
+        "mean_days": 2.879,
+        "median_days": 1.928,
+        "median_days_95ci_bootstrap": [
+          1.882,
+          1.989
+        ],
+        "p2_5_days": 0.026,
+        "p10_days": 0.175,
+        "p25_days": 0.877,
+        "p75_days": 5.003,
+        "p90_days": 6.724,
+        "p97_5_days": 6.873,
+        "share_under_1_hour": 0.0348,
+        "share_over_7_days": 0.0074,
+        "share_spanning_a_weekend_day": 0.4035,
+        "by_start_year": {
+          "2018": {
+            "n": 2816,
+            "median_days": 1.925,
+            "p25_days": 0.877,
+            "p75_days": 5.003,
+            "p90_days": 6.723
+          }
+        }
+      },
+      "supervisor_after_pre_approver": {
+        "from": "Declaration APPROVED by PRE_APPROVER",
+        "role": "SUPERVISOR",
+        "estimable_as_review_latency": "partly",
+        "n": 685,
+        "mean_days": 1.907,
+        "median_days": 0.9,
+        "median_days_95ci_bootstrap": [
+          0.844,
+          0.958
+        ],
+        "p2_5_days": 0.003,
+        "p10_days": 0.025,
+        "p25_days": 0.12,
+        "p75_days": 3.0,
+        "p90_days": 6.427,
+        "p97_5_days": 6.795,
+        "share_under_1_hour": 0.1445,
+        "share_over_7_days": 0.0015,
+        "share_spanning_a_weekend_day": 0.3197,
+        "by_start_year": {
+          "2017": {
+            "n": 685,
+            "median_days": 0.9,
+            "p25_days": 0.12,
+            "p75_days": 3.0,
+            "p90_days": 6.427
+          }
+        }
+      }
+    },
+    "lognormal_reference_fits": {
+      "administration_after_submission": {
+        "mu": -7.0889,
+        "sigma": 3.319,
+        "ks_statistic": 0.133,
+        "n_positive": 9154,
+        "share_zero_gaps": 0.0,
+        "implied_mean_days": 0.206,
+        "implied_p99_days": 1.882,
+        "observed_mean_days": 1.624,
+        "observed_p99_days": 43.121
+      },
+      "pre_approver_after_submission": {
+        "mu": -7.1767,
+        "sigma": 3.2612,
+        "ks_statistic": 0.1405,
+        "n_positive": 771,
+        "share_zero_gaps": 0.0,
+        "implied_mean_days": 0.156,
+        "implied_p99_days": 1.507,
+        "observed_mean_days": 1.32,
+        "observed_p99_days": 37.245
+      },
+      "supervisor_after_submission": {
+        "mu": -7.3703,
+        "sigma": 3.0115,
+        "ks_statistic": 0.1326,
+        "n_positive": 1596,
+        "share_zero_gaps": 0.0,
+        "implied_mean_days": 0.059,
+        "implied_p99_days": 0.695,
+        "observed_mean_days": 0.937,
+        "observed_p99_days": 31.178
+      },
+      "budget_owner_after_administration": {
+        "mu": -0.6418,
+        "sigma": 2.0475,
+        "ks_statistic": 0.1578,
+        "n_positive": 2879,
+        "share_zero_gaps": 0.0,
+        "implied_mean_days": 4.282,
+        "implied_p99_days": 61.651,
+        "observed_mean_days": 1.885,
+        "observed_p99_days": 13.723
+      },
+      "supervisor_after_administration": {
+        "mu": -0.5984,
+        "sigma": 2.0436,
+        "ks_statistic": 0.1626,
+        "n_positive": 5323,
+        "share_zero_gaps": 0.0,
+        "implied_mean_days": 4.436,
+        "implied_p99_days": 63.792,
+        "observed_mean_days": 1.912,
+        "observed_p99_days": 13.635
+      },
+      "supervisor_after_budget_owner": {
+        "mu": 0.4099,
+        "sigma": 1.4977,
+        "ks_statistic": 0.1469,
+        "n_positive": 2820,
+        "share_zero_gaps": 0.0,
+        "implied_mean_days": 4.625,
+        "implied_p99_days": 49.112,
+        "observed_mean_days": 2.879,
+        "observed_p99_days": 6.905
+      },
+      "supervisor_after_pre_approver": {
+        "mu": -0.6297,
+        "sigma": 2.157,
+        "ks_statistic": 0.1687,
+        "n_positive": 685,
+        "share_zero_gaps": 0.0,
+        "implied_mean_days": 5.456,
+        "implied_p99_days": 80.504,
+        "observed_mean_days": 1.907,
+        "observed_p99_days": 6.83
+      }
+    },
+    "submission_to_final_supervisor_approval": {
+      "n": 10070,
+      "mean_days": 4.831,
+      "median_days": 1.622,
+      "median_days_95ci_bootstrap": [
+        1.412,
+        1.721
+      ],
+      "p2_5_days": 0.0,
+      "p10_days": 0.002,
+      "p25_days": 0.122,
+      "p75_days": 4.963,
+      "p90_days": 9.362,
+      "p97_5_days": 30.338,
+      "share_under_1_hour": 0.1903,
+      "share_over_7_days": 0.1493
+    },
+    "submission_to_payment": {
+      "n": 10043,
+      "mean_days": 11.618,
+      "median_days": 7.411,
+      "median_days_95ci_bootstrap": [
+        7.343,
+        7.942
+      ],
+      "p2_5_days": 2.778,
+      "p10_days": 3.328,
+      "p25_days": 6.045,
+      "p75_days": 12.341,
+      "p90_days": 20.153,
+      "p97_5_days": 43.388,
+      "share_under_1_hour": 0.0,
+      "share_over_7_days": 0.6095
+    }
+  },
+  "working_calendar": {
+    "ADMINISTRATION": {
+      "decisions": 9154,
+      "share_weekday_08_18": 0.8308,
+      "share_weekend": 0.0641,
+      "share_22_to_06": 0.0314,
+      "by_hour": {
+        "0": 38,
+        "1": 5,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 6,
+        "7": 85,
+        "8": 382,
+        "9": 940,
+        "10": 1109,
+        "11": 1075,
+        "12": 691,
+        "13": 853,
+        "14": 920,
+        "15": 782,
+        "16": 740,
+        "17": 489,
+        "18": 228,
+        "19": 193,
+        "20": 179,
+        "21": 195,
+        "22": 142,
+        "23": 94
+      }
+    },
+    "BUDGET OWNER": {
+      "decisions": 2879,
+      "share_weekday_08_18": 0.9434,
+      "share_weekend": 0.008,
+      "share_22_to_06": 0.0,
+      "by_hour": {
+        "7": 111,
+        "8": 384,
+        "9": 309,
+        "10": 419,
+        "11": 324,
+        "12": 200,
+        "13": 322,
+        "14": 331,
+        "15": 299,
+        "16": 132,
+        "17": 10,
+        "18": 9,
+        "19": 2,
+        "20": 18,
+        "21": 9
+      }
+    },
+    "MISSING": {
+      "decisions": 91,
+      "share_weekday_08_18": 0.989,
+      "share_weekend": 0.0,
+      "share_22_to_06": 0.0,
+      "by_hour": {
+        "8": 4,
+        "9": 5,
+        "10": 11,
+        "11": 17,
+        "12": 14,
+        "13": 12,
+        "14": 11,
+        "15": 13,
+        "16": 3,
+        "18": 1
+      }
+    },
+    "PRE_APPROVER": {
+      "decisions": 771,
+      "share_weekday_08_18": 0.9001,
+      "share_weekend": 0.0389,
+      "share_22_to_06": 0.0117,
+      "by_hour": {
+        "0": 2,
+        "7": 1,
+        "8": 32,
+        "9": 115,
+        "10": 109,
+        "11": 90,
+        "12": 54,
+        "13": 64,
+        "14": 72,
+        "15": 67,
+        "16": 57,
+        "17": 56,
+        "18": 20,
+        "19": 10,
+        "20": 11,
+        "21": 4,
+        "22": 5,
+        "23": 2
+      }
+    },
+    "SUPERVISOR": {
+      "decisions": 10424,
+      "share_weekday_08_18": 0.846,
+      "share_weekend": 0.0226,
+      "share_22_to_06": 0.0694,
+      "by_hour": {
+        "0": 16,
+        "1": 3,
+        "2": 4,
+        "5": 603,
+        "6": 40,
+        "7": 361,
+        "8": 1230,
+        "9": 1294,
+        "10": 1306,
+        "11": 1019,
+        "12": 697,
+        "13": 880,
+        "14": 938,
+        "15": 869,
+        "16": 529,
+        "17": 191,
+        "18": 109,
+        "19": 88,
+        "20": 72,
+        "21": 78,
+        "22": 71,
+        "23": 26
+      }
+    }
+  },
+  "payment_batch": {
+    "events": 10044,
+    "share_17_30_to_17_32": 0.988,
+    "by_weekday": {
+      "0": 4294,
+      "1": 26,
+      "2": 1,
+      "3": 5723
+    }
+  },
+  "arrivals": {
+    "submissions_per_week_2018": {
+      "weeks": 53,
+      "median": 186.0,
+      "p10": 66.4,
+      "p90": 248.60000000000005
+    }
+  },
+  "chain_vs_amount": {
+    "note": "Paid cases with a positive amount; approval roles in the submission round that led to payment. Amounts are not exact (challenge page) and their currency is not stated.",
+    "cases": 10044,
+    "chain_counts": {
+      "ADM>SUP": 5133,
+      "ADM>BO>SUP": 2788,
+      "SUP": 1462,
+      "PRE>SUP": 659,
+      "": 2
+    },
+    "length_counts": {
+      "0": 2,
+      "1": 1462,
+      "2": 5792,
+      "3": 2788
+    },
+    "by_amount_bin": {
+      "0-25": {
+        "ADM>BO>SUP": 703,
+        "ADM>SUP": 1312,
+        "PRE>SUP": 138,
+        "SUP": 453
+      },
+      "25-50": {
+        "ADM>BO>SUP": 802,
+        "ADM>SUP": 1603,
+        "PRE>SUP": 223,
+        "SUP": 420
+      },
+      "50-100": {
+        "ADM>BO>SUP": 571,
+        "ADM>SUP": 1097,
+        "PRE>SUP": 168,
+        "SUP": 248
+      },
+      "100-250": {
+        "ADM>BO>SUP": 486,
+        "ADM>SUP": 712,
+        "PRE>SUP": 81,
+        "SUP": 231
+      },
+      "250-500": {
+        "ADM>BO>SUP": 160,
+        "ADM>SUP": 298,
+        "PRE>SUP": 36,
+        "SUP": 80
+      },
+      "500+": {
+        "ADM>BO>SUP": 66,
+        "ADM>SUP": 111,
+        "PRE>SUP": 13,
+        "SUP": 30
+      }
+    },
+    "share_with_budget_owner_step": {
+      "0-25": {
+        "cases": 2606,
+        "with_BO": 703,
+        "share": 0.2698,
+        "share_95ci_wilson": [
+          0.2531,
+          0.2871
+        ]
+      },
+      "25-50": {
+        "cases": 3049,
+        "with_BO": 802,
+        "share": 0.263,
+        "share_95ci_wilson": [
+          0.2477,
+          0.279
+        ]
+      },
+      "50-100": {
+        "cases": 2085,
+        "with_BO": 571,
+        "share": 0.2739,
+        "share_95ci_wilson": [
+          0.2551,
+          0.2934
+        ]
+      },
+      "100-250": {
+        "cases": 1510,
+        "with_BO": 486,
+        "share": 0.3219,
+        "share_95ci_wilson": [
+          0.2988,
+          0.3458
+        ]
+      },
+      "250-500": {
+        "cases": 574,
+        "with_BO": 160,
+        "share": 0.2787,
+        "share_95ci_wilson": [
+          0.2436,
+          0.3168
+        ]
+      },
+      "500+": {
+        "cases": 220,
+        "with_BO": 66,
+        "share": 0.3,
+        "share_95ci_wilson": [
+          0.2433,
+          0.3636
+        ]
+      }
+    },
+    "spearman_amount_vs_length": {
+      "rho": 0.0406,
+      "p_value": 4.6260803097718346e-05
+    },
+    "median_amount_by_length": {
+      "0": 42.62,
+      "1": 40.13,
+      "2": 43.33,
+      "3": 45.54
+    }
+  },
+  "year_comparison": {
+    "note": "2017 covers two departments and 2018 the whole university, so differences mix organisational scope with time.",
+    "paid_cases": {
+      "2017": 2141,
+      "2018": 7903
+    },
+    "route_shares_paid_round": {
+      "2017": {
+        "SUP": 0.6829,
+        "PRE>SUP": 0.3078,
+        "ADM>SUP": 0.0065,
+        "ADM>BO>SUP": 0.0019
+      },
+      "2018": {
+        "ADM>SUP": 0.6477,
+        "ADM>BO>SUP": 0.3523
+      }
+    },
+    "rejection_share_by_role": {
+      "ADMINISTRATION": {
+        "2017": {
+          "decisions": 22,
+          "rejected": 4,
+          "rejection_share": 0.1818
+        },
+        "2018": {
+          "decisions": 9132,
+          "rejected": 948,
+          "rejection_share": 0.1038
+        }
+      },
+      "PRE_APPROVER": {
+        "2017": {
+          "decisions": 771,
+          "rejected": 86,
+          "rejection_share": 0.1115
+        },
+        "2018": {
+          "decisions": 0,
+          "rejected": 0,
+          "rejection_share": null
+        }
+      },
+      "BUDGET OWNER": {
+        "2017": {
+          "decisions": 4,
+          "rejected": 0,
+          "rejection_share": 0.0
+        },
+        "2018": {
+          "decisions": 2875,
+          "rejected": 59,
+          "rejection_share": 0.0205
+        }
+      },
+      "SUPERVISOR": {
+        "2017": {
+          "decisions": 2299,
+          "rejected": 71,
+          "rejection_share": 0.0309
+        },
+        "2018": {
+          "decisions": 8125,
+          "rejected": 222,
+          "rejection_share": 0.0273
+        }
+      }
+    },
+    "time_to_decision_median_by_step": {
+      "administration_after_submission": {
+        "2018": 0.0
+      },
+      "pre_approver_after_submission": {
+        "2017": 0.0
+      },
+      "supervisor_after_submission": {
+        "2017": 0.0
+      },
+      "budget_owner_after_administration": {
+        "2018": 0.864
+      },
+      "supervisor_after_administration": {
+        "2018": 0.871
+      },
+      "supervisor_after_budget_owner": {
+        "2018": 1.925
+      },
+      "supervisor_after_pre_approver": {
+        "2017": 0.9
+      }
+    },
+    "transfer_2017_model_on_2018": {
+      "im_noise_0.0": {
+        "cases_2017": 2240,
+        "cases_2018": 8260,
+        "fitness_on_2017": 1.0,
+        "fitness_on_2018": 0.996,
+        "share_2018_traces_fitting": 0.9579,
+        "precision_on_2017": 0.3209,
+        "precision_on_2018": 0.2157
+      },
+      "im_noise_0.2": {
+        "cases_2017": 2240,
+        "cases_2018": 8260,
+        "fitness_on_2017": 0.9845,
+        "fitness_on_2018": 0.9765,
+        "share_2018_traces_fitting": 0.8574,
+        "precision_on_2017": 0.4831,
+        "precision_on_2018": 0.4304
+      }
+    }
+  }
+}

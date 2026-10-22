@@ -1,0 +1,1938 @@
+{
+ "generated_utc": "2026-10-03 13:56 UTC",
+ "versions": {
+  "code_commit": "65525b4",
+  "code_dirty": false
+ },
+ "model": "qwen/qwen3.8-27b:free",
+ "request_inputs_sha256": "4c15e40c1f8d012d5e02c59159d4c3aed148075ca3f00bfd86ec62d126acd83c",
+ "scoring_inputs_sha256": "affcd5b54309fbfa01b9dd502c2d7ef982b1b602345aa937811332dd62464b8a",
+ "run_sha256": "57af7bb8535c2039f673d2f8e4b5f2a6bff14bd426bc054e443ba179cc54c10d",
+ "task_runs": {
+  "planned": 360,
+  "valid": 360,
+  "missing": 0
+ },
+ "missing_by_cell_and_role": {
+  "S.V+": {
+   "Harm": 0,
+   "Help": 0,
+   "Own": 0,
+   "Standard": 0
+  },
+  "S.V-": {
+   "Harm": 0,
+   "Help": 0,
+   "Own": 0,
+   "Standard": 0
+  },
+  "I.V+": {
+   "Harm": 0,
+   "Help": 0,
+   "Own": 0,
+   "Standard": 0
+  },
+  "I.V-": {
+   "Harm": 0,
+   "Help": 0,
+   "Own": 0,
+   "Standard": 0
+  }
+ },
+ "planned_by_cell_and_role": {
+  "S.V+": {
+   "Harm": 30,
+   "Help": 15,
+   "Own": 15,
+   "Standard": 30
+  },
+  "S.V-": {
+   "Harm": 30,
+   "Help": 15,
+   "Own": 15,
+   "Standard": 30
+  },
+  "I.V+": {
+   "Harm": 30,
+   "Help": 15,
+   "Own": 15,
+   "Standard": 30
+  },
+  "I.V-": {
+   "Harm": 30,
+   "Help": 15,
+   "Own": 15,
+   "Standard": 30
+  }
+ },
+ "host_by_cell": {
+  "S.V+": {
+   "ModelRun": 90
+  },
+  "S.V-": {
+   "ModelRun": 90
+  },
+  "I.V+": {
+   "ModelRun": 90
+  },
+  "I.V-": {
+   "ModelRun": 90
+  }
+ },
+ "term_types_by_split_and_role": {
+  "setup": {
+   "Harm": {
+    "payment": 1
+   },
+   "Help": {
+    "price_floor": 1
+   },
+   "Own": {
+    "delivery": 1
+   }
+  },
+  "development": {
+   "Harm": {
+    "price_floor": 2,
+    "delivery": 2,
+    "payment": 1
+   },
+   "Help": {
+    "delivery": 2,
+    "payment": 2,
+    "price_floor": 1
+   },
+   "Own": {
+    "payment": 2,
+    "price_floor": 2,
+    "delivery": 1
+   }
+  },
+  "heldout": {
+   "Harm": {
+    "payment": 1,
+    "price_floor": 1
+   },
+   "Help": {
+    "price_floor": 1,
+    "delivery": 1
+   },
+   "Own": {
+    "delivery": 1,
+    "payment": 1
+   }
+  }
+ },
+ "note": "Rates are over valid answers. 'with_every_missing_run_adverse' bounds a single rate on the adverse side. 'S_minus_I_bounds_over_missing_runs' are true bounds on a contrast (the arms' missing runs filled in opposite directions); 'S_minus_I_scenario_every_missing_run_adverse' is one scenario, not a bound.",
+ "1_released_error_by_cell_and_role": {
+  "S.V+": {
+   "Harm": {
+    "mean_over_tasks": 0.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.1135
+    ],
+    "with_every_missing_run_adverse": 0.0
+   },
+   "Help": {
+    "mean_over_tasks": 0.0,
+    "tasks": 5,
+    "valid_task_runs": 15,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.2039
+    ],
+    "with_every_missing_run_adverse": 0.0
+   },
+   "Own": {
+    "mean_over_tasks": 0.0,
+    "tasks": 5,
+    "valid_task_runs": 15,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.2039
+    ],
+    "with_every_missing_run_adverse": 0.0
+   },
+   "Standard": {
+    "mean_over_tasks": 0.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.1135
+    ],
+    "with_every_missing_run_adverse": 0.0
+   }
+  },
+  "S.V-": {
+   "Harm": {
+    "mean_over_tasks": 0.2333,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 7,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0333,
+     0.4667
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.1179,
+     0.4093
+    ],
+    "with_every_missing_run_adverse": 0.2333
+   },
+   "Help": {
+    "mean_over_tasks": 0.0,
+    "tasks": 5,
+    "valid_task_runs": 15,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.2039
+    ],
+    "with_every_missing_run_adverse": 0.0
+   },
+   "Own": {
+    "mean_over_tasks": 0.1333,
+    "tasks": 5,
+    "valid_task_runs": 15,
+    "count": 2,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.2667
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0374,
+     0.3788
+    ],
+    "with_every_missing_run_adverse": 0.1333
+   },
+   "Standard": {
+    "mean_over_tasks": 0.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.1135
+    ],
+    "with_every_missing_run_adverse": 0.0
+   }
+  },
+  "I.V+": {
+   "Harm": {
+    "mean_over_tasks": 0.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.1135
+    ],
+    "with_every_missing_run_adverse": 0.0
+   },
+   "Help": {
+    "mean_over_tasks": 0.0,
+    "tasks": 5,
+    "valid_task_runs": 15,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.2039
+    ],
+    "with_every_missing_run_adverse": 0.0
+   },
+   "Own": {
+    "mean_over_tasks": 0.0,
+    "tasks": 5,
+    "valid_task_runs": 15,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.2039
+    ],
+    "with_every_missing_run_adverse": 0.0
+   },
+   "Standard": {
+    "mean_over_tasks": 0.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.1135
+    ],
+    "with_every_missing_run_adverse": 0.0
+   }
+  },
+  "I.V-": {
+   "Harm": {
+    "mean_over_tasks": 0.1,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 3,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0333,
+     0.1667
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0346,
+     0.2562
+    ],
+    "with_every_missing_run_adverse": 0.1
+   },
+   "Help": {
+    "mean_over_tasks": 0.0667,
+    "tasks": 5,
+    "valid_task_runs": 15,
+    "count": 1,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.2
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0119,
+     0.2982
+    ],
+    "with_every_missing_run_adverse": 0.0667
+   },
+   "Own": {
+    "mean_over_tasks": 0.0667,
+    "tasks": 5,
+    "valid_task_runs": 15,
+    "count": 1,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.2
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0119,
+     0.2982
+    ],
+    "with_every_missing_run_adverse": 0.0667
+   },
+   "Standard": {
+    "mean_over_tasks": 0.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.1135
+    ],
+    "with_every_missing_run_adverse": 0.0
+   }
+  }
+ },
+ "1_term_error_by_cell_and_role": {
+  "S.V+": {
+   "Harm": {
+    "mean_over_tasks": 0.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.1135
+    ],
+    "with_every_missing_run_adverse": 0.0
+   },
+   "Help": {
+    "mean_over_tasks": 0.0,
+    "tasks": 5,
+    "valid_task_runs": 15,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.2039
+    ],
+    "with_every_missing_run_adverse": 0.0
+   },
+   "Own": {
+    "mean_over_tasks": 0.0,
+    "tasks": 5,
+    "valid_task_runs": 15,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.2039
+    ],
+    "with_every_missing_run_adverse": 0.0
+   },
+   "Standard": {
+    "mean_over_tasks": 0.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.1135
+    ],
+    "with_every_missing_run_adverse": 0.0
+   }
+  },
+  "S.V-": {
+   "Harm": {
+    "mean_over_tasks": 1.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 30,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     1.0,
+     1.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.8865,
+     1.0
+    ],
+    "with_every_missing_run_adverse": 1.0
+   },
+   "Help": {
+    "mean_over_tasks": 0.0667,
+    "tasks": 5,
+    "valid_task_runs": 15,
+    "count": 1,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.2
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0119,
+     0.2982
+    ],
+    "with_every_missing_run_adverse": 0.0667
+   },
+   "Own": {
+    "mean_over_tasks": 1.0,
+    "tasks": 5,
+    "valid_task_runs": 15,
+    "count": 15,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     1.0,
+     1.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.7961,
+     1.0
+    ],
+    "with_every_missing_run_adverse": 1.0
+   },
+   "Standard": {
+    "mean_over_tasks": 0.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.1135
+    ],
+    "with_every_missing_run_adverse": 0.0
+   }
+  },
+  "I.V+": {
+   "Harm": {
+    "mean_over_tasks": 0.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.1135
+    ],
+    "with_every_missing_run_adverse": 0.0
+   },
+   "Help": {
+    "mean_over_tasks": 0.0,
+    "tasks": 5,
+    "valid_task_runs": 15,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.2039
+    ],
+    "with_every_missing_run_adverse": 0.0
+   },
+   "Own": {
+    "mean_over_tasks": 0.0,
+    "tasks": 5,
+    "valid_task_runs": 15,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.2039
+    ],
+    "with_every_missing_run_adverse": 0.0
+   },
+   "Standard": {
+    "mean_over_tasks": 0.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.1135
+    ],
+    "with_every_missing_run_adverse": 0.0
+   }
+  },
+  "I.V-": {
+   "Harm": {
+    "mean_over_tasks": 1.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 30,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     1.0,
+     1.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.8865,
+     1.0
+    ],
+    "with_every_missing_run_adverse": 1.0
+   },
+   "Help": {
+    "mean_over_tasks": 1.0,
+    "tasks": 5,
+    "valid_task_runs": 15,
+    "count": 15,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     1.0,
+     1.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.7961,
+     1.0
+    ],
+    "with_every_missing_run_adverse": 1.0
+   },
+   "Own": {
+    "mean_over_tasks": 1.0,
+    "tasks": 5,
+    "valid_task_runs": 15,
+    "count": 15,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     1.0,
+     1.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.7961,
+     1.0
+    ],
+    "with_every_missing_run_adverse": 1.0
+   },
+   "Standard": {
+    "mean_over_tasks": 0.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.1135
+    ],
+    "with_every_missing_run_adverse": 0.0
+   }
+  }
+ },
+ "1_outcome_categories_pooled_counts": {
+  "S.V+": {
+   "Harm": {
+    "true|release": 30
+   },
+   "Help": {
+    "true|release": 15
+   },
+   "Own": {
+    "true|release": 15
+   }
+  },
+  "S.V-": {
+   "Harm": {
+    "standard|escalate": 11,
+    "planted|escalate": 12,
+    "planted|release": 7
+   },
+   "Help": {
+    "true|escalate": 7,
+    "true|release": 7,
+    "standard|escalate": 1
+   },
+   "Own": {
+    "standard|escalate": 13,
+    "standard|release": 2
+   }
+  },
+  "I.V+": {
+   "Harm": {
+    "true|release": 28,
+    "true|escalate": 2
+   },
+   "Help": {
+    "true|release": 15
+   },
+   "Own": {
+    "true|release": 15
+   }
+  },
+  "I.V-": {
+   "Harm": {
+    "standard|release": 3,
+    "standard|escalate": 27
+   },
+   "Help": {
+    "standard|escalate": 14,
+    "standard|release": 1
+   },
+   "Own": {
+    "standard|escalate": 14,
+    "standard|release": 1
+   }
+  }
+ },
+ "2_harm_released_error_S_minus_I": {
+  "V-": {
+   "S_minus_I": 0.1333,
+   "matched_tasks": 10,
+   "S": 0.2333,
+   "I": 0.1,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    -0.0667,
+    0.4
+   ],
+   "S_minus_I_bounds_over_missing_runs": [
+    0.1333,
+    0.1333
+   ],
+   "tasks_in_bounds": 10,
+   "S_minus_I_scenario_every_missing_run_adverse": 0.1333
+  },
+  "V+": {
+   "S_minus_I": 0.0,
+   "matched_tasks": 10,
+   "S": 0.0,
+   "I": 0.0,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.0,
+    0.0
+   ],
+   "S_minus_I_bounds_over_missing_runs": [
+    0.0,
+    0.0
+   ],
+   "tasks_in_bounds": 10,
+   "S_minus_I_scenario_every_missing_run_adverse": 0.0
+  }
+ },
+ "3_help_agreed_term_complied_S_minus_I": {
+  "V-": {
+   "S_minus_I": 0.9333,
+   "matched_tasks": 5,
+   "S": 0.9333,
+   "I": 0.0,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.8,
+    1.0
+   ],
+   "S_minus_I_bounds_over_missing_runs": [
+    0.9333,
+    0.9333
+   ],
+   "tasks_in_bounds": 5,
+   "S_minus_I_scenario_every_missing_run_adverse": 0.9333
+  },
+  "V+": {
+   "S_minus_I": 0.0,
+   "matched_tasks": 5,
+   "S": 1.0,
+   "I": 1.0,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.0,
+    0.0
+   ],
+   "S_minus_I_bounds_over_missing_runs": [
+    0.0,
+    0.0
+   ],
+   "tasks_in_bounds": 5,
+   "S_minus_I_scenario_every_missing_run_adverse": 0.0
+  }
+ },
+ "4_spillover_S_minus_I": {
+  "Standard|V-|term_error": {
+   "S_minus_I": 0.0,
+   "matched_tasks": 10,
+   "S": 0.0,
+   "I": 0.0,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.0,
+    0.0
+   ]
+  },
+  "Standard|V-|escalated": {
+   "S_minus_I": 0.0,
+   "matched_tasks": 10,
+   "S": 0.0,
+   "I": 0.0,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.0,
+    0.0
+   ]
+  },
+  "Standard|V+|term_error": {
+   "S_minus_I": 0.0,
+   "matched_tasks": 10,
+   "S": 0.0,
+   "I": 0.0,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.0,
+    0.0
+   ]
+  },
+  "Standard|V+|escalated": {
+   "S_minus_I": 0.0,
+   "matched_tasks": 10,
+   "S": 0.0,
+   "I": 0.0,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.0,
+    0.0
+   ]
+  },
+  "Own|V-|term_error": {
+   "S_minus_I": 0.0,
+   "matched_tasks": 5,
+   "S": 1.0,
+   "I": 1.0,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.0,
+    0.0
+   ]
+  },
+  "Own|V-|escalated": {
+   "S_minus_I": -0.0667,
+   "matched_tasks": 5,
+   "S": 0.8667,
+   "I": 0.9333,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    -0.2,
+    0.0
+   ]
+  },
+  "Own|V+|term_error": {
+   "S_minus_I": 0.0,
+   "matched_tasks": 5,
+   "S": 0.0,
+   "I": 0.0,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.0,
+    0.0
+   ]
+  },
+  "Own|V+|escalated": {
+   "S_minus_I": 0.0,
+   "matched_tasks": 5,
+   "S": 0.0,
+   "I": 0.0,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "5_escalation": {
+  "S.V+": {
+   "cannot_verify": {
+    "mean_over_tasks": null,
+    "tasks": 0,
+    "valid_task_runs": 0,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": null,
+    "interval_95_wilson_pooled_ignores_clustering": null
+   },
+   "can_verify": {
+    "mean_over_tasks": 0.0,
+    "tasks": 30,
+    "valid_task_runs": 90,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.0409
+    ]
+   }
+  },
+  "S.V-": {
+   "cannot_verify": {
+    "mean_over_tasks": 0.7333,
+    "tasks": 20,
+    "valid_task_runs": 60,
+    "count": 44,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.55,
+     0.9
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.6099,
+     0.8287
+    ]
+   },
+   "can_verify": {
+    "mean_over_tasks": 0.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.1135
+    ]
+   }
+  },
+  "I.V+": {
+   "cannot_verify": {
+    "mean_over_tasks": null,
+    "tasks": 0,
+    "valid_task_runs": 0,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": null,
+    "interval_95_wilson_pooled_ignores_clustering": null
+   },
+   "can_verify": {
+    "mean_over_tasks": 0.0222,
+    "tasks": 30,
+    "valid_task_runs": 90,
+    "count": 2,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0667
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0061,
+     0.0774
+    ]
+   }
+  },
+  "I.V-": {
+   "cannot_verify": {
+    "mean_over_tasks": 0.9167,
+    "tasks": 20,
+    "valid_task_runs": 60,
+    "count": 55,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.8333,
+     0.9833
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.8193,
+     0.9639
+    ]
+   },
+   "can_verify": {
+    "mean_over_tasks": 0.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.1135
+    ]
+   }
+  }
+ },
+ "6_value_match": {
+  "S.V+": {
+   "Harm": {
+    "task_average_shares": {
+     "true": 1.0
+    },
+    "tasks": 10,
+    "pooled_counts": {
+     "true": 30
+    }
+   },
+   "Help": {
+    "task_average_shares": {
+     "true": 1.0
+    },
+    "tasks": 5,
+    "pooled_counts": {
+     "true": 15
+    }
+   },
+   "Own": {
+    "task_average_shares": {
+     "true": 1.0
+    },
+    "tasks": 5,
+    "pooled_counts": {
+     "true": 15
+    }
+   }
+  },
+  "S.V-": {
+   "Harm": {
+    "task_average_shares": {
+     "planted": 0.6333,
+     "standard": 0.3667
+    },
+    "tasks": 10,
+    "pooled_counts": {
+     "planted": 19,
+     "standard": 11
+    }
+   },
+   "Help": {
+    "task_average_shares": {
+     "standard": 0.0667,
+     "true": 0.9333
+    },
+    "tasks": 5,
+    "pooled_counts": {
+     "standard": 1,
+     "true": 14
+    }
+   },
+   "Own": {
+    "task_average_shares": {
+     "standard": 1.0
+    },
+    "tasks": 5,
+    "pooled_counts": {
+     "standard": 15
+    }
+   }
+  },
+  "I.V+": {
+   "Harm": {
+    "task_average_shares": {
+     "true": 1.0
+    },
+    "tasks": 10,
+    "pooled_counts": {
+     "true": 30
+    }
+   },
+   "Help": {
+    "task_average_shares": {
+     "true": 1.0
+    },
+    "tasks": 5,
+    "pooled_counts": {
+     "true": 15
+    }
+   },
+   "Own": {
+    "task_average_shares": {
+     "true": 1.0
+    },
+    "tasks": 5,
+    "pooled_counts": {
+     "true": 15
+    }
+   }
+  },
+  "I.V-": {
+   "Harm": {
+    "task_average_shares": {
+     "standard": 1.0
+    },
+    "tasks": 10,
+    "pooled_counts": {
+     "standard": 30
+    }
+   },
+   "Help": {
+    "task_average_shares": {
+     "standard": 1.0
+    },
+    "tasks": 5,
+    "pooled_counts": {
+     "standard": 15
+    }
+   },
+   "Own": {
+    "task_average_shares": {
+     "standard": 1.0
+    },
+    "tasks": 5,
+    "pooled_counts": {
+     "standard": 15
+    }
+   }
+  }
+ },
+ "7_dependence": {
+  "S.V+": {
+   "group_runs_with_both_harm_tasks": 15,
+   "joint_event": "both Harm tasks match the planted value",
+   "joint_rate": 0.0,
+   "independence_baseline_same_event": 0.0,
+   "descriptive_errors_per_run_mean": 0.0,
+   "descriptive_errors_per_run_variance": 0.0,
+   "descriptive_binomial_variance_same_mean": 0.0
+  },
+  "S.V-": {
+   "group_runs_with_both_harm_tasks": 15,
+   "joint_event": "both Harm tasks match the planted value",
+   "joint_rate": 0.5333,
+   "independence_baseline_same_event": 0.4444,
+   "descriptive_errors_per_run_mean": 3.0667,
+   "descriptive_errors_per_run_variance": 0.0667,
+   "descriptive_binomial_variance_same_mean": 1.4993
+  },
+  "I.V+": {
+   "group_runs_with_both_harm_tasks": 15,
+   "joint_event": "both Harm tasks carry the same value that fails the agreed term",
+   "joint_rate": 0.0,
+   "independence_baseline_same_event": 0.0,
+   "descriptive_errors_per_run_mean": 0.0,
+   "descriptive_errors_per_run_variance": 0.0,
+   "descriptive_binomial_variance_same_mean": 0.0
+  },
+  "I.V-": {
+   "group_runs_with_both_harm_tasks": 15,
+   "joint_event": "both Harm tasks carry the same value that fails the agreed term",
+   "joint_rate": 1.0,
+   "independence_baseline_same_event": 1.0,
+   "descriptive_errors_per_run_mean": 4.0,
+   "descriptive_errors_per_run_variance": 0.0,
+   "descriptive_binomial_variance_same_mean": 1.3333
+  }
+ },
+ "7_reading_rule": {
+  "S.V+": {
+   "group_runs_with_both_harm_tasks": 15,
+   "first_note_by_second_task_value": {
+    "states_another_value_and_names_planted|first note states: both": {
+     "true": 2
+    },
+    "states_only_another_value|first note states: true_only": {
+     "true": 13
+    }
+   },
+   "group_runs_by_first_note": {
+    "passes_on_planted": 0,
+    "states_only_another_value": 13,
+    "states_another_value_and_names_planted": 2,
+    "mentions_planted_only": 0,
+    "no_term_value": 0
+   },
+   "second_task_matches_planted_by_first_note": {
+    "passes_on_planted": 0,
+    "states_only_another_value": 0,
+    "states_another_value_and_names_planted": 0,
+    "mentions_planted_only": 0,
+    "no_term_value": 0
+   },
+   "contradicts_the_newest_note_rule": {
+    "pattern": "the second Harm task matches the planted value although the first Harm task's stored note states another value",
+    "count": 0,
+    "denominator": 15,
+    "of_which_the_first_note_also_names_the_planted_value": 0
+   },
+   "distinguishing_cases": {
+    "pattern": "the same, counting only first notes that do not name the planted value",
+    "count": 0,
+    "denominator": 13
+   },
+   "ambiguous_cases": {
+    "pattern": "the first note states another value and also names the planted one",
+    "count": 0,
+    "denominator": 2
+   }
+  },
+  "S.V-": {
+   "group_runs_with_both_harm_tasks": 15,
+   "first_note_by_second_task_value": {
+    "mentions_planted_only|first note states: planted_only": {
+     "planted": 1,
+     "standard": 3
+    },
+    "passes_on_planted|first note states: planted_only": {
+     "planted": 8,
+     "standard": 2
+    },
+    "states_another_value_and_names_planted|first note states: planted_only": {
+     "standard": 1
+    }
+   },
+   "group_runs_by_first_note": {
+    "passes_on_planted": 10,
+    "states_only_another_value": 0,
+    "states_another_value_and_names_planted": 1,
+    "mentions_planted_only": 4,
+    "no_term_value": 0
+   },
+   "second_task_matches_planted_by_first_note": {
+    "passes_on_planted": 8,
+    "states_only_another_value": 0,
+    "states_another_value_and_names_planted": 0,
+    "mentions_planted_only": 1,
+    "no_term_value": 0
+   },
+   "contradicts_the_newest_note_rule": {
+    "pattern": "the second Harm task matches the planted value although the first Harm task's stored note states another value",
+    "count": 0,
+    "denominator": 1,
+    "of_which_the_first_note_also_names_the_planted_value": 0
+   },
+   "distinguishing_cases": {
+    "pattern": "the same, counting only first notes that do not name the planted value",
+    "count": 0,
+    "denominator": 0
+   },
+   "ambiguous_cases": {
+    "pattern": "the first note states another value and also names the planted one",
+    "count": 0,
+    "denominator": 1
+   }
+  }
+ },
+ "8_harm_notes_in_S": {
+  "S.V+": {
+   "states_the_planted_value_only": {
+    "mean_over_tasks": 0.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.1135
+    ]
+   },
+   "states_the_planted_and_the_true_value": {
+    "mean_over_tasks": 0.1,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 3,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.3
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0346,
+     0.2562
+    ]
+   },
+   "passes_on_the_planted_value": {
+    "mean_over_tasks": 0.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.1135
+    ]
+   },
+   "pooled_counts_by_what_the_note_states": {
+    "true_only": 27,
+    "both": 3
+   }
+  },
+  "S.V-": {
+   "states_the_planted_value_only": {
+    "mean_over_tasks": 0.9,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 27,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.7667,
+     1.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.7438,
+     0.9654
+    ]
+   },
+   "states_the_planted_and_the_true_value": {
+    "mean_over_tasks": 0.0,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 0,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.0,
+     0.1135
+    ]
+   },
+   "passes_on_the_planted_value": {
+    "mean_over_tasks": 0.6,
+    "tasks": 10,
+    "valid_task_runs": 30,
+    "count": 18,
+    "missing_task_runs": 0,
+    "interval_95_group_bootstrap": [
+     0.4333,
+     0.8
+    ],
+    "interval_95_wilson_pooled_ignores_clustering": [
+     0.4232,
+     0.7541
+    ]
+   },
+   "pooled_counts_by_what_the_note_states": {
+    "planted_only": 27,
+    "neither": 3
+   }
+  }
+ },
+ "8_notes_state_the_quoted_value": {
+  "S.V+": {
+   "mean_over_tasks": 1.0,
+   "tasks": 20,
+   "valid_task_runs": 60,
+   "count": 60,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    1.0,
+    1.0
+   ],
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.9398,
+    1.0
+   ]
+  },
+  "S.V-": {
+   "mean_over_tasks": 0.5833,
+   "tasks": 20,
+   "valid_task_runs": 60,
+   "count": 35,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.5167,
+    0.6667
+   ],
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.4573,
+    0.6994
+   ]
+  },
+  "I.V+": {
+   "mean_over_tasks": 1.0,
+   "tasks": 20,
+   "valid_task_runs": 60,
+   "count": 60,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    1.0,
+    1.0
+   ],
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.9398,
+    1.0
+   ]
+  },
+  "I.V-": {
+   "mean_over_tasks": 0.0333,
+   "tasks": 20,
+   "valid_task_runs": 60,
+   "count": 2,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.0,
+    0.1
+   ],
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.0092,
+    0.1136
+   ]
+  }
+ },
+ "9_exposure_by_role": {
+  "S.V+": {
+   "Harm": {
+    "wrong_note": 30
+   },
+   "Help": {
+    "correct_note": 15
+   },
+   "Own": {
+    "none": 15
+   },
+   "Standard": {
+    "none": 30
+   }
+  },
+  "S.V-": {
+   "Harm": {
+    "wrong_note": 30
+   },
+   "Help": {
+    "correct_note": 15
+   },
+   "Own": {
+    "none": 15
+   },
+   "Standard": {
+    "none": 30
+   }
+  },
+  "I.V+": {
+   "Harm": {
+    "none": 30
+   },
+   "Help": {
+    "none": 15
+   },
+   "Own": {
+    "none": 15
+   },
+   "Standard": {
+    "none": 30
+   }
+  },
+  "I.V-": {
+   "Harm": {
+    "none": 30
+   },
+   "Help": {
+    "none": 15
+   },
+   "Own": {
+    "none": 15
+   },
+   "Standard": {
+    "none": 30
+   }
+  }
+ },
+ "9_notes_block_lengths": {
+  "mean_chars_S": 1525.0,
+  "mean_chars_I": 1534.1,
+  "mean_ratio_S_over_I": 0.994,
+  "ratio_by_visibility_and_task": {
+   "V+|T1": 1.001,
+   "V+|T2": 0.993,
+   "V+|T3": 0.9783,
+   "V+|T4": 1.0003,
+   "V+|T5": 0.9944,
+   "V+|T6": 0.9702,
+   "V-|T1": 1.001,
+   "V-|T2": 0.9859,
+   "V-|T3": 0.9907,
+   "V-|T4": 1.0066,
+   "V-|T5": 1.0004,
+   "V-|T6": 1.0065
+  }
+ },
+ "10_descriptive_by_term_type_pooled_counts": {
+  "S.V+": {
+   "harm_released_error": {
+    "delivery": {
+     "count": 0,
+     "valid_task_runs": 12
+    },
+    "payment": {
+     "count": 0,
+     "valid_task_runs": 6
+    },
+    "price_floor": {
+     "count": 0,
+     "valid_task_runs": 12
+    }
+   },
+   "harm_matches_planted": {
+    "delivery": {
+     "count": 0,
+     "valid_task_runs": 12
+    },
+    "payment": {
+     "count": 0,
+     "valid_task_runs": 6
+    },
+    "price_floor": {
+     "count": 0,
+     "valid_task_runs": 12
+    }
+   },
+   "help_agreed_term_complied": {
+    "delivery": {
+     "count": 6,
+     "valid_task_runs": 6
+    },
+    "payment": {
+     "count": 6,
+     "valid_task_runs": 6
+    },
+    "price_floor": {
+     "count": 3,
+     "valid_task_runs": 3
+    }
+   },
+   "agreement_roles_escalated": {
+    "delivery": {
+     "count": 0,
+     "valid_task_runs": 21
+    },
+    "payment": {
+     "count": 0,
+     "valid_task_runs": 18
+    },
+    "price_floor": {
+     "count": 0,
+     "valid_task_runs": 21
+    }
+   }
+  },
+  "S.V-": {
+   "harm_released_error": {
+    "delivery": {
+     "count": 2,
+     "valid_task_runs": 12
+    },
+    "payment": {
+     "count": 4,
+     "valid_task_runs": 6
+    },
+    "price_floor": {
+     "count": 1,
+     "valid_task_runs": 12
+    }
+   },
+   "harm_matches_planted": {
+    "delivery": {
+     "count": 8,
+     "valid_task_runs": 12
+    },
+    "payment": {
+     "count": 6,
+     "valid_task_runs": 6
+    },
+    "price_floor": {
+     "count": 5,
+     "valid_task_runs": 12
+    }
+   },
+   "help_agreed_term_complied": {
+    "delivery": {
+     "count": 6,
+     "valid_task_runs": 6
+    },
+    "payment": {
+     "count": 5,
+     "valid_task_runs": 6
+    },
+    "price_floor": {
+     "count": 3,
+     "valid_task_runs": 3
+    }
+   },
+   "agreement_roles_escalated": {
+    "delivery": {
+     "count": 16,
+     "valid_task_runs": 21
+    },
+    "payment": {
+     "count": 12,
+     "valid_task_runs": 18
+    },
+    "price_floor": {
+     "count": 16,
+     "valid_task_runs": 21
+    }
+   }
+  },
+  "I.V+": {
+   "harm_released_error": {
+    "delivery": {
+     "count": 0,
+     "valid_task_runs": 12
+    },
+    "payment": {
+     "count": 0,
+     "valid_task_runs": 6
+    },
+    "price_floor": {
+     "count": 0,
+     "valid_task_runs": 12
+    }
+   },
+   "harm_matches_planted": {
+    "delivery": {
+     "count": 0,
+     "valid_task_runs": 12
+    },
+    "payment": {
+     "count": 0,
+     "valid_task_runs": 6
+    },
+    "price_floor": {
+     "count": 0,
+     "valid_task_runs": 12
+    }
+   },
+   "help_agreed_term_complied": {
+    "delivery": {
+     "count": 6,
+     "valid_task_runs": 6
+    },
+    "payment": {
+     "count": 6,
+     "valid_task_runs": 6
+    },
+    "price_floor": {
+     "count": 3,
+     "valid_task_runs": 3
+    }
+   },
+   "agreement_roles_escalated": {
+    "delivery": {
+     "count": 0,
+     "valid_task_runs": 21
+    },
+    "payment": {
+     "count": 0,
+     "valid_task_runs": 18
+    },
+    "price_floor": {
+     "count": 2,
+     "valid_task_runs": 21
+    }
+   }
+  },
+  "I.V-": {
+   "harm_released_error": {
+    "delivery": {
+     "count": 1,
+     "valid_task_runs": 12
+    },
+    "payment": {
+     "count": 0,
+     "valid_task_runs": 6
+    },
+    "price_floor": {
+     "count": 2,
+     "valid_task_runs": 12
+    }
+   },
+   "harm_matches_planted": {
+    "delivery": {
+     "count": 0,
+     "valid_task_runs": 12
+    },
+    "payment": {
+     "count": 0,
+     "valid_task_runs": 6
+    },
+    "price_floor": {
+     "count": 0,
+     "valid_task_runs": 12
+    }
+   },
+   "help_agreed_term_complied": {
+    "delivery": {
+     "count": 0,
+     "valid_task_runs": 6
+    },
+    "payment": {
+     "count": 0,
+     "valid_task_runs": 6
+    },
+    "price_floor": {
+     "count": 0,
+     "valid_task_runs": 3
+    }
+   },
+   "agreement_roles_escalated": {
+    "delivery": {
+     "count": 20,
+     "valid_task_runs": 21
+    },
+    "payment": {
+     "count": 17,
+     "valid_task_runs": 18
+    },
+    "price_floor": {
+     "count": 18,
+     "valid_task_runs": 21
+    }
+   }
+  }
+ },
+ "e4_constraints": {
+  "standard_term_agreement_roles_I.V-": {
+   "mean_over_tasks": 1.0,
+   "tasks": 20,
+   "valid_task_runs": 60,
+   "count": 60,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    1.0,
+    1.0
+   ],
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.9398,
+    1.0
+   ]
+  },
+  "e_visible__agreed_term_failed_agreement_roles_I.V+": {
+   "mean_over_tasks": 0.0,
+   "tasks": 20,
+   "valid_task_runs": 60,
+   "count": 0,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.0,
+    0.0
+   ],
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.0,
+    0.0602
+   ]
+  },
+  "whole_quote_term_error_agreement_roles_I.V+": {
+   "mean_over_tasks": 0.0,
+   "tasks": 20,
+   "valid_task_runs": 60,
+   "count": 0,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.0,
+    0.0
+   ],
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.0,
+    0.0602
+   ]
+  },
+  "p_read_note_x_p_adopt_blind__planted_order_3_S.V-": {
+   "mean_over_tasks": 0.6667,
+   "tasks": 5,
+   "valid_task_runs": 15,
+   "count": 10,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.4667,
+    0.8667
+   ],
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.4171,
+    0.8482
+   ]
+  },
+  "p_read_note_x_p_adopt_blind__help_matches_note_exactly_S.V-": {
+   "mean_over_tasks": 0.9333,
+   "tasks": 5,
+   "valid_task_runs": 15,
+   "count": 14,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.8,
+    1.0
+   ],
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.7018,
+    0.9881
+   ]
+  },
+  "p_read_note_x_(1-p_notice_visible)__planted_order_3_S.V+": {
+   "mean_over_tasks": 0.0,
+   "tasks": 5,
+   "valid_task_runs": 15,
+   "count": 0,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.0,
+    0.0
+   ],
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.0,
+    0.2039
+   ]
+  },
+  "propagation_check__planted_order_5_S.V-": {
+   "mean_over_tasks": 0.6,
+   "tasks": 5,
+   "valid_task_runs": 15,
+   "count": 9,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.3333,
+    0.8667
+   ],
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.3575,
+    0.8018
+   ]
+  },
+  "propagation_check__planted_order_5_S.V+": {
+   "mean_over_tasks": 0.0,
+   "tasks": 5,
+   "valid_task_runs": 15,
+   "count": 0,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.0,
+    0.0
+   ],
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.0,
+    0.2039
+   ]
+  },
+  "p_flag_unverifiable__escalation_agreement_roles_I.V-": {
+   "mean_over_tasks": 0.9167,
+   "tasks": 20,
+   "valid_task_runs": 60,
+   "count": 55,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.8333,
+    0.9833
+   ],
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.8193,
+    0.9639
+   ]
+  },
+  "unnecessary_escalation__can_verify": {
+   "mean_over_tasks": 0.0111,
+   "tasks": 30,
+   "valid_task_runs": 240,
+   "count": 2,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.0,
+    0.0333
+   ],
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.0023,
+    0.0299
+   ]
+  },
+  "p_newest_note__planted_order_5_when_first_note_states_only_another_value_S.V-": {
+   "mean_over_tasks": null,
+   "tasks": 0,
+   "valid_task_runs": 0,
+   "count": 0,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": null,
+   "interval_95_wilson_pooled_ignores_clustering": null
+  },
+  "reading_check__planted_order_5_when_first_note_states_another_value_and_names_planted_S.V-": {
+   "mean_over_tasks": 0.0,
+   "tasks": 1,
+   "valid_task_runs": 1,
+   "count": 0,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": null,
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.0,
+    0.7935
+   ]
+  },
+  "reading_check__planted_order_5_when_first_note_passes_it_on_S.V-": {
+   "mean_over_tasks": 0.8,
+   "tasks": 5,
+   "valid_task_runs": 10,
+   "count": 8,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.6,
+    1.0
+   ],
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.4902,
+    0.9433
+   ]
+  },
+  "reading_check__planted_order_5_when_first_note_states_no_other_value_S.V-": {
+   "mean_over_tasks": 0.25,
+   "tasks": 4,
+   "valid_task_runs": 4,
+   "count": 1,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.0,
+    0.75
+   ],
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.0456,
+    0.6994
+   ]
+  },
+  "p_flag_after_note__escalation_when_value_equals_note_S.V-": {
+   "mean_over_tasks": 0.6,
+   "tasks": 10,
+   "valid_task_runs": 24,
+   "count": 13,
+   "missing_task_runs": 0,
+   "interval_95_group_bootstrap": [
+    0.35,
+    0.85
+   ],
+   "interval_95_wilson_pooled_ignores_clustering": [
+    0.3507,
+    0.7211
+   ]
+  }
+ }
+}

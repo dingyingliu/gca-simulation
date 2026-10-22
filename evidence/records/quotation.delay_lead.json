@@ -1,0 +1,39 @@
+{
+  "id": "quotation.delay_lead",
+  "mechanism": "Median delay between a lead finishing a review and the decision going out (working days); uses no capacity.",
+  "measures": "Nothing measured. A declared assumption.",
+  "simulator_parameter": "delay_lead",
+  "estimable": "no",
+  "estimable_note": "No evidence yet. No estimate planned this round.",
+  "value": {
+    "unit": "working days",
+    "range": [
+      0.0,
+      1.0
+    ],
+    "distribution": "uniform over the range (Latin hypercube draws)"
+  },
+  "status": "assumed",
+  "source": {
+    "name": "Declared assumption, evidence/assumptions.yaml",
+    "doi": null,
+    "licence": null,
+    "retrieved_utc": null
+  },
+  "conditions": "E4 quotation research model; every design, context and week",
+  "transfer": "No evidence. BPIC later-step elapsed medians of 0.86 to 1.93 calendar days contain this delay together with effort, queueing and off-hours, so they are context, not a bound.",
+  "versions": {
+    "code_commit": "1146349",
+    "code_dirty": false,
+    "analysis": "experiments/e4_quotation/write_assumption_records.py",
+    "model": null
+  },
+  "disagreements": [],
+  "tests": [],
+  "declared_utc": "2026-10-02 22:28 UTC",
+  "created_utc": "2026-10-03 10:36 UTC",
+  "used_by": [
+    "gca_sim/quotation"
+  ],
+  "notes": "Context only, not a bound (review round 3, Codex R3.3): time_to_decision.supervisor_after_administration.bpic2020"
+}
