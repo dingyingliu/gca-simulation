@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gca-sim/evidence/schema.json",
+  "title": "Evidence record",
+  "description": "One record per mechanism or parameter. It says where a number comes from, what the source actually measures, which simulator parameter it may inform, and how far it transfers.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "mechanism", "measures", "simulator_parameter", "estimable", "value", "status", "source", "conditions", "transfer", "versions", "disagreements", "tests"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9_.\\-]+$", "description": "Also the file name, without .json"},
+    "mechanism": {"type": "string", "description": "What happens in the world that this record is about"},
+    "measures": {"type": "string", "description": "What the source quantity actually measures, including what it mixes in"},
+    "simulator_parameter": {"type": ["string", "null"], "description": "The simulator parameter it may inform, or null if purely descriptive"},
+    "estimable": {"enum": ["yes", "partly", "no"]},
+    "estimable_note": {"type": "string", "description": "For partly or no: what is missing"},
+    "value": {
+      "type": ["object", "null"],
+      "description": "The estimate. Free-form, but say what any interval means.",
+      "properties": {
+        "unit": {"type": "string"},
+        "n": {"type": "integer"},
+        "point": {},
+        "summary": {"type": "object"},
+        "distribution": {"type": "string"},
+        "params": {"type": "object"},
+        "interval_95": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+        "interval_95_meaning": {"type": "string"},
+        "range": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+        "table": {}
+      }
+    },
+    "status": {"enum": ["observed", "fitted", "assumed", "illustrative"]},
+    "use": {
+      "enum": ["simulation", "range_only", "reference_only", "descriptive"],
+      "description": "How a consumer may use the value: as a simulation input, only to set or check a range, for reference only (never sampled), or as a description of the source. Review round 2, Claude R2.1 and Codex R2.3."
+    },
+    "source": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {"type": "string"},
+        "creator": {"type": "string"},
+        "doi": {"type": ["string", "null"]},
+        "url": {"type": "string"},
+        "licence": {"type": ["string", "null"]},
+        "retrieved_utc": {"type": ["string", "null"]},
+        "file_sha256": {"type": "string"}
+      }
+    },
+    "conditions": {"type": "string", "description": "The setting the value was observed in"},
+    "transfer": {"type": "string", "description": "How far it carries to the quotation episode, and as what (point, range, none)"},
+    "versions": {
+      "type": "object",
+      "required": ["code_commit", "model"],
+      "properties": {
+        "code_commit": {"type": ["string", "null"]},
+        "code_dirty": {"type": "boolean"},
+        "analysis": {"type": "string"},
+        "model": {"type": ["string", "null"]},
+        "library_versions": {"type": "object"}
+      }
+    },
+    "disagreements": {"type": "array"},
+    "tests": {"type": "array"},
+    "created_utc": {"type": "string"},
+    "declared_utc": {"type": "string"},
+    "used_by": {"type": "array", "items": {"type": "string"}},
+    "notes": {"type": "string"}
+  }
+}

@@ -1,0 +1,326 @@
+# Declared parameter ranges for the E4 quotation research model.
+#
+# Declared by Claude Code (build) before any comparison was run. Changing a range after seeing
+# results requires a dated entry in `changes` below and a note in LAB_LOG.md (HANDOFF 6, E4).
+#
+# status: assumed      = no evidence; a stated assumption, varied across its range
+#         analogue     = range informed by an observed analogue (E3), recorded as an assumption
+# replaced_by: where a later step is planned to supply an estimate (E5 = controlled agent pilot)
+#
+# Probabilities are per decision. Times are in working days. Ranges are wide on purpose: where
+# nothing is known, the comparison must be tested across plausible values (HANDOFF 1.3, point 4).
+
+declared_utc: "2026-10-02 22:28 UTC"
+declared_by: "Claude Code (build)"
+changes:
+  - utc: "2026-10-02 22:58 UTC"
+    what: "m_lead: analogue_records and basis text only. The range [0.5, 1.5] is unchanged."
+    why: >-
+      Review round 2 (Claude R2.2, R2.6). E3 now splits time to decision by the preceding step; the pooled
+      supervisor and per-role records the old pointers named were replaced. The new pointers name the
+      later-step records only, and the basis adds the spread between 2017 and 2018. No E4 output depends on
+      the pointers, so the development comparison stands.
+  - utc: "2026-10-02 23:03 UTC"
+    what: "p_read_note, p_adopt_blind, p_notice_visible: replaced_by text only. No range changed."
+    why: >-
+      Review round 2 (Codex R2.1). The E5 pilot identifies observable frequencies, which constrain products of
+      these parameters rather than each one alone. The text now says which products.
+  - utc: "2026-10-02 23:36 UTC"
+    what: >-
+      Ranges changed after the first development comparison: m_lead [0.5, 1.5] and m_ho [1.0, 3.0] are
+      replaced by effort_lead [0.1, 1.25], delay_lead [0.0, 1.0], effort_ho [0.1, 1.67] and delay_ho
+      [0.25, 2.0], all assumed. Structural: a policy gate (main on, sensitivity off). The held-out check is
+      renamed a robustness check across synthetic weeks.
+    why: >-
+      Review round 3. Claude R3.1 (Blocking) and Codex R3.3: m_lead was capacity-consuming service time with
+      a range taken from elapsed gaps that already contain queueing, so it double-counted queueing and left
+      leads overloaded in every draw. Separating effort from delay removes the double count; the lower effort
+      bound lets review capacity be adequate in some draws, which the old range never allowed. The ranges are
+      set on these modelling grounds before the rerun, not to favour any design. Codex R3.1 (Blocking): the
+      hard constraint "no release beyond granted authority" is now enforced by the engine. Claude R3.4: naming.
+      The first development comparison (ec16504) is superseded and kept in git history.
+  - utc: "2026-10-03 00:37 UTC"
+    what: >-
+      heldout.criterion: sensitivities and review-count measures left out; the 80% target applies to wrong
+      terms and to days separately; conclusions bound to result, assumptions and code hashes. No parameter
+      range changed.
+    why: >-
+      Review round 4. Claude R4.3: review counts follow from the designs and the case composition and would
+      dominate an equally weighted target. Claude R4.4 and Codex R4.2: the frozen conclusions must be checked
+      against the model they came from. Made before the robustness check has run (it has not).
+  - utc: "2026-10-03 10:25 UTC"
+    what: >-
+      Two parameters added, p_newest_note [1.0, 1.0] and p_flag_after_note [0.0, 0.0]. Both are fixed at the
+      values that reproduce the model as it was, so no result changes. No other range changed.
+    why: >-
+      Preparation for the agent pilot (E5), made before any development request was sent. The first model
+      fixed two rules that the pilot can test: a reader always takes the newest note, and an agent that used a
+      note never escalates the quote as unverifiable. Each rule is now a parameter whose default is the rule.
+      The pilot plan (section 9) fixes in advance how the pilot's frequencies will set their ranges. The two
+      are drawn from their own Latin hypercube, so the 26 earlier draws are unchanged (checked by hash).
+  - utc: "2026-10-03 14:01 UTC"
+    what: >-
+      Ranges replaced by the agent pilot's development estimates: e_visible [0.0, 0.2] to [0.0, 0.0602], p_flag_unverifiable [0.1, 0.8] to [0.8193, 0.9833], p_adopt_blind [0.3, 1.0] to [0.4171, 1.0], p_notice_visible [0.5, 1.0] to [0.3203, 1.0], p_flag_after_note [0.0, 0.0] to [0.35, 0.85]. The products
+      p_read_note x p_adopt_blind and p_read_note x (1 - p_notice_visible) are drawn from the pilot's
+      intervals [0.4171, 1.0] and [0.0, 0.2039]; p_read_note keeps its declared range, cut from below at the
+      larger product of each draw.
+    why: >-
+      HANDOFF 6, E5: replace the matching assumptions and rerun the comparison. Applied by
+      experiments/e4_quotation/apply_pilot.py to reports/E5/results_development.json
+      (SHA-256 08bc1227607bf7d3db2ade95129886bf3e33af4f05cdc3dfb137a8b7a7d760be) under the rules of experiments/agent_pilot_plan.md, section 9.1.
+      Every number used is in reports/E5/e4_update.json.
+
+parameters:
+
+  # ---- agent drafting -------------------------------------------------------------------------
+  e_std:
+    range: [0.02, 0.15]
+    status: assumed
+    meaning: "Agent misreads the content of a standard quote (for example the quantity)."
+    basis: "No evidence. The walkthrough's illustrative 1 in 11 (Q09) lies inside the range."
+    replaced_by: null
+  e_visible:
+    range: [0.0, 0.0602]
+    status: pilot
+    meaning: "Agent drafts from the template although the customer's agreement is visible to it."
+    basis: "Agent pilot (E5), development groups: share of agreement task runs that fail the agreed term with isolated notes and the agreement visible. Range by experiments/agent_pilot_plan.md, section 9.1."
+    replaced_by: "E5: error rate with the agreement visible, no wrong note (I.V+)"
+  p_as_requested:
+    range: [0.6, 1.0]
+    status: assumed
+    meaning: "Agent drafts a request beyond the written limits as asked rather than countering."
+    basis: "No evidence. The walkthrough's illustrative 3 in 3 is the upper end."
+    replaced_by: null
+
+  # ---- shared notes (the shared-context mechanism) --------------------------------------------
+  p_read_note:
+    range: [0.3, 1.0]
+    status: assumed
+    meaning: "Agent reads the most recent readable note about this customer's term when drafting."
+    basis: "No evidence."
+    replaced_by: "E5 constrains products, not this alone: p_read_note x p_adopt_blind (S.V-, Harm and Help roles) and p_read_note x (1 - p_notice_visible) (S.V+, Harm role)"
+  p_adopt_blind:
+    range: [0.4171, 1.0]
+    status: pilot_product
+    meaning: "Having read a note, the agent uses its value when it cannot see the register (it cannot tell a right note from a wrong one)."
+    basis: "Not drawn on its own any more, and still not measured on its own. The agent pilot (E5) measures the product p_read_note x p_adopt_blind, which is drawn from the pilot's interval; this parameter follows as the product divided by the assumed p_read_note. The range shown is the envelope of the values that can result."
+    replaced_by: "E5 constrains the product p_read_note x p_adopt_blind (matches the planted value, Harm role, S.V-; correct term, Help role, S.V-)"
+  p_notice_visible:
+    range: [0.3203, 1.0]
+    status: pilot_product
+    meaning: "Having read a note that contradicts a register entry it can see, the agent notices and uses the register."
+    basis: "Not drawn on its own any more, and still not measured on its own. The agent pilot (E5) measures the product p_read_note x (1 - p_notice_visible), which is drawn from the pilot's interval; this parameter follows from it and the assumed p_read_note. The range shown is the envelope of the values that can result."
+    replaced_by: "E5 constrains the product p_read_note x (1 - p_notice_visible) (matches the planted value, Harm role, S.V+)"
+  p_stale_note:
+    range: [0.0, 0.5]
+    status: assumed
+    meaning: "At the start of the week an out-of-date note exists for a customer with a written agreement, written by the agreement holder's agent."
+    basis: "No evidence. World-level draw per customer."
+    replaced_by: null
+  p_newest_note:
+    range: [1.0, 1.0]
+    status: assumed
+    meaning: "When several notes about the customer's term are readable, the agent takes the newest one; otherwise one of the older ones, each equally likely."
+    basis: "No evidence. Fixed at 1, the first model's rule (always the newest note)."
+    replaced_by: "E5: how often the second Harm task matches the planted value although the first Harm task's stored note states another value (S.V-)"
+    declared_utc: "2026-10-03 10:25 UTC"
+
+  # ---- recognising exceptions and the agent's own check -----------------------------------------
+  p_cue:
+    range: [0.2, 0.8]
+    status: assumed
+    meaning: "A request from a customer with an agreement or promise mentions the agreed terms."
+    basis: "No evidence. World-level draw per request."
+    replaced_by: null
+  p_rec_visible:
+    range: [0.85, 1.0]
+    status: assumed
+    meaning: "Agent treats a quote as a local exception when it can see the customer's register entry."
+    basis: "No evidence."
+    replaced_by: null
+  p_rec_cue:
+    range: [0.5, 0.95]
+    status: assumed
+    meaning: "Agent treats a quote as a local exception when the request mentions agreed terms."
+    basis: "No evidence."
+    replaced_by: "E5: escalation when it cannot verify (related)"
+  p_rec_none:
+    range: [0.0, 0.15]
+    status: assumed
+    meaning: "Agent treats a quote as a local exception with no cue and no visible entry (applies to standard and unflagged local quotes alike)."
+    basis: "No evidence."
+    replaced_by: null
+  p_policy_flag:
+    range: [0.9, 1.0]
+    status: assumed
+    meaning: "The routing rule spots a request beyond the written limits."
+    basis: "No evidence. Mechanical comparison, so a narrow range near 1."
+    replaced_by: null
+  p_selfcheck:
+    range: [0.7, 1.0]
+    status: assumed
+    meaning: "Agent's own check flags a draft that breaks a limit or register entry it can read."
+    basis: "No evidence. The walkthrough assumes 1."
+    replaced_by: null
+  p_selfcheck_request:
+    range: [0.0, 0.5]
+    status: assumed
+    meaning: "Agent's own check catches a content error against the original request."
+    basis: "No evidence. The walkthrough assumes 0."
+    replaced_by: null
+  p_flag_unverifiable:
+    range: [0.8193, 0.9833]
+    status: pilot
+    meaning: "Agent escalates a release-eligible draft when the request mentions agreed terms it cannot verify (no register entry, no note used)."
+    basis: "Agent pilot (E5), development groups: escalation rate on agreement task runs with isolated notes and the agreement not visible. Range by experiments/agent_pilot_plan.md, section 9.1."
+    replaced_by: "E5: escalation when the agent cannot verify"
+  p_flag_after_note:
+    range: [0.35, 0.85]
+    status: pilot
+    meaning: "Agent escalates a release-eligible draft although it used a note, when the request mentions agreed terms and no register entry is visible."
+    basis: "Agent pilot (E5), development groups: escalation rate among runs whose agreed term equals the note's value exactly, shared notes, agreement not visible. Range by experiments/agent_pilot_plan.md, section 9.1."
+    replaced_by: "E5: escalation among runs whose agreed term equals the note's value exactly (S.V-, first Harm task and Help task)"
+    declared_utc: "2026-10-03 10:25 UTC"
+
+  # ---- human reviewers (no evidence; HANDOFF 1.3 point 4) ---------------------------------------
+  p_detect_informed:
+    range: [0.6, 0.95]
+    status: assumed
+    meaning: "A reviewer who knows the correct value (or the written limits) catches a draft that contradicts it."
+    basis: "No evidence. E3 shows rejection shares of 2% to 11% per step, which are not detection rates and are not used here."
+    replaced_by: null
+  p_detect_request:
+    range: [0.4, 0.9]
+    status: assumed
+    meaning: "A reviewer catches a content error by comparing the draft with the request."
+    basis: "No evidence."
+    replaced_by: null
+  p_query:
+    range: [0.1, 0.7]
+    status: assumed
+    meaning: "A reviewer without the record asks the owning market's lead when the request mentions agreed terms."
+    basis: "No evidence."
+    replaced_by: null
+  p_fix_flagged:
+    range: [0.9, 1.0]
+    status: assumed
+    meaning: "Head office resolves an issue the agent flagged."
+    basis: "No evidence. The flag names the issue, so a narrow range near 1."
+    replaced_by: null
+  lambda_workload:
+    range: [0.0, 0.5]
+    status: assumed
+    meaning: "Proportional fall in a reviewer's detection when five or more quotes wait behind the one in hand (linear below five)."
+    basis: "No evidence. The memo says detection depends on workload; zero is included."
+    replaced_by: null
+  p_lead_knows_policy:
+    range: [0.5, 1.0]
+    status: assumed
+    meaning: "A regional lead knows the written limits (world-level draw per lead). Head office always does."
+    basis: "No evidence. In the walkthrough one of three leads does not know a limit (Q12)."
+    replaced_by: null
+
+  # ---- time ------------------------------------------------------------------------------------
+  # Review time is split into effort, which occupies the reviewer one review at a time, and a response
+  # delay, which uses no capacity and is applied once per review (review round 3, Claude R3.1, Codex R3.3).
+  # All four are assumed sensitivity ranges. The BPIC gaps are context only: they mix effort, delay,
+  # queueing and off-hours in calendar time, so they cannot bound any one of these.
+  effort_lead:
+    range: [0.1, 1.25]
+    status: assumed
+    meaning: "Median review capacity a regional lead spends per review (working days the lead's review slot is occupied)."
+    basis: "No evidence. Lower end about an hour of focused review; upper end is the walkthrough's four reviews a week. The range lets leads be under capacity in some draws and overloaded in others."
+    context_records: ["time_to_decision.budget_owner_after_administration.bpic2020",
+                      "time_to_decision.supervisor_after_administration.bpic2020",
+                      "time_to_decision.supervisor_after_budget_owner.bpic2020",
+                      "time_to_decision.supervisor_after_pre_approver.bpic2020"]
+    replaced_by: null
+  delay_lead:
+    range: [0.0, 1.0]
+    status: assumed
+    meaning: "Median delay between a lead finishing a review and the decision going out (working days); uses no capacity."
+    basis: "No evidence. BPIC later-step elapsed medians of 0.86 to 1.93 calendar days contain this delay together with effort, queueing and off-hours, so they are context, not a bound."
+    context_records: ["time_to_decision.supervisor_after_administration.bpic2020"]
+    replaced_by: null
+  effort_ho:
+    range: [0.1, 1.67]
+    status: assumed
+    meaning: "Median review capacity head office spends per review (working days)."
+    basis: "No evidence. Upper end is the walkthrough's three head-office reviews a week."
+    replaced_by: null
+  delay_ho:
+    range: [0.25, 2.0]
+    status: assumed
+    meaning: "Median delay between head office finishing a review and the decision going out (working days); uses no capacity."
+    basis: "No evidence. The walkthrough's illustrative 2.5 days for a head-office review covers effort plus delay."
+    replaced_by: null
+  sigma_review:
+    range: [0.25, 0.75]
+    status: assumed
+    meaning: "Log-scale spread of review times (lognormal)."
+    basis: "E3's lognormal fits to elapsed gaps were poor (KS 0.13 to 0.21) and include queueing, so they are not used; assumed. Applies to effort and delay draws alike."
+    replaced_by: null
+
+structural:
+  time_unit: "working days; nights and weekends are not modelled (E3: decisions mostly in weekday office hours)"
+  t_draft: {value: 0.5, status: illustrative, basis: "walkthrough: half a day to draft and send"}
+  reviewers: "one server per regional lead and one for head office, first in first out, one review at a time; a review occupies the reviewer for its effort, then the decision goes out after the response delay"
+  query_delay: "a reviewer's question to the owning market's lead is answered after one lead delay plus one lead effort (drawn), without using that lead's queue; the owning lead answers correctly"
+  policy_gate:
+    main: on
+    sensitivity: off
+    meaning: "on: the system refuses any release by an agent or a lead whose terms exceed the written limits without head-office authorisation, and escalates the quote to head office; off: such releases go out and are counted as releases beyond authority"
+    basis: "HANDOFF 6 E4 lists no release beyond granted authority among the hard constraints, and the memo says hard rules enforce permissions (review round 3, Codex R3.1). The walkthrough instead lets a lead pass a beyond-limit quote unknowingly (Q12). Which is the main model is Dingying's decision (LAB_LOG Q7); both are run."
+  notes:
+    content: "one note per drafted quote, about the customer's term at stake; order contents are not noted"
+    readable: "shared: every region's notes; isolated: only the drafting region's own notes"
+    notes_record:
+      values: [draft, released]
+      meaning: "draft: the note records the drafted terms; released: the note records the terms as released, after any review correction"
+      treatment: "structural assumption; both values are run and reported separately"
+  bypass_after_days:
+    main: null
+    sensitivity: 3
+    basis: "Case memo: do not assume that staff evade controls when review becomes slower. Off in the main comparison; the walkthrough's three-day value is run once as a labelled sensitivity."
+
+sampling:
+  parameter_draws: 64
+  design: "Latin hypercube over the ranges above (uniform within each range), scipy.stats.qmc, seed 20261002. The 26 parameters of the first model share one hypercube; p_newest_note and p_flag_after_note have their own (seed 20261003), so the first 26 draws never move. Once a pilot_constraints block exists, the two products of the note parameters are drawn from the pilot's intervals and p_adopt_blind and p_notice_visible follow from them (gca_sim/quotation/params.py)."
+  seeds_per_draw: 64
+  note: "outer loop over parameter draws (parameter uncertainty), inner loop over seeds (run-to-run variation)"
+
+heldout:
+  name: "robustness check across synthetic weeks (review round 3, Claude R3.4): the held-out weeks come from the same generator as the development weeks, so passing shows the conclusions do not depend on which weeks were drawn; it does not test the model against anything independent"
+  cases: "four generated weeks (H1 to H4, generator seeds 101 to 104) whose customers are disjoint from the development weeks"
+  manifest: "experiments/e4_quotation/heldout_manifest.json"
+  development_cases: "W0 (the walkthrough week) and four generated weeks (G1 to G4, seeds 1 to 4)"
+  rule: "Nothing is fitted or adjusted on the held-out weeks. They are run once, at the end of the round."
+  criterion: >-
+    A development conclusion is a pairwise comparison of two configurations on one measure (mean over
+    seeds, pooled over the development weeks) whose sign is the same in at least 95% of parameter draws,
+    in the design, context, baseline or notes families. Measures fixed by the designs and the case
+    composition (total, lead and head-office review counts) and the gate sensitivities are left out. A
+    conclusion passes on the held-out weeks if its sign is the same in at least 90% of parameter draws
+    there. Target: at least 80% of the conclusions pass for wrong terms, and separately for days to
+    customer; other measures are reported. If a target fails, we narrow the claims to what passes and say
+    so. The conclusions are frozen after the final development run, bound to the hashes of that result and
+    of this file and to the code commit, and checked against them before the one held-out run.
+
+pilot_constraints:
+  applied_utc: 2026-10-03 14:01 UTC
+  rule: experiments/agent_pilot_plan.md, section 9.1
+  source: reports/E5/results_development.json
+  source_sha256: 08bc1227607bf7d3db2ade95129886bf3e33af4f05cdc3dfb137a8b7a7d760be
+  details: reports/E5/e4_update.json
+  products:
+    q_read_x_adopt_blind: [0.4171, 1.0]
+    r_read_x_not_notice: [0.0, 0.2039]
+  ranges:
+    e_visible: [0.0, 0.0602]
+    p_flag_unverifiable: [0.8193, 0.9833]
+    p_adopt_blind: [0.4171, 1.0]
+    p_notice_visible: [0.3203, 1.0]
+    p_flag_after_note: [0.35, 0.85]
+  rules_of_the_first_model:
+    reader_takes_the_newest_note: {status: 'not assessed: no qualifying run', range_changed: false}
+    no_escalation_after_using_a_note: {status: contradicted (13 of 24); the range is set from the pilot, range_changed: true}

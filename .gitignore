@@ -1,0 +1,35 @@
+# Keys and credentials: only the empty .env.example is ever committed
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+*secret*
+*token*
+
+# Private notes and agent discussion files: never published
+PUBLIC_RELEASE_*.md
+LAB_LOG.md
+HANDOFF.md
+CLAUDE.md
+AGENTS.md
+*discussion*.md
+*_private.md
+reviews/
+rounds/
+notes/
+
+# Downloaded datasets, cloned repositories and caches
+data/raw/
+data/derived/
+third_party/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.pytest_tmp/
+*.egg-info/
+
+# Dry runs of the agent experiment with the fake agent are pipeline tests, not results
+experiments/agent_pilot/runs/fake/

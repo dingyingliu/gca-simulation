@@ -1,0 +1,38 @@
+[project]
+name = "gca-simulation"
+version = "0.1.0"
+description = "A research simulator of AI-assisted quotation work, with an experiment harness for testing a real AI model on the same tasks"
+requires-python = ">=3.13,<3.14"
+# Exact pins. The full resolved environment is in requirements.lock.
+dependencies = [
+    "simpy==4.1.2",
+    "numpy==2.5.3",
+    "pandas==3.0.6",
+    "scipy==1.18.1",
+    "matplotlib==3.11.2",
+    "pyyaml==6.0.3",
+    "jsonschema==4.26.0",
+]
+
+[project.optional-dependencies]
+# Only the analysis of the BPI Challenge 2020 log uses PM4Py (AGPL-3.0-or-later). It is not part of the core.
+process-mining = [
+    "pm4py==2.7.23.8",
+    "networkx==3.7",
+]
+dev = [
+    "pytest==9.1.1",
+    "mini-racer==0.14.1",   # V8 engine, one of two engines for regenerating E1 golden outputs from the original JavaScript (the other is Node).
+    "markdown==3.11",       # BSD. Used only to export a report as one HTML file.
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --basetemp=.pytest_tmp"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["gca_sim*"]
