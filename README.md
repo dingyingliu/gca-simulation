@@ -1,20 +1,39 @@
-# GCA Simulation (Global Collaboration with AI Agents)
+<div align="center">
 
-A research simulator of AI-assisted office work, and an experiment harness that tests a real AI model on the same tasks.
+<h1><img src="docs/gca-logo.svg" alt="GCA logo" height="44" align="center"> Global Collaboration with AI Agents</h1>
 
-It was built for **Global Collaboration with AI Agents (GCA)**, an economics and management research project, funded by the 2026 CEMS Philippe Louvet Innovation Grant, with a cross-school course for the CEMS alliance of business schools. In the course, student teams run a simulated multinational company where AI agents do part of the work. Each team chooses a management design, deciding which work goes to AI agents, who may do what, who checks whose work, and who can see which information. The simulator plays out a week of work under that design and shows the consequences.
+**GCA Simulation** · *a multi-agent simulator of companies where people and AI agents share the work*
 
-The research question is economic. A management design sets the division of labour and of information between people and AI agents, and the research asks how that choice changes productivity, how it trades the cost of review against the cost of errors, and who bears the cost when an agent is wrong.
+[![License MIT](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
+[![Python 3.13](https://img.shields.io/badge/Python-3.13-blue)](requirements.lock)
+[![Built with Claude Code](https://img.shields.io/badge/Built%20with-Claude%20Code-D97757)](#how-it-was-built)
 
-The first exercise is about customer quotations. AI agents draft price quotes for regional sales teams, and people review some of them. Some customers have special terms agreed with head office, and not everyone can see them.
+[Report](reports/first_round_report.md) • [Experiment plan](experiments/agent_pilot_plan.md) • [Assumptions](evidence/assumptions.yaml) • [Citation](CITATION.cff)
 
-## What it does
+</div>
 
-- **A simulator in which nobody can see the right answer.** Every role (AI agent, regional lead, head office) decides only from what it can observe, and a test checks that no decision ever reads the ground truth. Mistakes therefore arise as they do in a real organisation, through missing information, wrong notes and reviews that fail.
-- **Every number has a stated source.** Each parameter is labelled *observed* (counted in real data), *fitted* (estimated from a sample), *assumed* (a stated guess, given as a range) or *illustrative*. Conclusions are tested across the whole range of every guess (`evidence/assumptions.yaml`, `evidence/records/`).
-- **An experiment with a real AI model.** An open-weight large language model, acting as the quoting agent, drafted 504 quotes under four conditions. It could see the customer's agreement or not, and it either had a shared notebook of earlier agents' notes or did not. The experiment tests the model's judgement under missing information, whether it passes a quote it cannot verify to a person or follows a colleague's note. The plan was fixed before the runs, and some tasks were held back and used once at the end (`experiments/agent_pilot_plan.md`).
-- **The experiment's results feed back into the simulator.** Its estimates replaced the matching guesses, and the change to every conclusion is reported.
+## Overview
 
+When a company hands part of its work to AI agents, someone has to decide which tasks the agents take, what they may do on their own, who checks their work, and who can see which information. Each of these choices changes how much the company gets done, how much time goes into checking, and who pays when an agent gets something wrong.
+
+**Global Collaboration with AI Agents (GCA)** is an economics and management research project on these choices. It is funded by the 2026 CEMS Philippe Louvet Innovation Grant and comes with a cross-school course for the CEMS alliance of business schools, in which student teams run a simulated multinational company where AI agents do part of the work. This repository holds the project's simulator, together with an experiment that tests a real AI model on the same tasks.
+
+## The quotation exercise
+
+A management design fixes these choices. The simulator plays out a week of work under a given design and shows what follows, from wrong quotes that reach customers to the time people spend on review.
+
+In the first exercise, AI agents draft price quotes for regional sales teams, and people review some of them. Some customers have special terms agreed with head office, and not every role can see them.
+
+```mermaid
+flowchart LR
+    C[Customer request] --> A[AI agent drafts a quote]
+    T[(Special terms<br/>held by head office)] -. visible under some designs .-> A
+    N[(Notes from<br/>earlier agents)] -. shared under some designs .-> A
+    A --> D{Checked by<br/>a person?}
+    D -- yes --> P[Person reviews]
+    D -- no --> S[Quote goes to<br/>the customer]
+    P --> S
+```
 ## Results
 
 - **Information matters more than monitoring. Who can see the customer's agreement matters more than who reviews it.** In the simulator, the design that lets the agent and head office read every agreement had the fewest wrong quotes under every combination of assumptions tried. In the experiment, the agent that could see the agreement got all 120 quotes right and ignored a wrong note.
@@ -51,11 +70,6 @@ Three tests are skipped unless the BPI Challenge 2020 log is downloaded (see `da
 | `experiments/` | The experiment plan and run scripts, and the AI model's recorded answers |
 | `reports/` | Reports, tables and figures |
 | `tests/` | The test suite |
-
-## Where the recorded results come from
-
-The results were produced in a private development repository, whose history is not published. For this release the code was given clearer names, and [`RENAMES.md`](RENAMES.md) maps old names to new ones and explains what was left unchanged on purpose. The reports keep the old names and refer to the project's private brief, lab log and reviews, which are not included. The frozen data files and the experiment's code are byte for byte as they were run, and the public code reproduces the recorded results.
-
 
 ## Licence
 
