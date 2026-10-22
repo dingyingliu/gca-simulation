@@ -1,0 +1,1273 @@
+{
+ "preset": "review",
+ "name": "Review every quote",
+ "design": {
+  "std": "regional",
+  "loc": "regional",
+  "pol": "regional",
+  "share": false,
+  "cross": false,
+  "owner": "regional"
+ },
+ "result": {
+  "rows": [
+   {
+    "id": "Q01",
+    "mk": "BR",
+    "cust": "Aster",
+    "kind": "std",
+    "day": 1,
+    "val": 2400,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Aster, Brazil, €2,400, day 1. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Ana, Brazil lead. Quote 1 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "",
+      "k": "The review",
+      "v": "Ana, Brazil lead reads it and passes it. Nothing to correct. 1 day of review time spent."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 2.0, 1.0 day after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the regional lead."
+     }
+    ],
+    "route": "regional",
+    "out": 2,
+    "acct": "regional",
+    "days": 1
+   },
+   {
+    "id": "Q02",
+    "mk": "BR",
+    "cust": "Nexa",
+    "kind": "loc",
+    "day": 1,
+    "val": 8200,
+    "record": "Nexa distributor agreement, 60-day payment terms, negotiated by Ana.",
+    "draftWrong": "30-day terms instead of the agreed 60",
+    "fixedByRecords": true,
+    "checkable": "records",
+    "catch": {
+     "regional": true,
+     "ho": "records",
+     "other": "records"
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Nexa, Brazil, €8,200, day 1. Nexa distributor agreement, 60-day payment terms, negotiated by Ana."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: 30-day terms instead of the agreed 60."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Ana, Brazil lead. Quote 2 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "okdot",
+      "k": "The review",
+      "v": "Ana, Brazil lead sees it and corrects it. 1 day added."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 2.0, 1.0 day after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the regional lead."
+     }
+    ],
+    "route": "regional",
+    "err": null,
+    "fixed": true,
+    "out": 2,
+    "acct": "regional",
+    "days": 1
+   },
+   {
+    "id": "Q03",
+    "mk": "TR",
+    "cust": "Linden",
+    "kind": "std",
+    "day": 1,
+    "val": 4400,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Linden, Türkiye, €4,400, day 1. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Deniz, Türkiye lead. Quote 1 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "",
+      "k": "The review",
+      "v": "Deniz, Türkiye lead reads it and passes it. Nothing to correct. 1 day of review time spent."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 2.0, 1.0 day after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the regional lead."
+     }
+    ],
+    "route": "regional",
+    "out": 2,
+    "acct": "regional",
+    "days": 1
+   },
+   {
+    "id": "Q04",
+    "mk": "TR",
+    "cust": "Orion",
+    "kind": "pol",
+    "day": 1,
+    "val": 14500,
+    "record": "Orion asked for 18 per cent. The written limit is 10.",
+    "draftWrong": "18 per cent discount, written limit is 10",
+    "checkable": "policy",
+    "catch": {
+     "regional": true,
+     "ho": true
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Orion, Türkiye, €14,500, day 1. Orion asked for 18 per cent. The written limit is 10."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: 18 per cent discount, written limit is 10."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Deniz, Türkiye lead. Quote 2 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "okdot",
+      "k": "The review",
+      "v": "Deniz, Türkiye lead sees it and corrects it. 1 day added."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 2.0, 1.0 day after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the regional lead."
+     }
+    ],
+    "route": "regional",
+    "err": null,
+    "fixed": true,
+    "out": 2,
+    "acct": "regional",
+    "days": 1
+   },
+   {
+    "id": "Q05",
+    "mk": "TR",
+    "cust": "Deren",
+    "kind": "loc",
+    "day": 2,
+    "val": 3200,
+    "record": "Deren's contract requires the delivery term stated on every quote. Deren rejects quotes without it.",
+    "draftWrong": "no delivery term stated",
+    "fixedByRecords": true,
+    "checkable": "records",
+    "catch": {
+     "regional": true,
+     "ho": false,
+     "other": false
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Deren, Türkiye, €3,200, day 2. Deren's contract requires the delivery term stated on every quote. Deren rejects quotes without it."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: no delivery term stated."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Deniz, Türkiye lead. Quote 3 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "okdot",
+      "k": "The review",
+      "v": "Deniz, Türkiye lead sees it and corrects it. 1 day added."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 3.0, 1.0 day after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the regional lead."
+     }
+    ],
+    "route": "regional",
+    "err": null,
+    "fixed": true,
+    "out": 3,
+    "acct": "regional",
+    "days": 1
+   },
+   {
+    "id": "Q06",
+    "mk": "SG",
+    "cust": "Vela",
+    "kind": "std",
+    "day": 2,
+    "val": 17000,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Vela, Singapore, €17,000, day 2. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Mei, Singapore lead. Quote 1 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "",
+      "k": "The review",
+      "v": "Mei, Singapore lead reads it and passes it. Nothing to correct. 1 day of review time spent."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 3.0, 1.0 day after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the regional lead."
+     }
+    ],
+    "route": "regional",
+    "out": 3,
+    "acct": "regional",
+    "days": 1
+   },
+   {
+    "id": "Q07",
+    "mk": "SG",
+    "cust": "Nexa",
+    "kind": "loc",
+    "day": 2,
+    "val": 8200,
+    "record": "Same Nexa agreement as Q02, held by Ana in Brazil. Singapore's template does not have it.",
+    "draftWrong": "30-day terms instead of the agreed 60",
+    "fixedByRecords": true,
+    "checkable": "records",
+    "cross": "BR",
+    "catch": {
+     "regional": "records",
+     "ho": "records",
+     "other": true
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Nexa, Singapore, €8,200, day 2. Same Nexa agreement as Q02, held by Ana in Brazil. Singapore's template does not have it."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: 30-day terms instead of the agreed 60."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Mei, Singapore lead. Quote 2 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "",
+      "k": "The review",
+      "v": "Mei, Singapore lead reads it and passes it. Not visible from what this lead knows. 1 day added."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The customer",
+      "v": "Receives it on day 3.0, 1.0 day after asking. It is wrong: 30-day terms instead of the agreed 60."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the regional lead. Mei calls Nexa."
+     }
+    ],
+    "route": "regional",
+    "err": "30-day terms instead of the agreed 60",
+    "out": 3,
+    "acct": "regional",
+    "days": 1
+   },
+   {
+    "id": "Q08",
+    "mk": "BR",
+    "cust": "Pine",
+    "kind": "std",
+    "day": 2,
+    "val": 2900,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Pine, Brazil, €2,900, day 2. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Ana, Brazil lead. Quote 3 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "",
+      "k": "The review",
+      "v": "Ana, Brazil lead reads it and passes it. Nothing to correct. 1 day of review time spent."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 3.0, 1.0 day after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the regional lead."
+     }
+    ],
+    "route": "regional",
+    "out": 3,
+    "acct": "regional",
+    "days": 1
+   },
+   {
+    "id": "Q09",
+    "mk": "SG",
+    "cust": "Sol",
+    "kind": "std",
+    "day": 3,
+    "val": 6800,
+    "record": "Standard catalogue. The request said 40 units.",
+    "draftWrong": "quoted for 4 units, not 40",
+    "fixedByRecords": false,
+    "checkable": "none",
+    "missReason": "quantity",
+    "catch": {
+     "regional": true,
+     "ho": true,
+     "other": true
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Sol, Singapore, €6,800, day 3. Standard catalogue. The request said 40 units."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: quoted for 4 units, not 40."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Mei, Singapore lead. Quote 3 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "okdot",
+      "k": "The review",
+      "v": "Mei, Singapore lead sees it and corrects it. 1 day added."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 4.0, 1.0 day after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the regional lead."
+     }
+    ],
+    "route": "regional",
+    "err": null,
+    "fixed": true,
+    "out": 4,
+    "acct": "regional",
+    "days": 1
+   },
+   {
+    "id": "Q10",
+    "mk": "BR",
+    "cust": "Cedar",
+    "kind": "loc",
+    "day": 3,
+    "val": 5100,
+    "record": "Cedar distributor agreement, minimum unit price €105.",
+    "draftWrong": "€99 per unit, below the €105 floor",
+    "fixedByRecords": true,
+    "checkable": "records",
+    "catch": {
+     "regional": true,
+     "ho": "records",
+     "other": "records"
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Cedar, Brazil, €5,100, day 3. Cedar distributor agreement, minimum unit price €105."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: €99 per unit, below the €105 floor."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Ana, Brazil lead. Quote 4 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "okdot",
+      "k": "The review",
+      "v": "Ana, Brazil lead sees it and corrects it. 1 day added."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 4.0, 1.0 day after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the regional lead."
+     }
+    ],
+    "route": "regional",
+    "err": null,
+    "fixed": true,
+    "out": 4,
+    "acct": "regional",
+    "days": 1
+   },
+   {
+    "id": "Q11",
+    "mk": "TR",
+    "cust": "Tern",
+    "kind": "std",
+    "day": 3,
+    "val": 4100,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Tern, Türkiye, €4,100, day 3. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Deniz, Türkiye lead. Quote 4 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "",
+      "k": "The review",
+      "v": "Deniz, Türkiye lead reads it and passes it. Nothing to correct. 1 day of review time spent."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 4.0, 1.0 day after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the regional lead."
+     }
+    ],
+    "route": "regional",
+    "out": 4,
+    "acct": "regional",
+    "days": 1
+   },
+   {
+    "id": "Q12",
+    "mk": "SG",
+    "cust": "Vega",
+    "kind": "pol",
+    "day": 3,
+    "val": 9900,
+    "record": "Vega asked for 90-day terms. The written limit is 60. Mei does not know the limit.",
+    "draftWrong": "90-day terms, written limit is 60",
+    "checkable": "policy",
+    "catch": {
+     "regional": false,
+     "ho": true
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Vega, Singapore, €9,900, day 3. Vega asked for 90-day terms. The written limit is 60. Mei does not know the limit."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: 90-day terms, written limit is 60."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Mei, Singapore lead. Quote 4 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "",
+      "k": "The review",
+      "v": "Mei, Singapore lead reads it and passes it. Not visible from what this lead knows. 1 day added."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The customer",
+      "v": "Receives it on day 4.0, 1.0 day after asking. It is wrong: 90-day terms, written limit is 60."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the regional lead. Mei calls Vega."
+     }
+    ],
+    "route": "regional",
+    "err": "90-day terms, written limit is 60",
+    "out": 4,
+    "acct": "regional",
+    "days": 1
+   },
+   {
+    "id": "Q13",
+    "mk": "BR",
+    "cust": "Iris",
+    "kind": "std",
+    "day": 4,
+    "val": 3300,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Iris, Brazil, €3,300, day 4. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Ana, Brazil lead. Quote 5 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "",
+      "k": "The review",
+      "v": "Waited 1.5 days in the queue. Ana, Brazil lead reads it and passes it. Nothing to correct. 1 day of review time spent."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 6.5, 2.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the regional lead."
+     }
+    ],
+    "route": "regional",
+    "out": 6.5,
+    "acct": "regional",
+    "days": 2.5
+   },
+   {
+    "id": "Q14",
+    "mk": "SG",
+    "cust": "Lotus",
+    "kind": "loc",
+    "day": 4,
+    "val": 7600,
+    "record": "Lotus was promised tax-inclusive pricing in a meeting. Written nowhere.",
+    "draftWrong": "price quoted before tax",
+    "fixedByRecords": false,
+    "checkable": "none",
+    "missReason": "verbal",
+    "catch": {
+     "regional": true,
+     "ho": false,
+     "other": false
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Lotus, Singapore, €7,600, day 4. Lotus was promised tax-inclusive pricing in a meeting. Written nowhere."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: price quoted before tax."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Mei, Singapore lead. Quote 5 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "okdot",
+      "k": "The review",
+      "v": "Waited 1.5 days in the queue. Mei, Singapore lead sees it and corrects it. 1 day added."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 6.5, 2.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the regional lead."
+     }
+    ],
+    "route": "regional",
+    "err": null,
+    "fixed": true,
+    "out": 6.5,
+    "acct": "regional",
+    "days": 2.5
+   },
+   {
+    "id": "Q15",
+    "mk": "TR",
+    "cust": "Birch",
+    "kind": "std",
+    "day": 4,
+    "val": 2100,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Birch, Türkiye, €2,100, day 4. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Deniz, Türkiye lead. Quote 5 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "",
+      "k": "The review",
+      "v": "Waited 1.5 days in the queue. Deniz, Türkiye lead reads it and passes it. Nothing to correct. 1 day of review time spent."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 6.5, 2.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the regional lead."
+     }
+    ],
+    "route": "regional",
+    "out": 6.5,
+    "acct": "regional",
+    "days": 2.5
+   },
+   {
+    "id": "Q16",
+    "mk": "SG",
+    "cust": "Elm",
+    "kind": "std",
+    "day": 4,
+    "val": 5400,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Elm, Singapore, €5,400, day 4. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Mei, Singapore lead. Quote 6 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The queue",
+      "v": "Mei, Singapore lead already had 4 quotes. This one would have waited 3.0 days for review. After 3 days this company's sales team sends the quote itself, so it went out on day 7, unreviewed and with no approval recorded."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 7.0, 3.0 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "No approval was recorded. The quote left under the company's three-day practice, which the team's rules did not authorise. The team remains accountable for the rule that created the queue."
+     }
+    ],
+    "route": "regional",
+    "out": 7,
+    "acct": "nobody",
+    "err": null,
+    "bypass": true,
+    "days": 3
+   },
+   {
+    "id": "Q17",
+    "mk": "TR",
+    "cust": "Barut",
+    "kind": "loc",
+    "day": 5,
+    "val": 6100,
+    "record": "Barut agreed minimum price €88, from last year's negotiation.",
+    "draftWrong": "€84 per unit, below the agreed €88",
+    "fixedByRecords": true,
+    "checkable": "records",
+    "catch": {
+     "regional": true,
+     "ho": "records",
+     "other": "records"
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Barut, Türkiye, €6,100, day 5. Barut agreed minimum price €88, from last year's negotiation."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: €84 per unit, below the agreed €88."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Deniz, Türkiye lead. Quote 6 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The queue",
+      "v": "Deniz, Türkiye lead already had 4 quotes. This one would have waited 3.0 days for review. After 3 days this company's sales team sends the quote itself, so it went out on day 8, unreviewed and with no approval recorded."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The customer",
+      "v": "Receives it on day 8.0, 3.0 days after asking. It is wrong: €84 per unit, below the agreed €88."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "No approval was recorded. The quote left under the company's three-day practice, which the team's rules did not authorise. The team remains accountable for the rule that created the queue. Deniz calls Barut."
+     }
+    ],
+    "route": "regional",
+    "out": 8,
+    "acct": "nobody",
+    "err": "€84 per unit, below the agreed €88",
+    "bypass": true,
+    "days": 3
+   },
+   {
+    "id": "Q18",
+    "mk": "BR",
+    "cust": "Onda",
+    "kind": "pol",
+    "day": 5,
+    "val": 12800,
+    "record": "Onda asked for free shipping on a €12,800 order. The written limit allows it above €20,000.",
+    "draftWrong": "free shipping below the written threshold",
+    "checkable": "policy",
+    "catch": {
+     "regional": true,
+     "ho": true
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Onda, Brazil, €12,800, day 5. Onda asked for free shipping on a €12,800 order. The written limit allows it above €20,000."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: free shipping below the written threshold."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Ana, Brazil lead. Quote 6 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The queue",
+      "v": "Ana, Brazil lead already had 4 quotes. This one would have waited 3.0 days for review. After 3 days this company's sales team sends the quote itself, so it went out on day 8, unreviewed and with no approval recorded."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The customer",
+      "v": "Receives it on day 8.0, 3.0 days after asking. It is wrong: free shipping below the written threshold."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "No approval was recorded. The quote left under the company's three-day practice, which the team's rules did not authorise. The team remains accountable for the rule that created the queue. Ana calls Onda."
+     }
+    ],
+    "route": "regional",
+    "out": 8,
+    "acct": "nobody",
+    "err": "free shipping below the written threshold",
+    "bypass": true,
+    "days": 3
+   },
+   {
+    "id": "Q19",
+    "mk": "BR",
+    "cust": "Ravi",
+    "kind": "std",
+    "day": 5,
+    "val": 1900,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Ravi, Brazil, €1,900, day 5. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Ana, Brazil lead. Quote 7 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The queue",
+      "v": "Ana, Brazil lead already had 4 quotes. This one would have waited 4.5 days for review. After 3 days this company's sales team sends the quote itself, so it went out on day 8, unreviewed and with no approval recorded."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 8.0, 3.0 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "No approval was recorded. The quote left under the company's three-day practice, which the team's rules did not authorise. The team remains accountable for the rule that created the queue."
+     }
+    ],
+    "route": "regional",
+    "out": 8,
+    "acct": "nobody",
+    "err": null,
+    "bypass": true,
+    "days": 3
+   },
+   {
+    "id": "Q20",
+    "mk": "TR",
+    "cust": "Sana",
+    "kind": "std",
+    "day": 5,
+    "val": 2600,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Sana, Türkiye, €2,600, day 5. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Deniz, Türkiye lead. Quote 7 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The queue",
+      "v": "Deniz, Türkiye lead already had 4 quotes. This one would have waited 4.5 days for review. After 3 days this company's sales team sends the quote itself, so it went out on day 8, unreviewed and with no approval recorded."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 8.0, 3.0 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "No approval was recorded. The quote left under the company's three-day practice, which the team's rules did not authorise. The team remains accountable for the rule that created the queue."
+     }
+    ],
+    "route": "regional",
+    "out": 8,
+    "acct": "nobody",
+    "err": null,
+    "bypass": true,
+    "days": 3
+   }
+  ],
+  "time": 1.725,
+  "load": {
+   "BR": 7,
+   "TR": 7,
+   "SG": 6,
+   "HO": 0
+  },
+  "errs": [
+   {
+    "id": "Q07",
+    "mk": "SG",
+    "cust": "Nexa",
+    "kind": "loc",
+    "day": 2,
+    "val": 8200,
+    "record": "Same Nexa agreement as Q02, held by Ana in Brazil. Singapore's template does not have it.",
+    "draftWrong": "30-day terms instead of the agreed 60",
+    "fixedByRecords": true,
+    "checkable": "records",
+    "cross": "BR",
+    "catch": {
+     "regional": "records",
+     "ho": "records",
+     "other": true
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Nexa, Singapore, €8,200, day 2. Same Nexa agreement as Q02, held by Ana in Brazil. Singapore's template does not have it."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: 30-day terms instead of the agreed 60."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Mei, Singapore lead. Quote 2 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "",
+      "k": "The review",
+      "v": "Mei, Singapore lead reads it and passes it. Not visible from what this lead knows. 1 day added."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The customer",
+      "v": "Receives it on day 3.0, 1.0 day after asking. It is wrong: 30-day terms instead of the agreed 60."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the regional lead. Mei calls Nexa."
+     }
+    ],
+    "route": "regional",
+    "err": "30-day terms instead of the agreed 60",
+    "out": 3,
+    "acct": "regional",
+    "days": 1
+   },
+   {
+    "id": "Q12",
+    "mk": "SG",
+    "cust": "Vega",
+    "kind": "pol",
+    "day": 3,
+    "val": 9900,
+    "record": "Vega asked for 90-day terms. The written limit is 60. Mei does not know the limit.",
+    "draftWrong": "90-day terms, written limit is 60",
+    "checkable": "policy",
+    "catch": {
+     "regional": false,
+     "ho": true
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Vega, Singapore, €9,900, day 3. Vega asked for 90-day terms. The written limit is 60. Mei does not know the limit."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: 90-day terms, written limit is 60."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Mei, Singapore lead. Quote 4 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "",
+      "k": "The review",
+      "v": "Mei, Singapore lead reads it and passes it. Not visible from what this lead knows. 1 day added."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The customer",
+      "v": "Receives it on day 4.0, 1.0 day after asking. It is wrong: 90-day terms, written limit is 60."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the regional lead. Mei calls Vega."
+     }
+    ],
+    "route": "regional",
+    "err": "90-day terms, written limit is 60",
+    "out": 4,
+    "acct": "regional",
+    "days": 1
+   },
+   {
+    "id": "Q17",
+    "mk": "TR",
+    "cust": "Barut",
+    "kind": "loc",
+    "day": 5,
+    "val": 6100,
+    "record": "Barut agreed minimum price €88, from last year's negotiation.",
+    "draftWrong": "€84 per unit, below the agreed €88",
+    "fixedByRecords": true,
+    "checkable": "records",
+    "catch": {
+     "regional": true,
+     "ho": "records",
+     "other": "records"
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Barut, Türkiye, €6,100, day 5. Barut agreed minimum price €88, from last year's negotiation."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: €84 per unit, below the agreed €88."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Deniz, Türkiye lead. Quote 6 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The queue",
+      "v": "Deniz, Türkiye lead already had 4 quotes. This one would have waited 3.0 days for review. After 3 days this company's sales team sends the quote itself, so it went out on day 8, unreviewed and with no approval recorded."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The customer",
+      "v": "Receives it on day 8.0, 3.0 days after asking. It is wrong: €84 per unit, below the agreed €88."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "No approval was recorded. The quote left under the company's three-day practice, which the team's rules did not authorise. The team remains accountable for the rule that created the queue. Deniz calls Barut."
+     }
+    ],
+    "route": "regional",
+    "out": 8,
+    "acct": "nobody",
+    "err": "€84 per unit, below the agreed €88",
+    "bypass": true,
+    "days": 3
+   },
+   {
+    "id": "Q18",
+    "mk": "BR",
+    "cust": "Onda",
+    "kind": "pol",
+    "day": 5,
+    "val": 12800,
+    "record": "Onda asked for free shipping on a €12,800 order. The written limit allows it above €20,000.",
+    "draftWrong": "free shipping below the written threshold",
+    "checkable": "policy",
+    "catch": {
+     "regional": true,
+     "ho": true
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Onda, Brazil, €12,800, day 5. Onda asked for free shipping on a €12,800 order. The written limit allows it above €20,000."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: free shipping below the written threshold."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Regional review: Ana, Brazil lead. Quote 6 of 4 this reviewer can take this week."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The queue",
+      "v": "Ana, Brazil lead already had 4 quotes. This one would have waited 3.0 days for review. After 3 days this company's sales team sends the quote itself, so it went out on day 8, unreviewed and with no approval recorded."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The customer",
+      "v": "Receives it on day 8.0, 3.0 days after asking. It is wrong: free shipping below the written threshold."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "No approval was recorded. The quote left under the company's three-day practice, which the team's rules did not authorise. The team remains accountable for the rule that created the queue. Ana calls Onda."
+     }
+    ],
+    "route": "regional",
+    "out": 8,
+    "acct": "nobody",
+    "err": "free shipping below the written threshold",
+    "bypass": true,
+    "days": 3
+   }
+  ],
+  "acct": {
+   "team": 0,
+   "regional": 15,
+   "ho": 0,
+   "nobody": 5
+  },
+  "unsigned": 5,
+  "unownedErrs": 0,
+  "regUsed": 20,
+  "hoUsed": 0
+ },
+ "summary": "4 wrong quotes reached customers, 1.7 days average to the customer, the leads were sent 20 quotes for 12 review slots, 5 went out with no approval recorded.",
+ "source": "original"
+}

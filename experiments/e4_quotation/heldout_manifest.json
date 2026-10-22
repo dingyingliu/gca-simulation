@@ -1,0 +1,53 @@
+{
+ "frozen_utc": "2026-10-02 22:32 UTC",
+ "generator_commit": "1ec08af",
+ "development": {
+  "W0.json": {
+   "name": "W0 walkthrough week",
+   "sha256": "2ef10e0ae395ddd3151a35007920eed5bc626082fa2c49ae07895f7476891daf",
+   "requests": 20
+  },
+  "G1.json": {
+   "name": "G1 development week",
+   "sha256": "5aa063bf08e4f7719ec5e6037288d422e6a62f3b5b830bbfbf24e3f2cf3c7766",
+   "requests": 20
+  },
+  "G2.json": {
+   "name": "G2 development week",
+   "sha256": "3a05305d6b3fe17a490f4a416843f43dc32818cb4c59a1610c3aa0d583b2559c",
+   "requests": 20
+  },
+  "G3.json": {
+   "name": "G3 development week",
+   "sha256": "bded46f15e20db36058089d5e8a4f09dd4bf15175fdabc0641c224465a11944a",
+   "requests": 20
+  },
+  "G4.json": {
+   "name": "G4 development week",
+   "sha256": "3c9cb0f0ade1b03eafdb3dfb4891e1b175245b1b1b80501721c74fcaf20d88f7",
+   "requests": 20
+  }
+ },
+ "heldout": {
+  "H1.json": {
+   "name": "H1 held-out week",
+   "sha256": "728f52f3010310950a0802983e98ab378fb11b3b7bac82d35beaa662067ed6bf",
+   "requests": 20
+  },
+  "H2.json": {
+   "name": "H2 held-out week",
+   "sha256": "b3d8b45f21486898472b5f721db91bf236d1e36fdd3ffaa55fad33b5bd1c2dea",
+   "requests": 20
+  },
+  "H3.json": {
+   "name": "H3 held-out week",
+   "sha256": "76cdde639000fc7915eb26d5ad9a2ed92cb4890fe3218b59e359a08a723c01c8",
+   "requests": 20
+  },
+  "H4.json": {
+   "name": "H4 held-out week",
+   "sha256": "3fd04ba40741c83a0ab3f092913912ff7684c8f7c46e17c2a066d03127c4b8d2",
+   "requests": 20
+  }
+ }
+}

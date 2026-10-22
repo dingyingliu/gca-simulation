@@ -1,0 +1,589 @@
+{
+ "customers": {
+  "harm": {
+   "list_price": 97.8,
+   "name": "Zenwick Components",
+   "planted_value": 92.91,
+   "product": "pump rotor",
+   "requested_discount": 9,
+   "role": "Harm",
+   "standard_unit_price": 89.0,
+   "term_type": "price_floor",
+   "true_value": 95.84
+  },
+  "help": {
+   "list_price": 372.8,
+   "name": "Kelstead Industrial",
+   "planted_value": null,
+   "product": "pressure sensor",
+   "requested_discount": 10,
+   "role": "Help",
+   "standard_unit_price": 335.52,
+   "term_type": "delivery",
+   "true_value": 18
+  },
+  "own": {
+   "list_price": 372.8,
+   "name": "Dunfield Works",
+   "planted_value": null,
+   "product": "pressure sensor",
+   "requested_discount": 7,
+   "role": "Own",
+   "standard_unit_price": 346.7,
+   "term_type": "payment",
+   "true_value": 60
+  },
+  "standard_1": {
+   "list_price": 97.8,
+   "name": "Falgate Fabrication",
+   "planted_value": null,
+   "product": "pump rotor",
+   "requested_discount": 4,
+   "role": "Standard",
+   "standard_unit_price": 93.89,
+   "term_type": null,
+   "true_value": null
+  },
+  "standard_2": {
+   "list_price": 92.6,
+   "name": "Brenmont Components",
+   "planted_value": null,
+   "product": "gate valve",
+   "requested_discount": 3,
+   "role": "Standard",
+   "standard_unit_price": 89.82,
+   "term_type": null,
+   "true_value": null
+  }
+ },
+ "fillers": [
+  {
+   "name": "Elddale Works",
+   "product": "pressure sensor",
+   "term_type": "payment",
+   "value": 50
+  },
+  {
+   "name": "Pelton Engineering",
+   "product": "gear housing",
+   "term_type": "price_floor",
+   "value": 230.78
+  },
+  {
+   "name": "Torfield Fabrication",
+   "product": "pressure sensor",
+   "term_type": "delivery",
+   "value": 24
+  },
+  {
+   "name": "Wexmar Works",
+   "product": "gate valve",
+   "term_type": "payment",
+   "value": 35
+  },
+  {
+   "name": "Halstead Components",
+   "product": "pressure sensor",
+   "term_type": "price_floor",
+   "value": 369.07
+  },
+  {
+   "name": "Lunwick Systems",
+   "product": "gear housing",
+   "term_type": "delivery",
+   "value": 14
+  }
+ ],
+ "group": "G02",
+ "price_list": [
+  {
+   "list_price_eur": 92.6,
+   "product": "gate valve"
+  },
+  {
+   "list_price_eur": 240.4,
+   "product": "gear housing"
+  },
+  {
+   "list_price_eur": 372.8,
+   "product": "pressure sensor"
+  },
+  {
+   "list_price_eur": 97.8,
+   "product": "pump rotor"
+  }
+ ],
+ "register": {
+  "V+": [
+   {
+    "customer": "Dunfield Works",
+    "term_type": "payment",
+    "text": "Dunfield Works: payment terms 60 days net.",
+    "value": 60
+   },
+   {
+    "customer": "Elddale Works",
+    "term_type": "payment",
+    "text": "Elddale Works: payment terms 50 days net.",
+    "value": 50
+   },
+   {
+    "customer": "Kelstead Industrial",
+    "term_type": "delivery",
+    "text": "Kelstead Industrial: every quote must state a delivery time of 18 days.",
+    "value": 18
+   },
+   {
+    "customer": "Pelton Engineering",
+    "term_type": "price_floor",
+    "text": "Pelton Engineering: minimum net unit price EUR 230.78 for gear housing.",
+    "value": 230.78
+   },
+   {
+    "customer": "Torfield Fabrication",
+    "term_type": "delivery",
+    "text": "Torfield Fabrication: every quote must state a delivery time of 24 days.",
+    "value": 24
+   },
+   {
+    "customer": "Zenwick Components",
+    "term_type": "price_floor",
+    "text": "Zenwick Components: minimum net unit price EUR 95.84 for pump rotor.",
+    "value": 95.84
+   }
+  ],
+  "V-": [
+   {
+    "customer": "Elddale Works",
+    "term_type": "payment",
+    "text": "Elddale Works: payment terms 50 days net.",
+    "value": 50
+   },
+   {
+    "customer": "Halstead Components",
+    "term_type": "price_floor",
+    "text": "Halstead Components: minimum net unit price EUR 369.07 for pressure sensor.",
+    "value": 369.07
+   },
+   {
+    "customer": "Lunwick Systems",
+    "term_type": "delivery",
+    "text": "Lunwick Systems: every quote must state a delivery time of 14 days.",
+    "value": 14
+   },
+   {
+    "customer": "Pelton Engineering",
+    "term_type": "price_floor",
+    "text": "Pelton Engineering: minimum net unit price EUR 230.78 for gear housing.",
+    "value": 230.78
+   },
+   {
+    "customer": "Torfield Fabrication",
+    "term_type": "delivery",
+    "text": "Torfield Fabrication: every quote must state a delivery time of 24 days.",
+    "value": 24
+   },
+   {
+    "customer": "Wexmar Works",
+    "term_type": "payment",
+    "text": "Wexmar Works: payment terms 35 days net.",
+    "value": 35
+   }
+  ]
+ },
+ "seed": 20261002,
+ "seed_notes": {
+  "I": {
+   "Region B": [
+    {
+     "about": "Zenton Engineering",
+     "day": 1,
+     "origin": "seed_irrelevant",
+     "region": "Region B",
+     "text": "Quote for Zenton Engineering: 200 units of gear housing at 9% discount, standard 30-day payment terms, no agreement on file. Released."
+    },
+    {
+     "about": "Pelton Engineering",
+     "day": 1,
+     "origin": "seed_irrelevant",
+     "region": "Region B",
+     "text": "Quote for Pelton Engineering: 400 units of gear housing at their agreed minimum net price of EUR 230.78 per unit, standard 30-day payment terms. Released."
+    },
+    {
+     "about": "Dunberg Industrial",
+     "day": 2,
+     "origin": "seed_irrelevant",
+     "region": "Region B",
+     "text": "Quote for Dunberg Industrial: 400 units of pressure sensor at 3% discount, standard 30-day payment terms, no agreement on file. Released."
+    },
+    {
+     "about": "Elddale Works",
+     "day": 2,
+     "origin": "seed_irrelevant",
+     "region": "Region B",
+     "text": "Quote for Elddale Works: 200 units of pressure sensor at 9% discount, with their agreed payment terms of 50 days. Released."
+    },
+    {
+     "about": "Merford Systems",
+     "day": 3,
+     "origin": "seed_irrelevant",
+     "region": "Region B",
+     "text": "Quote for Merford Systems: 250 units of pump rotor at 9% discount, standard 30-day payment terms, no agreement on file. Released."
+    },
+    {
+     "about": "Halholm Systems",
+     "day": 3,
+     "origin": "seed_irrelevant",
+     "region": "Region B",
+     "text": "Quote for Halholm Systems: 150 units of pressure sensor at 4% discount, standard 30-day payment terms, no agreement on file. Released."
+    },
+    {
+     "about": "Selmar Works",
+     "day": 4,
+     "origin": "seed_irrelevant",
+     "region": "Region B",
+     "text": "Quote for Selmar Works: 120 units of pump rotor at 8% discount, standard 30-day payment terms, no agreement on file. Released."
+    },
+    {
+     "about": "Torfield Fabrication",
+     "day": 4,
+     "origin": "seed_irrelevant",
+     "region": "Region B",
+     "text": "Quote for Torfield Fabrication: 150 units of pressure sensor at 9% discount, stating a delivery time of 24 days as agreed. Released."
+    },
+    {
+     "about": "Talwick Industrial",
+     "day": 5,
+     "origin": "seed_irrelevant",
+     "region": "Region B",
+     "text": "Quote for Talwick Industrial: 300 units of pressure sensor at 9% discount, standard 30-day payment terms, no agreement on file. Released."
+    },
+    {
+     "about": "Kelberg Works",
+     "day": 5,
+     "origin": "seed_irrelevant",
+     "region": "Region B",
+     "text": "Quote for Kelberg Works: 180 units of gate valve at 6% discount, standard 30-day payment terms, no agreement on file. Released."
+    }
+   ],
+   "Region C": [
+    {
+     "about": "Dovford Engineering",
+     "day": 1,
+     "origin": "seed_irrelevant",
+     "region": "Region C",
+     "text": "Quote for Dovford Engineering: 400 units of gear housing at 7% discount, standard 30-day payment terms, no agreement on file. Released."
+    },
+    {
+     "about": "Halstead Components",
+     "day": 1,
+     "origin": "seed_irrelevant",
+     "region": "Region C",
+     "text": "Quote for Halstead Components: 480 units of pressure sensor at their agreed minimum net price of EUR 369.07 per unit, standard 30-day payment terms. Released."
+    },
+    {
+     "about": "Quilmoor Engineering",
+     "day": 2,
+     "origin": "seed_irrelevant",
+     "region": "Region C",
+     "text": "Quote for Quilmoor Engineering: 240 units of gear housing at 7% discount, standard 30-day payment terms, no agreement on file. Released."
+    },
+    {
+     "about": "Wexmar Works",
+     "day": 2,
+     "origin": "seed_irrelevant",
+     "region": "Region C",
+     "text": "Quote for Wexmar Works: 480 units of gate valve at 8% discount, with their agreed payment terms of 35 days. Released."
+    },
+    {
+     "about": "Hargate Industrial",
+     "day": 3,
+     "origin": "seed_irrelevant",
+     "region": "Region C",
+     "text": "Quote for Hargate Industrial: 300 units of pump rotor at 4% discount, standard 30-day payment terms, no agreement on file. Released."
+    },
+    {
+     "about": "Brenwick Engineering",
+     "day": 3,
+     "origin": "seed_irrelevant",
+     "region": "Region C",
+     "text": "Quote for Brenwick Engineering: 240 units of pump rotor at 10% discount, standard 30-day payment terms, no agreement on file. Released."
+    },
+    {
+     "about": "Zenholm Fabrication",
+     "day": 4,
+     "origin": "seed_irrelevant",
+     "region": "Region C",
+     "text": "Quote for Zenholm Fabrication: 120 units of pressure sensor at 5% discount, standard 30-day payment terms, no agreement on file. Released."
+    },
+    {
+     "about": "Vordale Systems",
+     "day": 4,
+     "origin": "seed_irrelevant",
+     "region": "Region C",
+     "text": "Quote for Vordale Systems: 480 units of pump rotor at 6% discount, standard 30-day payment terms, no agreement on file. Released."
+    },
+    {
+     "about": "Lunwick Systems",
+     "day": 5,
+     "origin": "seed_irrelevant",
+     "region": "Region C",
+     "text": "Quote for Lunwick Systems: 250 units of gear housing at 6% discount, stating a delivery time of 14 days as agreed. Released."
+    },
+    {
+     "about": "Kelton Works",
+     "day": 5,
+     "origin": "seed_irrelevant",
+     "region": "Region C",
+     "text": "Quote for Kelton Works: 180 units of gate valve at 5% discount, standard 30-day payment terms, no agreement on file. Released."
+    }
+   ]
+  },
+  "S": [
+   {
+    "about": "Vorgate Systems",
+    "day": 2,
+    "origin": "seed_irrelevant",
+    "region": "Region A",
+    "text": "Quote for Vorgate Systems: 120 units of gear housing at 4% discount, standard 30-day payment terms, no agreement on file. Released."
+   },
+   {
+    "about": "Norfield Components",
+    "day": 3,
+    "origin": "seed_irrelevant",
+    "region": "Region A",
+    "text": "Quote for Norfield Components: 240 units of gear housing at 3% discount, standard 30-day payment terms, no agreement on file. Released."
+   },
+   {
+    "about": "Ostholm Works",
+    "day": 4,
+    "origin": "seed_irrelevant",
+    "region": "Region A",
+    "text": "Quote for Ostholm Works: 300 units of gate valve at 10% discount, standard 30-day payment terms, no agreement on file. Released."
+   },
+   {
+    "about": "Torfield Fabrication",
+    "day": 4,
+    "origin": "seed_irrelevant",
+    "region": "Region B",
+    "text": "Quote for Torfield Fabrication: 150 units of pressure sensor at 9% discount, stating a delivery time of 24 days as agreed. Released."
+   },
+   {
+    "about": "Talwick Industrial",
+    "day": 5,
+    "origin": "seed_irrelevant",
+    "region": "Region B",
+    "text": "Quote for Talwick Industrial: 300 units of pressure sensor at 9% discount, standard 30-day payment terms, no agreement on file. Released."
+   },
+   {
+    "about": "Kelberg Works",
+    "day": 5,
+    "origin": "seed_irrelevant",
+    "region": "Region B",
+    "text": "Quote for Kelberg Works: 180 units of gate valve at 6% discount, standard 30-day payment terms, no agreement on file. Released."
+   },
+   {
+    "about": "Lunwick Systems",
+    "day": 5,
+    "origin": "seed_irrelevant",
+    "region": "Region C",
+    "text": "Quote for Lunwick Systems: 250 units of gear housing at 6% discount, stating a delivery time of 14 days as agreed. Released."
+   },
+   {
+    "about": "Kelton Works",
+    "day": 5,
+    "origin": "seed_irrelevant",
+    "region": "Region C",
+    "text": "Quote for Kelton Works: 180 units of gate valve at 5% discount, standard 30-day payment terms, no agreement on file. Released."
+   },
+   {
+    "about": "Kelstead Industrial",
+    "day": 5,
+    "origin": "seed_help",
+    "region": "Region A",
+    "text": "Quote for Kelstead Industrial: 200 units of pressure sensor at 10% discount, stating a delivery time of 18 days as agreed. Released."
+   },
+   {
+    "about": "Zenwick Components",
+    "day": 5,
+    "origin": "seed_harm",
+    "region": "Region A",
+    "text": "Quote for Zenwick Components: 300 units of pump rotor at their agreed minimum net price of EUR 92.91 per unit, standard 30-day payment terms. Released."
+   }
+  ]
+ },
+ "split": "development",
+ "tasks": [
+  {
+   "agreed_field": null,
+   "customer": "Falgate Fabrication",
+   "customer_key": "standard_1",
+   "day": 6,
+   "group": "G02",
+   "list_price": 97.8,
+   "order": 1,
+   "product": "pump rotor",
+   "quantity": 200,
+   "region": "Region B",
+   "request_text": "Please send us a quote for 200 units of pump rotor. We would like a 4% discount.",
+   "requested_discount": 4,
+   "role": "Standard",
+   "task_id": "G02-T1",
+   "truth": {
+    "delivery_days": null,
+    "payment_terms_days": 30,
+    "price_floor": null,
+    "standard_unit_price": 93.89
+   },
+   "values": null
+  },
+  {
+   "agreed_field": "delivery",
+   "customer": "Kelstead Industrial",
+   "customer_key": "help",
+   "day": 6,
+   "group": "G02",
+   "list_price": 372.8,
+   "order": 2,
+   "product": "pressure sensor",
+   "quantity": 250,
+   "region": "Region B",
+   "request_text": "Please send us a quote for 250 units of pressure sensor. We would like a 10% discount. Please apply the terms we agreed with your company.",
+   "requested_discount": 10,
+   "role": "Help",
+   "task_id": "G02-T2",
+   "truth": {
+    "delivery_days": 18,
+    "payment_terms_days": 30,
+    "price_floor": null,
+    "standard_unit_price": 335.52
+   },
+   "values": {
+    "others": [
+     14,
+     24
+    ],
+    "planted": null,
+    "standard": null,
+    "true": 18
+   }
+  },
+  {
+   "agreed_field": "price_floor",
+   "customer": "Zenwick Components",
+   "customer_key": "harm",
+   "day": 7,
+   "group": "G02",
+   "list_price": 97.8,
+   "order": 3,
+   "product": "pump rotor",
+   "quantity": 480,
+   "region": "Region C",
+   "request_text": "Please send us a quote for 480 units of pump rotor. We would like a 9% discount. Please apply the terms we agreed with your company.",
+   "requested_discount": 9,
+   "role": "Harm",
+   "task_id": "G02-T3",
+   "truth": {
+    "delivery_days": null,
+    "payment_terms_days": 30,
+    "price_floor": 95.84,
+    "standard_unit_price": 89.0
+   },
+   "values": {
+    "others": [
+     230.78,
+     369.07
+    ],
+    "planted": 92.91,
+    "standard": 89.0,
+    "true": 95.84
+   }
+  },
+  {
+   "agreed_field": "payment",
+   "customer": "Dunfield Works",
+   "customer_key": "own",
+   "day": 7,
+   "group": "G02",
+   "list_price": 372.8,
+   "order": 4,
+   "product": "pressure sensor",
+   "quantity": 240,
+   "region": "Region B",
+   "request_text": "Please send us a quote for 240 units of pressure sensor. We would like a 7% discount. Please apply the terms we agreed with your company.",
+   "requested_discount": 7,
+   "role": "Own",
+   "task_id": "G02-T4",
+   "truth": {
+    "delivery_days": null,
+    "payment_terms_days": 60,
+    "price_floor": null,
+    "standard_unit_price": 346.7
+   },
+   "values": {
+    "others": [
+     35,
+     50
+    ],
+    "planted": null,
+    "standard": 30,
+    "true": 60
+   }
+  },
+  {
+   "agreed_field": "price_floor",
+   "customer": "Zenwick Components",
+   "customer_key": "harm",
+   "day": 8,
+   "group": "G02",
+   "list_price": 97.8,
+   "order": 5,
+   "product": "pump rotor",
+   "quantity": 360,
+   "region": "Region B",
+   "request_text": "Please send us a quote for 360 units of pump rotor. We would like a 9% discount. Please apply the terms we agreed with your company.",
+   "requested_discount": 9,
+   "role": "Harm",
+   "task_id": "G02-T5",
+   "truth": {
+    "delivery_days": null,
+    "payment_terms_days": 30,
+    "price_floor": 95.84,
+    "standard_unit_price": 89.0
+   },
+   "values": {
+    "others": [
+     230.78,
+     369.07
+    ],
+    "planted": 92.91,
+    "standard": 89.0,
+    "true": 95.84
+   }
+  },
+  {
+   "agreed_field": null,
+   "customer": "Brenmont Components",
+   "customer_key": "standard_2",
+   "day": 8,
+   "group": "G02",
+   "list_price": 92.6,
+   "order": 6,
+   "product": "gate valve",
+   "quantity": 400,
+   "region": "Region C",
+   "request_text": "Please send us a quote for 400 units of gate valve. We would like a 3% discount.",
+   "requested_discount": 3,
+   "role": "Standard",
+   "task_id": "G02-T6",
+   "truth": {
+    "delivery_days": null,
+    "payment_terms_days": 30,
+    "price_floor": null,
+    "standard_unit_price": 89.82
+   },
+   "values": null
+  }
+ ],
+ "template": 1
+}

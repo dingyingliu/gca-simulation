@@ -1,0 +1,126 @@
+{
+ "seed": 20261002,
+ "generator": "gca_sim/pilot/bank.py",
+ "splits": {
+  "setup": [
+   "G01"
+  ],
+  "development": [
+   "G02",
+   "G03",
+   "G04",
+   "G05",
+   "G06"
+  ],
+  "heldout": [
+   "G07",
+   "G08"
+  ]
+ },
+ "groups": {
+  "G01": {
+   "split": "setup",
+   "template": 1,
+   "sha256": "3cde87f18d038f9618c96e317b4e05f4f4b15b9f4971819817bf57dfdb233d13",
+   "tasks": [
+    "G01-T1",
+    "G01-T2",
+    "G01-T3",
+    "G01-T4",
+    "G01-T5",
+    "G01-T6"
+   ]
+  },
+  "G02": {
+   "split": "development",
+   "template": 1,
+   "sha256": "05e45deb48cf5ae4f2303bdda8e8619157e018795fc951f54b33c2c5c4009511",
+   "tasks": [
+    "G02-T1",
+    "G02-T2",
+    "G02-T3",
+    "G02-T4",
+    "G02-T5",
+    "G02-T6"
+   ]
+  },
+  "G03": {
+   "split": "development",
+   "template": 1,
+   "sha256": "0423369886c1cf16932df31af36f32260d3900b0123dbc09443a47a3d2e6162b",
+   "tasks": [
+    "G03-T1",
+    "G03-T2",
+    "G03-T3",
+    "G03-T4",
+    "G03-T5",
+    "G03-T6"
+   ]
+  },
+  "G04": {
+   "split": "development",
+   "template": 1,
+   "sha256": "5c012dd034eaf66a1cf4bc03bb76c058f7b5561b222b25913d1b815f7570504b",
+   "tasks": [
+    "G04-T1",
+    "G04-T2",
+    "G04-T3",
+    "G04-T4",
+    "G04-T5",
+    "G04-T6"
+   ]
+  },
+  "G05": {
+   "split": "development",
+   "template": 1,
+   "sha256": "29996d968bc5549b394f7fc0723ab9b3186b901cedee7163dc2be0235cc10888",
+   "tasks": [
+    "G05-T1",
+    "G05-T2",
+    "G05-T3",
+    "G05-T4",
+    "G05-T5",
+    "G05-T6"
+   ]
+  },
+  "G06": {
+   "split": "development",
+   "template": 1,
+   "sha256": "8be332ac37fe3516160c793e6f06175e9a89be153f4ae8bd6168810b5985fcb4",
+   "tasks": [
+    "G06-T1",
+    "G06-T2",
+    "G06-T3",
+    "G06-T4",
+    "G06-T5",
+    "G06-T6"
+   ]
+  },
+  "G07": {
+   "split": "heldout",
+   "template": 2,
+   "sha256": "7ba4bbe3c1cb2b7461104d3960285bf764eab9623c373373bdf9122c73f1be85",
+   "tasks": [
+    "G07-T1",
+    "G07-T2",
+    "G07-T3",
+    "G07-T4",
+    "G07-T5",
+    "G07-T6"
+   ]
+  },
+  "G08": {
+   "split": "heldout",
+   "template": 2,
+   "sha256": "abcde99f4495d66eb56700089fdaffe043be3575bb4c4e0003a37dc75e67424d",
+   "tasks": [
+    "G08-T1",
+    "G08-T2",
+    "G08-T3",
+    "G08-T4",
+    "G08-T5",
+    "G08-T6"
+   ]
+  }
+ }
+}

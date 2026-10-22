@@ -1,0 +1,23 @@
+{
+ "generated_utc": "2026-10-02 22:14 UTC",
+ "engine": "Node v24.19.0",
+ "cross_check": {
+  "engines": [
+   "Node v24.19.0",
+   "V8 via mini-racer 0.14.1"
+  ],
+  "result": "byte-identical outputs from both engines"
+ },
+ "script": "gca_sim/demo_replica/original/walkthrough_script.js",
+ "script_sha256": "53cca498ebdea69261f20335c25d207477f4db729d860d1e698d195141c4fe3e",
+ "source_html": "One_Week_in_the_Course.html",
+ "source_html_sha256": "9fcd4c02491d0714ba99a3424665899acbec487a9431629c5900d5a9d18c6bb5",
+ "files": {
+  "golden_review.json": "6a5f76df491e85471857ce441a0ca9ffbc8b8461029eb06a52a9ef72a3d1d79e",
+  "golden_limits.json": "e6df9f54e5144b59f9db387f164648cf2e53784754649cdabff01f4fdf00b10b",
+  "golden_local.json": "79d8ef21b1467c7fc866c2411fdef5a7908c29c8ed94f5958034f3e19e28e555",
+  "variant_nobypass_review.json": "809503ceae42abd1c464f67546976696c7cd0165c911d9ae9e17c6170f1dc9a1",
+  "variant_nobypass_limits.json": "eaf13240bf217e661aa85e2c88da1c9887136d5c08032463962fa30b870ed13c",
+  "variant_nobypass_local.json": "e66053e2c62efb618ef9f746bb8c76e9cbb1423271d68e87084c5a5cc740780c"
+ }
+}

@@ -1,0 +1,1167 @@
+{
+ "preset": "limits",
+ "name": "Release within shared limits",
+ "design": {
+  "std": "agent",
+  "loc": "agent",
+  "pol": "ho",
+  "share": true,
+  "cross": false,
+  "owner": "ho"
+ },
+ "result": {
+  "rows": [
+   {
+    "id": "Q01",
+    "mk": "BR",
+    "cust": "Aster",
+    "kind": "std",
+    "day": 1,
+    "val": 2400,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Aster, Brazil, €2,400, day 1. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits. Nothing to correct."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 1.5, 0.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule."
+     }
+    ],
+    "route": "agent",
+    "out": 1.5,
+    "acct": "team",
+    "err": null,
+    "days": 0.5
+   },
+   {
+    "id": "Q02",
+    "mk": "BR",
+    "cust": "Nexa",
+    "kind": "loc",
+    "day": 1,
+    "val": 8200,
+    "record": "Nexa distributor agreement, 60-day payment terms, negotiated by Ana.",
+    "draftWrong": "30-day terms instead of the agreed 60",
+    "fixedByRecords": true,
+    "checkable": "records",
+    "catch": {
+     "regional": true,
+     "ho": "records",
+     "other": "records"
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Nexa, Brazil, €8,200, day 1. Nexa distributor agreement, 60-day payment terms, negotiated by Ana."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly. The regional agreement was available to it, and the standard template alone would have got this wrong."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits. Nothing to correct."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 1.5, 0.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule."
+     }
+    ],
+    "route": "agent",
+    "out": 1.5,
+    "acct": "team",
+    "err": null,
+    "days": 0.5
+   },
+   {
+    "id": "Q03",
+    "mk": "TR",
+    "cust": "Linden",
+    "kind": "std",
+    "day": 1,
+    "val": 4400,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Linden, Türkiye, €4,400, day 1. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits. Nothing to correct."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 1.5, 0.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule."
+     }
+    ],
+    "route": "agent",
+    "out": 1.5,
+    "acct": "team",
+    "err": null,
+    "days": 0.5
+   },
+   {
+    "id": "Q04",
+    "mk": "TR",
+    "cust": "Orion",
+    "kind": "pol",
+    "day": 1,
+    "val": 14500,
+    "record": "Orion asked for 18 per cent. The written limit is 10.",
+    "draftWrong": "18 per cent discount, written limit is 10",
+    "checkable": "policy",
+    "catch": {
+     "regional": true,
+     "ho": true
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Orion, Türkiye, €14,500, day 1. Orion asked for 18 per cent. The written limit is 10."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: 18 per cent discount, written limit is 10."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Head-office review: Head office. Quote 1 of 3 this reviewer can take this week."
+     },
+     {
+      "cls": "okdot",
+      "k": "The review",
+      "v": "Head office sees it and corrects it. 2.5 days added."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 3.5, 2.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: head office."
+     }
+    ],
+    "route": "ho",
+    "err": null,
+    "fixed": true,
+    "out": 3.5,
+    "acct": "ho",
+    "days": 2.5
+   },
+   {
+    "id": "Q05",
+    "mk": "TR",
+    "cust": "Deren",
+    "kind": "loc",
+    "day": 2,
+    "val": 3200,
+    "record": "Deren's contract requires the delivery term stated on every quote. Deren rejects quotes without it.",
+    "draftWrong": "no delivery term stated",
+    "fixedByRecords": true,
+    "checkable": "records",
+    "catch": {
+     "regional": true,
+     "ho": false,
+     "other": false
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Deren, Türkiye, €3,200, day 2. Deren's contract requires the delivery term stated on every quote. Deren rejects quotes without it."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly. The regional agreement was available to it, and the standard template alone would have got this wrong."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits. Nothing to correct."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 2.5, 0.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule."
+     }
+    ],
+    "route": "agent",
+    "out": 2.5,
+    "acct": "team",
+    "err": null,
+    "days": 0.5
+   },
+   {
+    "id": "Q06",
+    "mk": "SG",
+    "cust": "Vela",
+    "kind": "std",
+    "day": 2,
+    "val": 17000,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Vela, Singapore, €17,000, day 2. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits. Nothing to correct."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 2.5, 0.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule."
+     }
+    ],
+    "route": "agent",
+    "out": 2.5,
+    "acct": "team",
+    "err": null,
+    "days": 0.5
+   },
+   {
+    "id": "Q07",
+    "mk": "SG",
+    "cust": "Nexa",
+    "kind": "loc",
+    "day": 2,
+    "val": 8200,
+    "record": "Same Nexa agreement as Q02, held by Ana in Brazil. Singapore's template does not have it.",
+    "draftWrong": "30-day terms instead of the agreed 60",
+    "fixedByRecords": true,
+    "checkable": "records",
+    "cross": "BR",
+    "catch": {
+     "regional": "records",
+     "ho": "records",
+     "other": true
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Nexa, Singapore, €8,200, day 2. Same Nexa agreement as Q02, held by Ana in Brazil. Singapore's template does not have it."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly. The regional agreement was available to it, and the standard template alone would have got this wrong."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits. Nothing to correct."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 2.5, 0.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule."
+     }
+    ],
+    "route": "agent",
+    "out": 2.5,
+    "acct": "team",
+    "err": null,
+    "days": 0.5
+   },
+   {
+    "id": "Q08",
+    "mk": "BR",
+    "cust": "Pine",
+    "kind": "std",
+    "day": 2,
+    "val": 2900,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Pine, Brazil, €2,900, day 2. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits. Nothing to correct."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 2.5, 0.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule."
+     }
+    ],
+    "route": "agent",
+    "out": 2.5,
+    "acct": "team",
+    "err": null,
+    "days": 0.5
+   },
+   {
+    "id": "Q09",
+    "mk": "SG",
+    "cust": "Sol",
+    "kind": "std",
+    "day": 3,
+    "val": 6800,
+    "record": "Standard catalogue. The request said 40 units.",
+    "draftWrong": "quoted for 4 units, not 40",
+    "fixedByRecords": false,
+    "checkable": "none",
+    "missReason": "quantity",
+    "catch": {
+     "regional": true,
+     "ho": true,
+     "other": true
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Sol, Singapore, €6,800, day 3. Standard catalogue. The request said 40 units."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: quoted for 4 units, not 40."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits, and against the regional agreements it has been given. Nothing it can read contradicts this draft, so it passes. The quantity was in the original request, but this agent’s check does not compare quantities against the request."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The customer",
+      "v": "Receives it on day 3.5, 0.5 days after asking. It is wrong: quoted for 4 units, not 40."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule. The head of sales calls Sol."
+     }
+    ],
+    "route": "agent",
+    "out": 3.5,
+    "acct": "team",
+    "err": "quoted for 4 units, not 40",
+    "days": 0.5
+   },
+   {
+    "id": "Q10",
+    "mk": "BR",
+    "cust": "Cedar",
+    "kind": "loc",
+    "day": 3,
+    "val": 5100,
+    "record": "Cedar distributor agreement, minimum unit price €105.",
+    "draftWrong": "€99 per unit, below the €105 floor",
+    "fixedByRecords": true,
+    "checkable": "records",
+    "catch": {
+     "regional": true,
+     "ho": "records",
+     "other": "records"
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Cedar, Brazil, €5,100, day 3. Cedar distributor agreement, minimum unit price €105."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly. The regional agreement was available to it, and the standard template alone would have got this wrong."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits. Nothing to correct."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 3.5, 0.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule."
+     }
+    ],
+    "route": "agent",
+    "out": 3.5,
+    "acct": "team",
+    "err": null,
+    "days": 0.5
+   },
+   {
+    "id": "Q11",
+    "mk": "TR",
+    "cust": "Tern",
+    "kind": "std",
+    "day": 3,
+    "val": 4100,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Tern, Türkiye, €4,100, day 3. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits. Nothing to correct."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 3.5, 0.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule."
+     }
+    ],
+    "route": "agent",
+    "out": 3.5,
+    "acct": "team",
+    "err": null,
+    "days": 0.5
+   },
+   {
+    "id": "Q12",
+    "mk": "SG",
+    "cust": "Vega",
+    "kind": "pol",
+    "day": 3,
+    "val": 9900,
+    "record": "Vega asked for 90-day terms. The written limit is 60. Mei does not know the limit.",
+    "draftWrong": "90-day terms, written limit is 60",
+    "checkable": "policy",
+    "catch": {
+     "regional": false,
+     "ho": true
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Vega, Singapore, €9,900, day 3. Vega asked for 90-day terms. The written limit is 60. Mei does not know the limit."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: 90-day terms, written limit is 60."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Head-office review: Head office. Quote 2 of 3 this reviewer can take this week."
+     },
+     {
+      "cls": "okdot",
+      "k": "The review",
+      "v": "Head office sees it and corrects it. 2.5 days added."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 5.5, 2.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: head office."
+     }
+    ],
+    "route": "ho",
+    "err": null,
+    "fixed": true,
+    "out": 5.5,
+    "acct": "ho",
+    "days": 2.5
+   },
+   {
+    "id": "Q13",
+    "mk": "BR",
+    "cust": "Iris",
+    "kind": "std",
+    "day": 4,
+    "val": 3300,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Iris, Brazil, €3,300, day 4. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits. Nothing to correct."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 4.5, 0.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule."
+     }
+    ],
+    "route": "agent",
+    "out": 4.5,
+    "acct": "team",
+    "err": null,
+    "days": 0.5
+   },
+   {
+    "id": "Q14",
+    "mk": "SG",
+    "cust": "Lotus",
+    "kind": "loc",
+    "day": 4,
+    "val": 7600,
+    "record": "Lotus was promised tax-inclusive pricing in a meeting. Written nowhere.",
+    "draftWrong": "price quoted before tax",
+    "fixedByRecords": false,
+    "checkable": "none",
+    "missReason": "verbal",
+    "catch": {
+     "regional": true,
+     "ho": false,
+     "other": false
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Lotus, Singapore, €7,600, day 4. Lotus was promised tax-inclusive pricing in a meeting. Written nowhere."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: price quoted before tax."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits, and against the regional agreements it has been given. Nothing it can read contradicts this draft, so it passes. What this quote turns on was agreed verbally and written nowhere."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The customer",
+      "v": "Receives it on day 4.5, 0.5 days after asking. It is wrong: price quoted before tax."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule. The head of sales calls Lotus."
+     }
+    ],
+    "route": "agent",
+    "out": 4.5,
+    "acct": "team",
+    "err": "price quoted before tax",
+    "days": 0.5
+   },
+   {
+    "id": "Q15",
+    "mk": "TR",
+    "cust": "Birch",
+    "kind": "std",
+    "day": 4,
+    "val": 2100,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Birch, Türkiye, €2,100, day 4. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits. Nothing to correct."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 4.5, 0.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule."
+     }
+    ],
+    "route": "agent",
+    "out": 4.5,
+    "acct": "team",
+    "err": null,
+    "days": 0.5
+   },
+   {
+    "id": "Q16",
+    "mk": "SG",
+    "cust": "Elm",
+    "kind": "std",
+    "day": 4,
+    "val": 5400,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Elm, Singapore, €5,400, day 4. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits. Nothing to correct."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 4.5, 0.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule."
+     }
+    ],
+    "route": "agent",
+    "out": 4.5,
+    "acct": "team",
+    "err": null,
+    "days": 0.5
+   },
+   {
+    "id": "Q17",
+    "mk": "TR",
+    "cust": "Barut",
+    "kind": "loc",
+    "day": 5,
+    "val": 6100,
+    "record": "Barut agreed minimum price €88, from last year's negotiation.",
+    "draftWrong": "€84 per unit, below the agreed €88",
+    "fixedByRecords": true,
+    "checkable": "records",
+    "catch": {
+     "regional": true,
+     "ho": "records",
+     "other": "records"
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Barut, Türkiye, €6,100, day 5. Barut agreed minimum price €88, from last year's negotiation."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly. The regional agreement was available to it, and the standard template alone would have got this wrong."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits. Nothing to correct."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 5.5, 0.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule."
+     }
+    ],
+    "route": "agent",
+    "out": 5.5,
+    "acct": "team",
+    "err": null,
+    "days": 0.5
+   },
+   {
+    "id": "Q18",
+    "mk": "BR",
+    "cust": "Onda",
+    "kind": "pol",
+    "day": 5,
+    "val": 12800,
+    "record": "Onda asked for free shipping on a €12,800 order. The written limit allows it above €20,000.",
+    "draftWrong": "free shipping below the written threshold",
+    "checkable": "policy",
+    "catch": {
+     "regional": true,
+     "ho": true
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Onda, Brazil, €12,800, day 5. Onda asked for free shipping on a €12,800 order. The written limit allows it above €20,000."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: free shipping below the written threshold."
+     },
+     {
+      "cls": "",
+      "k": "The route",
+      "v": "Head-office review: Head office. Quote 3 of 3 this reviewer can take this week."
+     },
+     {
+      "cls": "okdot",
+      "k": "The review",
+      "v": "Head office sees it and corrects it. 2.5 days added."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 7.5, 2.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: head office."
+     }
+    ],
+    "route": "ho",
+    "err": null,
+    "fixed": true,
+    "out": 7.5,
+    "acct": "ho",
+    "days": 2.5
+   },
+   {
+    "id": "Q19",
+    "mk": "BR",
+    "cust": "Ravi",
+    "kind": "std",
+    "day": 5,
+    "val": 1900,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Ravi, Brazil, €1,900, day 5. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits. Nothing to correct."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 5.5, 0.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule."
+     }
+    ],
+    "route": "agent",
+    "out": 5.5,
+    "acct": "team",
+    "err": null,
+    "days": 0.5
+   },
+   {
+    "id": "Q20",
+    "mk": "TR",
+    "cust": "Sana",
+    "kind": "std",
+    "day": 5,
+    "val": 2600,
+    "record": "Standard catalogue, 30-day terms.",
+    "draftWrong": null,
+    "checkable": "none",
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Sana, Türkiye, €2,600, day 5. Standard catalogue, 30-day terms."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "Correctly."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits. Nothing to correct."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "okdot",
+      "k": "The customer",
+      "v": "Receives it on day 5.5, 0.5 days after asking. It is right."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule."
+     }
+    ],
+    "route": "agent",
+    "out": 5.5,
+    "acct": "team",
+    "err": null,
+    "days": 0.5
+   }
+  ],
+  "time": 0.8,
+  "load": {
+   "BR": 0,
+   "TR": 0,
+   "SG": 0,
+   "HO": 3
+  },
+  "errs": [
+   {
+    "id": "Q09",
+    "mk": "SG",
+    "cust": "Sol",
+    "kind": "std",
+    "day": 3,
+    "val": 6800,
+    "record": "Standard catalogue. The request said 40 units.",
+    "draftWrong": "quoted for 4 units, not 40",
+    "fixedByRecords": false,
+    "checkable": "none",
+    "missReason": "quantity",
+    "catch": {
+     "regional": true,
+     "ho": true,
+     "other": true
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Sol, Singapore, €6,800, day 3. Standard catalogue. The request said 40 units."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: quoted for 4 units, not 40."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits, and against the regional agreements it has been given. Nothing it can read contradicts this draft, so it passes. The quantity was in the original request, but this agent’s check does not compare quantities against the request."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The customer",
+      "v": "Receives it on day 3.5, 0.5 days after asking. It is wrong: quoted for 4 units, not 40."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule. The head of sales calls Sol."
+     }
+    ],
+    "route": "agent",
+    "out": 3.5,
+    "acct": "team",
+    "err": "quoted for 4 units, not 40",
+    "days": 0.5
+   },
+   {
+    "id": "Q14",
+    "mk": "SG",
+    "cust": "Lotus",
+    "kind": "loc",
+    "day": 4,
+    "val": 7600,
+    "record": "Lotus was promised tax-inclusive pricing in a meeting. Written nowhere.",
+    "draftWrong": "price quoted before tax",
+    "fixedByRecords": false,
+    "checkable": "none",
+    "missReason": "verbal",
+    "catch": {
+     "regional": true,
+     "ho": false,
+     "other": false
+    },
+    "trace": [
+     {
+      "cls": "",
+      "k": "The request",
+      "v": "Lotus, Singapore, €7,600, day 4. Lotus was promised tax-inclusive pricing in a meeting. Written nowhere."
+     },
+     {
+      "cls": "agent",
+      "k": "The agent drafts",
+      "v": "From the standard template: price quoted before tax."
+     },
+     {
+      "cls": "",
+      "k": "The agent checks",
+      "v": "Against the written limits, and against the regional agreements it has been given. Nothing it can read contradicts this draft, so it passes. What this quote turns on was agreed verbally and written nowhere."
+     },
+     {
+      "cls": "",
+      "k": "Released",
+      "v": "Sent without human approval, under the rule the team wrote. Accountability sits with the team."
+     },
+     {
+      "cls": "gapdot",
+      "k": "The customer",
+      "v": "Receives it on day 4.5, 0.5 days after asking. It is wrong: price quoted before tax."
+     },
+     {
+      "cls": "",
+      "k": "Accountability",
+      "v": "Approved by: the team, through its rule. The head of sales calls Lotus."
+     }
+    ],
+    "route": "agent",
+    "out": 4.5,
+    "acct": "team",
+    "err": "price quoted before tax",
+    "days": 0.5
+   }
+  ],
+  "acct": {
+   "team": 17,
+   "regional": 0,
+   "ho": 3,
+   "nobody": 0
+  },
+  "unsigned": 0,
+  "unownedErrs": 0,
+  "regUsed": 0,
+  "hoUsed": 3
+ },
+ "summary": "2 wrong quotes reached customers, 0.8 days average to the customer, the leads were sent 0 quotes for 12 review slots.",
+ "source": "variant: const BYPASS=Infinity"
+}

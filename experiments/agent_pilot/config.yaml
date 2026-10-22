@@ -1,0 +1,46 @@
+# Configuration of the agent pilot (E5). Fixed and committed before the first model run
+# (experiments/agent_pilot_plan.md, section 8).
+#
+# A model run refuses to start while `model`, the two prices or `cap_usd` are null.
+# The model and the cap are Dingying's decisions. The prices are the provider's list prices for that model,
+# copied from https://openrouter.ai/api/v1/models on the day she decided.
+
+provider: openrouter
+base_url: https://openrouter.ai/api/v1/chat/completions
+key_env: OPENROUTER_API_KEY          # read from the environment, or from the git-ignored .env file
+
+# Dingying, 2026-10-03, about 08:55 UTC: a free open-weight model on OpenRouter, with a spending cap of 15 USD.
+# OpenRouter lists this model as canonical slug qwen/qwen3.8-27b-20260814, weights Qwen/Qwen3.8-27B on Hugging
+# Face, at no charge. The key itself carries a 15 USD limit at OpenRouter.
+model: "qwen/qwen3.8-27b:free"
+input_usd_per_million_tokens: 0
+output_usd_per_million_tokens: 0
+cap_usd: 15
+decided_by: Dingying
+decided_utc: "2026-10-03, about 08:55 UTC"
+
+# Caps reasoning and answer together. Raised from 3000 on 2026-10-03 after the second set-up run: reasoning alone
+# reached 2,112 tokens on the second Harm task in the shared arm (1,810 in the first set-up run), and an answer
+# cut off at the limit would be lost in the cell the pilot is about. The answer itself takes 97 to 186 tokens.
+max_tokens: 6000
+reasoning_effort: low                # the model's default is xhigh; fixed at low and recorded
+# Sampling settings are sent explicitly, at the model's listed defaults, and the host is pinned, so that neither
+# can change part way through a run (review round 10, Claude R10.2). The host does not accept top_k, so its own
+# default applies there (OpenRouter lists 20 for this model).
+temperature: 1
+top_p: 0.95
+structured_outputs: true             # the output schema is enforced by the provider where it can be
+provider_order: ["modelrun/fp4"]     # the one host OpenRouter lists for this model; it serves 4-bit weights. No fallback.
+timeout_seconds: 180
+max_attempts: 3                      # per task run: errors and unparseable answers are retried
+workers: 3                           # group runs in parallel; the tasks inside a group run stay in order
+
+# Free models on OpenRouter allow 20 requests a minute and 1,000 a day for this account.
+min_seconds_between_requests: 3.2    # at most about 18 request starts a minute, across all workers
+rate_limit_wait_seconds: 30          # wait after an HTTP 429 that gives no Retry-After
+max_rate_limit_waits: 20             # then the run stops and can be resumed
+
+replicates:
+  setup: 1
+  development: 3
+  heldout: 3
